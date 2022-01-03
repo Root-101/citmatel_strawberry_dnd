@@ -12,25 +12,15 @@ class DnDSubLevelBackground extends StatefulWidget {
 }
 
 class _DnDSubLevelBackgroundState extends State<DnDSubLevelBackground> {
-  late Widget _animatedWidget;
-
-  @override
-  void initState() {
-    super.initState();
-    setState(
-      () {
-        _animatedWidget = DnDSubLevelLoading(
-          onEnd: () {
-            //really start the level
-            setState(() {
-              _animatedWidget =
-                  DnDSubLevelScreen(subLevelDomain: widget.subLevelDomain);
-            });
-          },
-        );
-      },
-    );
-  }
+  late Widget _animatedWidget = DnDSubLevelLoading(
+    onEnd: () {
+      //really start the level
+      setState(() {
+        _animatedWidget =
+            DnDSubLevelScreen(subLevelDomain: widget.subLevelDomain);
+      });
+    },
+  );
 
   @override
   Widget build(BuildContext context) {
