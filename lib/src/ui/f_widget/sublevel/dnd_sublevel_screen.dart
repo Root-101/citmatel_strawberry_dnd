@@ -1,4 +1,7 @@
+import 'dart:ui';
+
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animator/flutter_animator.dart'
     hide FadeInAnimation, FadeIn;
@@ -24,18 +27,20 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: GetBuilder<DnDSubLevelController>(
-        builder: (_) {
-          return Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              _buildListOfHearts(),
-              _buildImageCard(),
-              //_buildWord(),
-            ],
-          );
-        },
+    return Scaffold(
+      body: SafeArea(
+        child: GetBuilder<DnDSubLevelController>(
+          builder: (_) {
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                _buildListOfHearts(),
+                _buildDroppedItems(),
+                _buildItemList(),
+              ],
+            );
+          },
+        ),
       ),
     );
   }
@@ -43,40 +48,27 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
   _buildListOfHearts() {
     int countOfColumns = controller.lives;
     return _animatedGridView(
+      countOfColumns,
+      List.generate(
         countOfColumns,
-        List.generate(
-          countOfColumns,
-          (int index) {
-            return index < controller.lives - controller.remainingLives
-                ? Swing(
-                    child: Icon(
-                      FontAwesomeIcons.heartBroken,
-                      color: Colors.red.shade900,
-                      size: 50,
-                    ),
-                  )
-                : _buildAnimations(
-                    index,
-                    countOfColumns,
-                    SpinKitPumpingHeart(
-                      color: Colors.red.shade900,
-                      size: 55,
-                    ),
-                  );
-          },
-        ));
-  }
-
-  _buildAnimations(int index, int countOfColumns, Widget widget) {
-    return AnimationConfiguration.staggeredGrid(
-      columnCount: 6,
-      position: index,
-      duration: const Duration(milliseconds: 1375),
-      child: ScaleAnimation(
-        scale: 0.5,
-        child: FadeInAnimation(
-          child: widget,
-        ),
+        (int index) {
+          return index < controller.lives - controller.remainingLives
+              ? Swing(
+                  child: Icon(
+                    FontAwesomeIcons.heartBroken,
+                    color: Colors.red.shade900,
+                    size: 50,
+                  ),
+                )
+              : _buildAnimations(
+                  index,
+                  countOfColumns,
+                  SpinKitPumpingHeart(
+                    color: Colors.red.shade900,
+                    size: 55,
+                  ),
+                );
+        },
       ),
     );
   }
@@ -97,32 +89,21 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
     );
   }
 
-  _emptyCard(String text, Color decorationColor, Color shadowColor) {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
-      decoration: BoxDecoration(
-        color: decorationColor,
-        borderRadius: BorderRadius.all(Radius.circular(4.0)),
-        boxShadow: <BoxShadow>[
-          BoxShadow(
-            color: shadowColor,
-            blurRadius: 6.0,
-            offset: Offset(0.0, 4.0),
-          ),
-        ],
-      ),
-      child: Center(
-          child: Text(
-        text,
-        style: TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
+  _buildAnimations(int index, int countOfColumns, Widget widget) {
+    return AnimationConfiguration.staggeredGrid(
+      columnCount: countOfColumns,
+      position: index,
+      duration: const Duration(milliseconds: 1375),
+      child: ScaleAnimation(
+        scale: 0.5,
+        child: FadeInAnimation(
+          child: widget,
         ),
-      )),
+      ),
     );
   }
 
-  _buildImageCard() {
+  _buildDroppedItems() {
     return Container(
       margin: const EdgeInsets.symmetric(
         vertical: 20.0,
@@ -132,7 +113,7 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
       child: ClipRRect(
         // For the rounded corners
         borderRadius: BorderRadius.all(Radius.circular(15)),
-        child: _fadeImage(""),
+        child: _fadeImage(controller.imageUrl),
       ),
     );
   }
@@ -156,6 +137,98 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
   }
 
   _buildGridView() {
-    return Text("Grid view con las posiciones");
+    int columns = controller.columns;
+
+    List<DropTargetItemDomain> items = controller.itemsDropped;
+    return _animatedGridView(
+      columns,
+      List.generate(
+        items.length,
+        (int index) {
+          return _buildAnimations(
+            index,
+            columns,
+            _buildSingleTarget(
+              items[index],
+            ),
+          );
+        },
+      ),
+    );
+  }
+
+  _buildSingleTarget(DropTargetItemDomain drop) {
+    return DragTarget<DnDSubLevelItemDomain>(
+      onWillAccept: (_) => controller.onWillAccept(drop),
+      onAccept: (data) => controller.onAccept(drop, data),
+      builder: (context, acceptedItems, rejectedItems) => Container(
+        color: Colors.red,
+        alignment: Alignment.center,
+        margin: const EdgeInsets.all(8.0),
+        child: drop.item == null
+            ? Container(
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                  border: Border.all(),
+                ),
+              )
+            : Container(
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                  image: DecorationImage(
+                    image: AssetImage(drop.item!.urlImage),
+                    //no va a ser null porque lo verifique arriba
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+      ),
+    );
+  }
+
+  _buildItemList() {
+    double defaultW = 50;
+    double defaultH = 50;
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: controller.itemsToDrag
+          .map(
+            (item) => Draggable<DnDSubLevelItemDomain>(
+              data: item,
+              feedback: Container(
+                width: defaultW,
+                height: defaultH,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.all(Radius.circular(15)),
+                  child: Image.asset(
+                    item.urlImage,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              childWhenDragging: Container(
+                width: defaultW,
+                height: defaultH,
+                child: ColorFiltered(
+                  colorFilter:
+                      ColorFilter.mode(Colors.grey, BlendMode.saturation),
+                  child: Image.asset(
+                    item.urlImage,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              child: Container(
+                width: defaultW,
+                height: defaultH,
+                child: Image.asset(
+                  item.urlImage,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+          )
+          .toList(),
+    );
   }
 }
