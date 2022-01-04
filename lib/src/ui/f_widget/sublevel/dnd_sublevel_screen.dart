@@ -1,5 +1,7 @@
+import 'dart:math';
 import 'dart:ui';
 
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/cupertino.dart';
@@ -181,22 +183,36 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
   }
 
   _buildDraggableItemList() {
-    double defaultW = 50;
-    double defaultH = 50;
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children: controller.itemsToDrag
-          .map(
-            (item) => Draggable<DnDSubLevelItemDomain>(
-              data: item,
-              feedback: _buildDraggableFeedbackItem(
-                  defaultW, defaultH, item.urlImage),
-              childWhenDragging: _buildDraggableChildWhenDragging(
-                  defaultW, defaultH, item.urlImage),
-              child: _buildDraggableChild(defaultW, defaultH, item.urlImage),
-            ),
-          )
-          .toList(),
+    double defaultH = MediaQuery.of(Get.context!).size.height / 8;
+    double defaultW = defaultH;
+    int initialPage = max((controller.itemsToDrag.length / 2).round() - 1, 0);
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: CarouselSlider(
+        options: CarouselOptions(
+          height: defaultH,
+          initialPage: initialPage,
+          viewportFraction: 0.25,
+          enableInfiniteScroll: false,
+          enlargeCenterPage: true,
+        ),
+        items: controller.itemsToDrag
+            .map(
+              (item) => ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+                child: Draggable<DnDSubLevelItemDomain>(
+                  data: item,
+                  feedback: _buildDraggableFeedbackItem(
+                      defaultW, defaultH, item.urlImage),
+                  childWhenDragging: _buildDraggableChildWhenDragging(
+                      defaultW, defaultH, item.urlImage),
+                  child:
+                      _buildDraggableChild(defaultW, defaultH, item.urlImage),
+                ),
+              ),
+            )
+            .toList(),
+      ),
     );
   }
 
@@ -233,7 +249,7 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
       width: w,
       height: h,
       child: ClipRRect(
-        borderRadius: BorderRadius.all(Radius.circular(15)),
+        borderRadius: BorderRadius.all(Radius.circular(20)),
         child: Image.asset(
           image,
           fit: BoxFit.cover,
