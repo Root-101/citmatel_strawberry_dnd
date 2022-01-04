@@ -31,16 +31,13 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
       body: SafeArea(
         child: GetBuilder<DnDSubLevelController>(
           builder: (_) {
-            return Padding(
-              padding: const EdgeInsets.all(12.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  _buildListOfHearts(),
-                  _buildDroppedItems(),
-                  _buildDraggableItemList(),
-                ],
-              ),
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                _buildListOfHearts(),
+                _buildDroppedItems(),
+                _buildDraggableItemList(),
+              ],
             );
           },
         ),
@@ -50,28 +47,31 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
 
   _buildListOfHearts() {
     int countOfColumns = controller.lives;
-    return _animatedGridView(
-      countOfColumns,
-      List.generate(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12),
+      child: _animatedGridView(
         countOfColumns,
-        (int index) {
-          return index < controller.lives - controller.remainingLives
-              ? Swing(
-                  child: Icon(
-                    FontAwesomeIcons.heartBroken,
-                    color: Colors.red.shade900,
-                    size: 50,
-                  ),
-                )
-              : _buildAnimations(
-                  index,
-                  countOfColumns,
-                  SpinKitPumpingHeart(
-                    color: Colors.red.shade900,
-                    size: 55,
-                  ),
-                );
-        },
+        List.generate(
+          countOfColumns,
+          (int index) {
+            return index < controller.lives - controller.remainingLives
+                ? Swing(
+                    child: Icon(
+                      FontAwesomeIcons.heartBroken,
+                      color: Colors.red.shade900,
+                      size: 50,
+                    ),
+                  )
+                : _buildAnimations(
+                    index,
+                    countOfColumns,
+                    SpinKitPumpingHeart(
+                      color: Colors.red.shade900,
+                      size: 55,
+                    ),
+                  );
+          },
+        ),
       ),
     );
   }
@@ -108,23 +108,26 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
   }
 
   _buildDroppedItems() {
-    return ClipRRect(
-      borderRadius: BorderRadius.all(Radius.circular(15)),
-      child: Container(
-        child: FadeIn(
-          duration: Duration(milliseconds: 4000),
-          curve: Curves.easeInOutCirc,
-          child: Container(
-            width: MediaQuery.of(Get.context!).size.width,
-            height: MediaQuery.of(Get.context!).size.width,
-            decoration: BoxDecoration(
-              color: Colors.transparent, //pa si por si acaso
-              image: DecorationImage(
-                image: AssetImage(controller.imageUrl),
-                fit: BoxFit.cover,
+    final double padding = 12.0;
+    return Padding(
+      padding: EdgeInsets.all(padding),
+      child: ClipRRect(
+        borderRadius: BorderRadius.all(Radius.circular(15)),
+        child: Container(
+          child: FadeIn(
+            duration: Duration(milliseconds: 4000),
+            curve: Curves.easeInOutCirc,
+            child: Container(
+              width: MediaQuery.of(Get.context!).size.width - 2 * padding,
+              height: MediaQuery.of(Get.context!).size.width - 2 * padding,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(controller.imageUrl),
+                  fit: BoxFit.fill,
+                ),
               ),
+              child: _buildDragTargetGridView(),
             ),
-            child: _buildDragTargetGridView(),
           ),
         ),
       ),
