@@ -21,8 +21,26 @@ class DnDLevel1 {
           DnDSubLevelItemDomain(
             id: 2,
             urlImage: "assets/icons/brain_in_blue.jpg",
-            rowPosition: 1,
+            rowPosition: 0,
             columnPosition: 1,
+          ),
+          DnDSubLevelItemDomain(
+            id: 3,
+            urlImage: "assets/icons/brain_in_blue.jpg",
+            rowPosition: 2,
+            columnPosition: 3,
+          ),
+          DnDSubLevelItemDomain(
+            id: 4,
+            urlImage: "assets/icons/brain_in_blue.jpg",
+            rowPosition: 4,
+            columnPosition: 4,
+          ),
+          DnDSubLevelItemDomain(
+            id: 5,
+            urlImage: "assets/icons/brain_in_blue.jpg",
+            rowPosition: 2,
+            columnPosition: 2,
           ),
         ],
       ),

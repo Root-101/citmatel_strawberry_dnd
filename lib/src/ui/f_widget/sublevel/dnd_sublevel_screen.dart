@@ -1,4 +1,10 @@
+import 'dart:math';
+import 'dart:ui';
+
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
+import 'package:dotted_border/dotted_border.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animator/flutter_animator.dart'
     hide FadeInAnimation, FadeIn;
@@ -24,25 +30,29 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: GetBuilder<DnDSubLevelController>(
-        builder: (_) {
-          return Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              _buildListOfHearts(),
-              _buildImageCard(),
-              //_buildWord(),
-            ],
-          );
-        },
+    return Scaffold(
+      body: SafeArea(
+        child: GetBuilder<DnDSubLevelController>(
+          builder: (_) {
+            return Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                _buildListOfHearts(),
+                _buildDroppedItems(),
+                _buildDraggableItemList(),
+              ],
+            );
+          },
+        ),
       ),
     );
   }
 
   _buildListOfHearts() {
     int countOfColumns = controller.lives;
-    return _animatedGridView(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 12),
+      child: _animatedGridView(
         countOfColumns,
         List.generate(
           countOfColumns,
@@ -64,28 +74,17 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
                     ),
                   );
           },
-        ));
-  }
-
-  _buildAnimations(int index, int countOfColumns, Widget widget) {
-    return AnimationConfiguration.staggeredGrid(
-      columnCount: 6,
-      position: index,
-      duration: const Duration(milliseconds: 1375),
-      child: ScaleAnimation(
-        scale: 0.5,
-        child: FadeInAnimation(
-          child: widget,
         ),
       ),
     );
   }
 
-  _animatedGridView(int cantOfColumns, List<Widget> children) {
+  _animatedGridView(int cantOfColumns, List<Widget> children,
+      {double aspectRatio = 1.0}) {
     return AnimationLimiter(
       child: GridView.count(
-        childAspectRatio: 1.0,
-        padding: const EdgeInsets.all(8.0),
+        childAspectRatio: aspectRatio,
+        //padding: const EdgeInsets.all(8.0),
         crossAxisCount: cantOfColumns,
         // Amount of columns in the grid
         shrinkWrap: true,
@@ -97,65 +96,165 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
     );
   }
 
-  _emptyCard(String text, Color decorationColor, Color shadowColor) {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
-      decoration: BoxDecoration(
-        color: decorationColor,
-        borderRadius: BorderRadius.all(Radius.circular(4.0)),
-        boxShadow: <BoxShadow>[
-          BoxShadow(
-            color: shadowColor,
-            blurRadius: 6.0,
-            offset: Offset(0.0, 4.0),
-          ),
-        ],
-      ),
-      child: Center(
-          child: Text(
-        text,
-        style: TextStyle(
-          fontSize: 20,
-          fontWeight: FontWeight.bold,
+  _buildAnimations(int index, int countOfColumns, Widget widget) {
+    return AnimationConfiguration.staggeredGrid(
+      columnCount: countOfColumns,
+      position: index,
+      duration: const Duration(milliseconds: 1375),
+      child: ScaleAnimation(
+        scale: 0.5,
+        child: FadeInAnimation(
+          child: widget,
         ),
-      )),
+      ),
     );
   }
 
-  _buildImageCard() {
-    return Container(
-      margin: const EdgeInsets.symmetric(
-        vertical: 20.0,
-        horizontal: 20.0,
-      ),
-      height: 240.0,
+  _buildDroppedItems() {
+    final double padding = 12.0;
+    return Padding(
+      padding: EdgeInsets.all(padding),
       child: ClipRRect(
-        // For the rounded corners
         borderRadius: BorderRadius.all(Radius.circular(15)),
-        child: _fadeImage(""),
-      ),
-    );
-  }
-
-  ///Fade the entranace of the image
-  _fadeImage(String imageUrl) {
-    return FadeIn(
-      child: Container(
-        decoration: BoxDecoration(
-          color: Colors.transparent, //pa si por si acaso
-          image: DecorationImage(
-            image: AssetImage(imageUrl),
-            fit: BoxFit.cover,
+        child: Container(
+          child: FadeIn(
+            duration: Duration(milliseconds: 4000),
+            curve: Curves.easeInOutCirc,
+            child: Container(
+              width: MediaQuery.of(Get.context!).size.width - 2 * padding,
+              height: MediaQuery.of(Get.context!).size.width - 2 * padding,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(controller.imageUrl),
+                  fit: BoxFit.fill,
+                ),
+              ),
+              child: _buildDragTargetGridView(),
+            ),
           ),
         ),
-        child: _buildGridView(),
       ),
-      duration: Duration(milliseconds: 4000),
-      curve: Curves.easeInOutCirc,
     );
   }
 
-  _buildGridView() {
-    return Text("Grid view con las posiciones");
+  _buildDragTargetGridView() {
+    int columns = controller.columns;
+
+    List<DropTargetItemDomain> items = controller.itemsDropped;
+    return _animatedGridView(
+      columns,
+      List.generate(
+        items.length,
+        (int index) {
+          return _buildAnimations(
+            index,
+            columns,
+            _buildSingleDragTarget(
+              items[index],
+            ),
+          );
+        },
+      ),
+      aspectRatio: controller.rows / columns,
+    );
+  }
+
+  _buildSingleDragTarget(DropTargetItemDomain drop) {
+    return DragTarget<DnDSubLevelItemDomain>(
+      onWillAccept: (_) => controller.onWillAccept(drop),
+      onAccept: (data) => controller.onAccept(drop, data),
+      builder: (context, acceptedItems, rejectedItems) => DottedBorder(
+        color: Colors.white38,
+        dashPattern: const <double>[3, 5],
+        child: drop.item == null
+            ? Container()
+            : Container(
+                decoration: BoxDecoration(
+                  color: Colors.transparent,
+                  image: DecorationImage(
+                    //no va a ser null porque lo verifique arriba
+                    image: AssetImage(drop.item!.urlImage),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+      ),
+    );
+  }
+
+  _buildDraggableItemList() {
+    double defaultH = MediaQuery.of(Get.context!).size.height / 8;
+    double defaultW = defaultH;
+    int initialPage = max((controller.itemsToDrag.length / 2).round() - 1, 0);
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: CarouselSlider(
+        options: CarouselOptions(
+          height: defaultH,
+          initialPage: initialPage,
+          viewportFraction: 0.25,
+          enableInfiniteScroll: false,
+          enlargeCenterPage: true,
+        ),
+        items: controller.itemsToDrag
+            .map(
+              (item) => ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(20)),
+                child: Draggable<DnDSubLevelItemDomain>(
+                  data: item,
+                  feedback: _buildDraggableFeedbackItem(
+                      defaultW, defaultH, item.urlImage),
+                  childWhenDragging: _buildDraggableChildWhenDragging(
+                      defaultW, defaultH, item.urlImage),
+                  child:
+                      _buildDraggableChild(defaultW, defaultH, item.urlImage),
+                ),
+              ),
+            )
+            .toList(),
+      ),
+    );
+  }
+
+  //child normal en la lista
+  _buildDraggableChild(double w, double h, String image) {
+    return Container(
+      width: w,
+      height: h,
+      child: Image.asset(
+        image,
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+
+  //child que se queda en la lista cuando se esta arrastrando
+  _buildDraggableChildWhenDragging(double w, double h, String image) {
+    return Container(
+      width: w,
+      height: h,
+      child: ColorFiltered(
+        colorFilter: ColorFilter.mode(Colors.grey, BlendMode.saturation),
+        child: Image.asset(
+          image,
+          fit: BoxFit.cover,
+        ),
+      ),
+    );
+  }
+
+  //child que se va arrastrando
+  _buildDraggableFeedbackItem(double w, double h, String image) {
+    return Container(
+      width: w,
+      height: h,
+      child: ClipRRect(
+        borderRadius: BorderRadius.all(Radius.circular(20)),
+        child: Image.asset(
+          image,
+          fit: BoxFit.cover,
+        ),
+      ),
+    );
   }
 }
