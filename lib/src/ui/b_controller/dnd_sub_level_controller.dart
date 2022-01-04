@@ -1,3 +1,4 @@
+import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:get/get.dart';
 
 abstract class DnDSubLevelController extends GetxController {
@@ -6,4 +7,18 @@ abstract class DnDSubLevelController extends GetxController {
   int get lives;
 
   int get remainingLives;
+
+  String get imageUrl;
+
+  int get columns;
+
+  int get rows;
+
+  List<DnDSubLevelItemDomain> get itemsToDrag;
+
+  List<DropTargetItemDomain> get itemsDropped;
+
+  bool onWillAccept(DropTargetItemDomain drop);
+
+  void onAccept(DropTargetItemDomain drop, DnDSubLevelItemDomain data);
 }
