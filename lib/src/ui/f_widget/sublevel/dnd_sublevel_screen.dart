@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animator/flutter_animator.dart'
@@ -160,10 +161,9 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
     return DragTarget<DnDSubLevelItemDomain>(
       onWillAccept: (_) => controller.onWillAccept(drop),
       onAccept: (data) => controller.onAccept(drop, data),
-      builder: (context, acceptedItems, rejectedItems) => Container(
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.grey, width: 2),
-        ),
+      builder: (context, acceptedItems, rejectedItems) => DottedBorder(
+        color: Colors.white38,
+        dashPattern: const <double>[3, 5],
         child: drop.item == null
             ? Container()
             : Container(
