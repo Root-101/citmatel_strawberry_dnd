@@ -31,13 +31,16 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
       body: SafeArea(
         child: GetBuilder<DnDSubLevelController>(
           builder: (_) {
-            return Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                _buildListOfHearts(),
-                _buildDroppedItems(),
-                _buildItemList(),
-              ],
+            return Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  _buildListOfHearts(),
+                  _buildDroppedItems(),
+                  _buildDraggableItemList(),
+                ],
+              ),
             );
           },
         ),
@@ -73,11 +76,12 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
     );
   }
 
-  _animatedGridView(int cantOfColumns, List<Widget> children) {
+  _animatedGridView(int cantOfColumns, List<Widget> children,
+      {double aspectRatio = 1.0}) {
     return AnimationLimiter(
       child: GridView.count(
-        childAspectRatio: 1.0,
-        padding: const EdgeInsets.all(8.0),
+        childAspectRatio: aspectRatio,
+        //padding: const EdgeInsets.all(8.0),
         crossAxisCount: cantOfColumns,
         // Amount of columns in the grid
         shrinkWrap: true,
@@ -104,39 +108,30 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
   }
 
   _buildDroppedItems() {
-    return Container(
-      margin: const EdgeInsets.symmetric(
-        vertical: 20.0,
-        horizontal: 20.0,
-      ),
-      height: 240.0,
-      child: ClipRRect(
-        // For the rounded corners
-        borderRadius: BorderRadius.all(Radius.circular(15)),
-        child: _fadeImage(controller.imageUrl),
-      ),
-    );
-  }
-
-  ///Fade the entranace of the image
-  _fadeImage(String imageUrl) {
-    return FadeIn(
+    return ClipRRect(
+      borderRadius: BorderRadius.all(Radius.circular(15)),
       child: Container(
-        decoration: BoxDecoration(
-          color: Colors.transparent, //pa si por si acaso
-          image: DecorationImage(
-            image: AssetImage(imageUrl),
-            fit: BoxFit.cover,
+        child: FadeIn(
+          duration: Duration(milliseconds: 4000),
+          curve: Curves.easeInOutCirc,
+          child: Container(
+            width: MediaQuery.of(Get.context!).size.width,
+            height: MediaQuery.of(Get.context!).size.width,
+            decoration: BoxDecoration(
+              color: Colors.transparent, //pa si por si acaso
+              image: DecorationImage(
+                image: AssetImage(controller.imageUrl),
+                fit: BoxFit.cover,
+              ),
+            ),
+            child: _buildDragTargetGridView(),
           ),
         ),
-        child: _buildGridView(),
       ),
-      duration: Duration(milliseconds: 4000),
-      curve: Curves.easeInOutCirc,
     );
   }
 
-  _buildGridView() {
+  _buildDragTargetGridView() {
     int columns = controller.columns;
 
     List<DropTargetItemDomain> items = controller.itemsDropped;
@@ -148,36 +143,32 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
           return _buildAnimations(
             index,
             columns,
-            _buildSingleTarget(
+            _buildSingleDragTarget(
               items[index],
             ),
           );
         },
       ),
+      aspectRatio: controller.rows / columns,
     );
   }
 
-  _buildSingleTarget(DropTargetItemDomain drop) {
+  _buildSingleDragTarget(DropTargetItemDomain drop) {
     return DragTarget<DnDSubLevelItemDomain>(
       onWillAccept: (_) => controller.onWillAccept(drop),
       onAccept: (data) => controller.onAccept(drop, data),
       builder: (context, acceptedItems, rejectedItems) => Container(
-        color: Colors.red,
-        alignment: Alignment.center,
-        margin: const EdgeInsets.all(8.0),
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.grey, width: 2),
+        ),
         child: drop.item == null
-            ? Container(
-                decoration: BoxDecoration(
-                  color: Colors.transparent,
-                  border: Border.all(),
-                ),
-              )
+            ? Container()
             : Container(
                 decoration: BoxDecoration(
                   color: Colors.transparent,
                   image: DecorationImage(
-                    image: AssetImage(drop.item!.urlImage),
                     //no va a ser null porque lo verifique arriba
+                    image: AssetImage(drop.item!.urlImage),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -186,7 +177,7 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
     );
   }
 
-  _buildItemList() {
+  _buildDraggableItemList() {
     double defaultW = 50;
     double defaultH = 50;
     return Row(
