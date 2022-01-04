@@ -20,7 +20,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   _initItemsDropped() {
     List<DropTargetItemDomain> items = [];
-    for (int row = 0; row < columns; row++) {
+    for (int row = 0; row < rows; row++) {
       for (int col = 0; col < columns; col++) {
         items.add(DropTargetItemDomain(column: col, row: row));
       }
@@ -38,7 +38,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   int get columns => subLevelUseCase.subLevelDomain.columns;
 
   @override
-  int get rows => subLevelUseCase.subLevelDomain.columns;
+  int get rows => subLevelUseCase.subLevelDomain.rows;
 
   void _breakHeart() {
     remainingLives--;
