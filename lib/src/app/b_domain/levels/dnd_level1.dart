@@ -36,6 +36,12 @@ class DnDLevel1 {
             rowPosition: 4,
             columnPosition: 4,
           ),
+          DnDSubLevelItemDomain(
+            id: 5,
+            urlImage: "assets/icons/brain_in_blue.jpg",
+            rowPosition: 2,
+            columnPosition: 2,
+          ),
         ],
       ),
     ],
