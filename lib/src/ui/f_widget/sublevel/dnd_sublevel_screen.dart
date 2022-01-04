@@ -195,40 +195,56 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
           .map(
             (item) => Draggable<DnDSubLevelItemDomain>(
               data: item,
-              feedback: Container(
-                width: defaultW,
-                height: defaultH,
-                child: ClipRRect(
-                  borderRadius: BorderRadius.all(Radius.circular(15)),
-                  child: Image.asset(
-                    item.urlImage,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-              childWhenDragging: Container(
-                width: defaultW,
-                height: defaultH,
-                child: ColorFiltered(
-                  colorFilter:
-                      ColorFilter.mode(Colors.grey, BlendMode.saturation),
-                  child: Image.asset(
-                    item.urlImage,
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-              child: Container(
-                width: defaultW,
-                height: defaultH,
-                child: Image.asset(
-                  item.urlImage,
-                  fit: BoxFit.cover,
-                ),
-              ),
+              feedback: _buildDraggableFeedbackItem(
+                  defaultW, defaultH, item.urlImage),
+              childWhenDragging: _buildDraggableChildWhenDragging(
+                  defaultW, defaultH, item.urlImage),
+              child: _buildDraggableChild(defaultW, defaultH, item.urlImage),
             ),
           )
           .toList(),
+    );
+  }
+
+  //child normal en la lista
+  _buildDraggableChild(double w, double h, String image) {
+    return Container(
+      width: w,
+      height: h,
+      child: Image.asset(
+        image,
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+
+  //child que se queda en la lista cuando se esta arrastrando
+  _buildDraggableChildWhenDragging(double w, double h, String image) {
+    return Container(
+      width: w,
+      height: h,
+      child: ColorFiltered(
+        colorFilter: ColorFilter.mode(Colors.grey, BlendMode.saturation),
+        child: Image.asset(
+          image,
+          fit: BoxFit.cover,
+        ),
+      ),
+    );
+  }
+
+  //child que se va arrastrando
+  _buildDraggableFeedbackItem(double w, double h, String image) {
+    return Container(
+      width: w,
+      height: h,
+      child: ClipRRect(
+        borderRadius: BorderRadius.all(Radius.circular(15)),
+        child: Image.asset(
+          image,
+          fit: BoxFit.cover,
+        ),
+      ),
     );
   }
 }
