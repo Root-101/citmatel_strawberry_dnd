@@ -31,7 +31,7 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
       child: GetBuilder<DnDSubLevelController>(
         builder: (_) {
           return Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               _buildListOfHearts(),
               _buildDroppedItems(),
