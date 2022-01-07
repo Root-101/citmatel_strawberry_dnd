@@ -45,7 +45,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   void _breakHeart() {
     remainingLives--;
     if (remainingLives <= 0) {
-      looseLevel();
+      _looseLevel();
     }
   }
 
@@ -74,6 +74,10 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
       itemsToDrag.removeWhere(
         (element) => element.id == data.id,
       );
+
+      if (itemsToDrag.isEmpty) {
+        _winLevel();
+      }
     } else {
       StrawberryVibration.vibrate();
       StrawberryAudio.playAudioWrong();
@@ -82,5 +86,11 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
     update();
   }
 
-  void looseLevel() {}
+  void _looseLevel() {
+    Get.offNamed(StrawberryLevelLose.ROUTE_NAME);
+  }
+
+  void _winLevel() {
+    Get.offNamed(StrawberryLevelWin.ROUTE_NAME);
+  }
 }
