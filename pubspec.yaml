@@ -39,7 +39,11 @@ dev_dependencies:
 flutter:
   assets:
     - packages/citmatel_strawberry_dnd/assets/images/brain_in_blue.jpg
-    - packages/citmatel_strawberry_dnd/assets/images/dnd_wallpaper.jpg
-    - packages/citmatel_strawberry_dnd/assets/images/test.jpg
+    - packages/citmatel_strawberry_dnd/assets/images/test.jpg    
+    - packages/citmatel_strawberry_dnd/assets/icons/frog.png  
+    - packages/citmatel_strawberry_dnd/assets/icons/bird.png  
+    - packages/citmatel_strawberry_dnd/assets/icons/deer.png  
+    - packages/citmatel_strawberry_dnd/assets/icons/monkey.png
+    - packages/citmatel_strawberry_dnd/assets/icons/flower.png
 
   uses-material-design: true
