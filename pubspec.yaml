@@ -32,6 +32,10 @@ dependencies:
   dotted_border: ^2.0.0+2
   carousel_slider: ^4.0.0
 
+  #Tools
+  citmatel_strawberry_tools:
+    path: ../citmatel_strawberry_tools
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

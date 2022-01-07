@@ -1,4 +1,6 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
+import 'package:citmatel_strawberry_tools/tools_exporter.dart';
+import 'package:get/get.dart';
 
 class DnDSubLevelControllerImpl extends DnDSubLevelController {
   late final DnDSubLevelUseCase subLevelUseCase;
@@ -56,6 +58,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
         drop.column == data.columnPosition && drop.row == data.rowPosition;
 
     if (accepted) {
+      StrawberryAudio.playAudioCorrect();
       //busca la posicion del grid donde se soltó el item
       int posDropped = itemsDropped.indexWhere(
         (element) =>
@@ -72,6 +75,8 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
         (element) => element.id == data.id,
       );
     } else {
+      StrawberryVibration.vibrate();
+      StrawberryAudio.playAudioWrong();
       _breakHeart();
     }
     update();
