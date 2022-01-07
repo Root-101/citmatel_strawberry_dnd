@@ -1,10 +1,7 @@
 import 'dart:math';
-import 'dart:ui';
-
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:dotted_border/dotted_border.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animator/flutter_animator.dart'
     hide FadeInAnimation, FadeIn;
@@ -30,20 +27,18 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: GetBuilder<DnDSubLevelController>(
-          builder: (_) {
-            return Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                _buildListOfHearts(),
-                _buildDroppedItems(),
-                _buildDraggableItemList(),
-              ],
-            );
-          },
-        ),
+    return SafeArea(
+      child: GetBuilder<DnDSubLevelController>(
+        builder: (_) {
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              _buildListOfHearts(),
+              _buildDroppedItems(),
+              _buildDraggableItemList(),
+            ],
+          );
+        },
       ),
     );
   }
