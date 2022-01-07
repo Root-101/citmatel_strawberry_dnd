@@ -28,7 +28,7 @@ class _DnDSubLevelBackgroundState extends State<DnDSubLevelBackground> {
       decoration: BoxDecoration(
         color: Colors.transparent, //pa si por si acaso
         image: DecorationImage(
-          image: AssetImage("assets/icons/dnd_wallpaper.jpg"),
+          image: AssetImage(DnDAssets.WALLPAPER),
           fit: BoxFit.cover,
         ),
       ),
