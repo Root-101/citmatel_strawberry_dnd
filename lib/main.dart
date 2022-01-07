@@ -1,4 +1,5 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
+import 'package:citmatel_strawberry_tools/tools_exporter.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -24,12 +25,22 @@ class MyApp extends StatelessWidget {
         GetPage(
           name: DnDLevelsScreen.ROUTE_NAME,
           page: () =>
-          //entrada directo al nivel 1
-          /*DnDSubLevelScreen(
+              //entrada directo al nivel 1
+              /*DnDSubLevelScreen(
                   subLevelDomain: DnDLevel1.level1.sublevel[0]),*/
-          //entrada a el grid de seleccion de niveles
-          DnDLevelsScreen(),
+              //entrada a el grid de seleccion de niveles
+              DnDLevelsScreen(),
           transition: Transition.rightToLeft,
+        ),
+        GetPage(
+          name: StrawberryLevelWin.ROUTE_NAME,
+          page: () => StrawberryLevelWin(),
+          transition: Transition.circularReveal,
+        ),
+        GetPage(
+          name: StrawberryLevelLose.ROUTE_NAME,
+          page: () => StrawberryLevelLose(),
+          transition: Transition.leftToRightWithFade,
         ),
       ],
       /*unknownRoute: GetPage(
