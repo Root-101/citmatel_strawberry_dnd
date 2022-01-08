@@ -105,7 +105,8 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
     Get.offNamed(StrawberryLevelLose.ROUTE_NAME);
   }
 
-  void _winLevel() {
+  void _winLevel() async {
+    await Future.delayed(Duration(seconds: 3));
     Get.offNamed(StrawberryLevelWin.ROUTE_NAME);
   }
 
