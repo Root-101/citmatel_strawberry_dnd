@@ -1,4 +1,5 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
+import 'package:confetti/confetti.dart';
 import 'package:get/get.dart';
 
 abstract class DnDSubLevelController extends GetxController {
@@ -15,6 +16,8 @@ abstract class DnDSubLevelController extends GetxController {
   int get rows;
 
   bool shouldShake();
+
+  ConfettiController confettiController();
 
   List<DnDSubLevelItemDomain> get itemsToDrag;
 
