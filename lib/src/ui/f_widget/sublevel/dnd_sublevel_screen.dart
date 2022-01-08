@@ -35,7 +35,11 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
             children: [
               _buildListOfHearts(),
               _buildDroppedItems(),
-              _buildDraggableItemList(),
+              controller.shouldShake()
+                  ? Shake(
+                      child: _buildDraggableItemList(),
+                    )
+                  : _buildDraggableItemList(),
             ],
           );
         },
