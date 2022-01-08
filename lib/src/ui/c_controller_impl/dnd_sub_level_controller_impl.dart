@@ -1,16 +1,20 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:citmatel_strawberry_tools/tools_exporter.dart';
+import 'package:confetti/confetti.dart';
 import 'package:get/get.dart';
 
 class DnDSubLevelControllerImpl extends DnDSubLevelController {
   late final DnDSubLevelUseCase subLevelUseCase;
   int remainingLives = 0;
-  bool _shouldShake = false;
 
   late final List<DnDSubLevelItemDomain> itemsToDrag;
 
   late final List<DropTargetItemDomain> itemsDropped;
 
+  late final ConfettiController _confettiController;
+  ConfettiController confettiController() => _confettiController;
+
+  bool _shouldShake = false;
   bool shouldShake() => this._shouldShake;
 
   DnDSubLevelControllerImpl({
@@ -21,6 +25,9 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
     remainingLives = subLevelUseCase.lives();
     itemsToDrag = subLevelUseCase.subLevelDomain.items;
     itemsDropped = _initItemsDropped();
+    _confettiController = ConfettiController(
+      duration: const Duration(milliseconds: 50),
+    );
   }
 
   _initItemsDropped() {
@@ -65,6 +72,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
     if (accepted) {
       _shouldShake = false;
       StrawberryAudio.playAudioCorrect();
+      makeConffeti();
       //busca la posicion del grid donde se soltó el item
       int posDropped = itemsDropped.indexWhere(
         (element) =>
@@ -99,5 +107,10 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   void _winLevel() {
     Get.offNamed(StrawberryLevelWin.ROUTE_NAME);
+  }
+
+  void makeConffeti() {
+    _confettiController.play();
+    update();
   }
 }
