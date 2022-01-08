@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
+import 'package:confetti/confetti.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animator/flutter_animator.dart'
@@ -30,12 +31,24 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
     return SafeArea(
       child: GetBuilder<DnDSubLevelController>(
         builder: (_) {
-          return Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+          return Stack(
             children: [
-              _buildListOfHearts(),
-              _buildDroppedItems(),
-              _buildDraggableItemList(),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  _buildListOfHearts(),
+                  _buildDroppedItems(),
+                  controller.shouldShake()
+                      ? Shake(
+                          child: _buildDraggableItemList(),
+                        )
+                      : _buildDraggableItemList(),
+                ],
+              ),
+              Align(
+                alignment: Alignment.topCenter,
+                child: _buildConfetti(),
+              ),
             ],
           );
         },
@@ -250,6 +263,32 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
           fit: BoxFit.cover,
         ),
       ),
+    );
+  }
+
+  _buildConfetti() {
+    return ConfettiWidget(
+      confettiController: controller.confettiController(),
+      blastDirectionality: BlastDirectionality.explosive,
+      // Configure the drag force to apply to the confetti.
+      particleDrag: 0.05,
+      // The higher the value the higher the likelihood that particles will be emitted on a single frame.
+      emissionFrequency: 0.5,
+      // The number of particles to be emitted per emission.
+      numberOfParticles: 100,
+      // Change the speed at which the confetti falls.
+      gravity: 0.5,
+      // Size of the confetti.
+      minimumSize: Size(5, 5),
+      maximumSize: Size(10, 10),
+      shouldLoop: false,
+      colors: const [
+        Colors.green,
+        Colors.pink,
+        Colors.blue,
+        Colors.orange,
+        Colors.purple
+      ],
     );
   }
 }

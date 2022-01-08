@@ -35,6 +35,7 @@ dependencies:
   #Tools
   citmatel_strawberry_tools:
     path: ../citmatel_strawberry_tools
+  confetti: ^0.6.0
 
 dev_dependencies:
   flutter_test:
