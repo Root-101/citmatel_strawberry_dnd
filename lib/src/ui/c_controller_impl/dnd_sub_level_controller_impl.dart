@@ -5,10 +5,13 @@ import 'package:get/get.dart';
 class DnDSubLevelControllerImpl extends DnDSubLevelController {
   late final DnDSubLevelUseCase subLevelUseCase;
   int remainingLives = 0;
+  bool _shouldShake = false;
 
   late final List<DnDSubLevelItemDomain> itemsToDrag;
 
   late final List<DropTargetItemDomain> itemsDropped;
+
+  bool shouldShake() => this._shouldShake;
 
   DnDSubLevelControllerImpl({
     required DnDSubLevelDomain subLevelDomain,
@@ -50,6 +53,8 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   }
 
   bool onWillAccept(DropTargetItemDomain drop) {
+    _shouldShake = false;
+    update();
     return drop.accepting;
   }
 
@@ -58,6 +63,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
         drop.column == data.columnPosition && drop.row == data.rowPosition;
 
     if (accepted) {
+      _shouldShake = false;
       StrawberryAudio.playAudioCorrect();
       //busca la posicion del grid donde se soltó el item
       int posDropped = itemsDropped.indexWhere(
@@ -79,6 +85,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
         _winLevel();
       }
     } else {
+      _shouldShake = true;
       StrawberryVibration.vibrate();
       StrawberryAudio.playAudioWrong();
       _breakHeart();

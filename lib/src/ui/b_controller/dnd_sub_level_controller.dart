@@ -14,6 +14,8 @@ abstract class DnDSubLevelController extends GetxController {
 
   int get rows;
 
+  bool shouldShake();
+
   List<DnDSubLevelItemDomain> get itemsToDrag;
 
   List<DropTargetItemDomain> get itemsDropped;
