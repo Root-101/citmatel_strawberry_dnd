@@ -1,7 +1,6 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:citmatel_strawberry_tools/tools_exporter.dart';
 import 'package:confetti/confetti.dart';
-import 'package:get/get.dart';
 
 class DnDSubLevelControllerImpl extends DnDSubLevelController {
   late final DnDSubLevelUseCase subLevelUseCase;
@@ -55,7 +54,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   void _breakHeart() {
     remainingLives--;
     if (remainingLives <= 0) {
-      _looseLevel();
+      StrawberryFunction.looseLevel();
     }
   }
 
@@ -90,7 +89,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
       );
 
       if (itemsToDrag.isEmpty) {
-        _winLevel();
+        StrawberryFunction.winLevel();
       }
     } else {
       _shouldShake = true;
@@ -99,15 +98,6 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
       _breakHeart();
     }
     update();
-  }
-
-  void _looseLevel() {
-    Get.offNamed(StrawberryLevelLose.ROUTE_NAME);
-  }
-
-  void _winLevel() async {
-    await Future.delayed(Duration(seconds: 3));
-    Get.offNamed(StrawberryLevelWin.ROUTE_NAME);
   }
 
   void makeConffeti() {
