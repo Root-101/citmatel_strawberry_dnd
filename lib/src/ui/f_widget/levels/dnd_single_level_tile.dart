@@ -1,6 +1,6 @@
 import 'package:animations/animations.dart';
-import 'package:flutter/material.dart';
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
+import 'package:flutter/material.dart';
 
 class DnDSingleLevelTile extends StatelessWidget {
   final DnDSubLevelDomain subLevelDomain;
@@ -32,6 +32,6 @@ class DnDSingleLevelTile extends StatelessWidget {
 
   //Screen grande para cuando se entra al subnivel, pantalla de cargando para el sub nivel
   _buildOpen() {
-    return DnDSubLevelBackground(subLevelDomain: subLevelDomain);
+    return DnDSubLevelLoading(subLevelDomain: subLevelDomain);
   }
 }
