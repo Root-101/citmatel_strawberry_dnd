@@ -10,10 +10,10 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   late final List<DropTargetItemDomain> itemsDropped;
 
-  late final ConfettiController _confettiController;
-  ConfettiController confettiController() => _confettiController;
+  late final ConfettiController confettiController;
 
   bool _shouldShake = false;
+
   bool shouldShake() => this._shouldShake;
 
   DnDSubLevelControllerImpl({
@@ -22,9 +22,9 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
           subLevelDomain: subLevelDomain,
         ) {
     remainingLives = subLevelUseCase.lives();
-    itemsToDrag = subLevelUseCase.subLevelDomain.items;
+    itemsToDrag = subLevelUseCase.items();
     itemsDropped = _initItemsDropped();
-    _confettiController = ConfettiController(
+    confettiController = ConfettiController(
       duration: const Duration(milliseconds: 50),
     );
   }
@@ -40,16 +40,16 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   }
 
   @override
-  int get lives => subLevelUseCase.subLevelDomain.lives;
+  int get lives => subLevelUseCase.lives();
 
   @override
-  String get imageUrl => subLevelUseCase.subLevelDomain.urlImage;
+  String get imageUrl => subLevelUseCase.urlImage;
 
   @override
-  int get columns => subLevelUseCase.subLevelDomain.columns;
+  int get columns => subLevelUseCase.columns;
 
   @override
-  int get rows => subLevelUseCase.subLevelDomain.rows;
+  int get rows => subLevelUseCase.rows;
 
   void _breakHeart() {
     remainingLives--;
@@ -101,7 +101,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   }
 
   void makeConffeti() {
-    _confettiController.play();
+    confettiController.play();
     update();
   }
 }

@@ -69,7 +69,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
               Align(
                 alignment: Alignment.topCenter,
                 child: StrawberryConfettiWidget(
-                  confettiController: _controller.confettiController(),
+                  confettiController: _controller.confettiController,
                 ),
               ),
             ],
