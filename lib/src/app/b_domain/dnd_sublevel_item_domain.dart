@@ -14,4 +14,14 @@ class DnDSubLevelItemDomain extends BasicDomainObject {
     required this.columnPosition,
     this.hint = "",
   });
+
+  DnDSubLevelItemDomain clone() {
+    return DnDSubLevelItemDomain(
+      id: this.id,
+      urlImage: this.urlImage,
+      rowPosition: this.rowPosition,
+      columnPosition: this.columnPosition,
+      hint: this.hint,
+    );
+  }
 }
