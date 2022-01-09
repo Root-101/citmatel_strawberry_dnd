@@ -88,9 +88,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
         (element) => element.id == data.id,
       );
 
-      if (itemsToDrag.isEmpty) {
-        StrawberryFunction.winLevel();
-      }
+      _doWinLevel();
     } else {
       _shouldShake = true;
       StrawberryVibration.vibrate();
@@ -102,5 +100,12 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   void _makeConffeti() {
     confettiController.play();
+  }
+
+  ///si se gano el nivel ve para otra pantalla, sino no hace nada
+  void _doWinLevel() {
+    if (itemsToDrag.isEmpty) {
+      StrawberryFunction.winLevel();
+    }
   }
 }
