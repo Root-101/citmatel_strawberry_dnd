@@ -58,8 +58,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   }
 
   void onAccept(DropTargetItemDomain drop, DnDSubLevelItemDomain data) {
-    bool accepted =
-        drop.column == data.columnPosition && drop.row == data.rowPosition;
+    bool accepted = data.possiblesPositions.contains(drop.position);
 
     if (accepted) {
       _shouldShake = false;
@@ -67,9 +66,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
       _makeConffeti();
       //busca la posicion del grid donde se soltó el item
       int posDropped = itemsDropped.indexWhere(
-        (element) =>
-            element.column == data.columnPosition &&
-            element.row == data.rowPosition,
+        (element) => element.position == drop.position,
       );
       //sutituye el viejo por el item soltado
       itemsDropped[posDropped].item = data; //se le pone el data que se arrastro
