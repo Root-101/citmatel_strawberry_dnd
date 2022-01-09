@@ -71,7 +71,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
     if (accepted) {
       _shouldShake = false;
       StrawberryAudio.playAudioCorrect();
-      makeConffeti();
+      _makeConffeti();
       //busca la posicion del grid donde se soltó el item
       int posDropped = itemsDropped.indexWhere(
         (element) =>
@@ -100,8 +100,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
     update();
   }
 
-  void makeConffeti() {
+  void _makeConffeti() {
     confettiController.play();
-    update();
   }
 }
