@@ -14,18 +14,37 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 
 // ignore: must_be_immutable
-class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
+class DnDSubLevelScreen extends StatefulWidget {
   static const ROUTE_NAME = "/dnd-sublevel-screen";
 
   DnDSubLevelScreen({
     required DnDSubLevelDomain subLevelDomain,
   }) : super() {
-    Get.delete<DnDSubLevelController>();
     Get.put<DnDSubLevelController>(
       DnDSubLevelControllerImpl(
         subLevelDomain: subLevelDomain,
       ),
     );
+  }
+
+  @override
+  State<DnDSubLevelScreen> createState() => _DnDSubLevelScreenState();
+}
+
+class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
+  late final DnDSubLevelController _controller;
+
+  @override
+  void initState() {
+    _controller = Get.find();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    Get.delete<DnDSubLevelController>();
+    super.dispose();
   }
 
   @override
@@ -40,7 +59,7 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
                 children: [
                   _buildListOfHearts(),
                   _buildDroppedItems(),
-                  controller.shouldShake()
+                  _controller.shouldShake()
                       ? Shake(
                           child: _buildDraggableItemList(),
                         )
@@ -50,7 +69,7 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
               Align(
                 alignment: Alignment.topCenter,
                 child: StrawberryConfettiWidget(
-                  confettiController: controller.confettiController(),
+                  confettiController: _controller.confettiController(),
                 ),
               ),
             ],
@@ -61,7 +80,7 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
   }
 
   _buildListOfHearts() {
-    int countOfColumns = controller.lives;
+    int countOfColumns = _controller.lives;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12),
       child: _animatedGridView(
@@ -69,7 +88,7 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
         List.generate(
           countOfColumns,
           (int index) {
-            return index < controller.lives - controller.remainingLives
+            return index < _controller.lives - _controller.remainingLives
                 ? Swing(
                     child: Icon(
                       FontAwesomeIcons.heartBroken,
@@ -137,7 +156,7 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
               height: MediaQuery.of(Get.context!).size.width - 2 * padding,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(controller.imageUrl),
+                  image: AssetImage(_controller.imageUrl),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -150,9 +169,9 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
   }
 
   _buildDragTargetGridView() {
-    int columns = controller.columns;
+    int columns = _controller.columns;
 
-    List<DropTargetItemDomain> items = controller.itemsDropped;
+    List<DropTargetItemDomain> items = _controller.itemsDropped;
     return _animatedGridView(
       columns,
       List.generate(
@@ -167,14 +186,14 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
           );
         },
       ),
-      aspectRatio: controller.rows / columns,
+      aspectRatio: _controller.rows / columns,
     );
   }
 
   _buildSingleDragTarget(DropTargetItemDomain drop) {
     return DragTarget<DnDSubLevelItemDomain>(
-      onWillAccept: (_) => controller.onWillAccept(drop),
-      onAccept: (data) => controller.onAccept(drop, data),
+      onWillAccept: (_) => _controller.onWillAccept(drop),
+      onAccept: (data) => _controller.onAccept(drop, data),
       builder: (context, acceptedItems, rejectedItems) => DottedBorder(
         color: Colors.white38,
         dashPattern: const <double>[3, 5],
@@ -197,7 +216,7 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
   _buildDraggableItemList() {
     double defaultH = MediaQuery.of(Get.context!).size.height / 8;
     double defaultW = defaultH;
-    int initialPage = max((controller.itemsToDrag.length / 2).round() - 1, 0);
+    int initialPage = max((_controller.itemsToDrag.length / 2).round() - 1, 0);
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: CarouselSlider(
@@ -208,7 +227,7 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
           enableInfiniteScroll: false,
           enlargeCenterPage: true,
         ),
-        items: controller.itemsToDrag
+        items: _controller.itemsToDrag
             .map(
               (item) => ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(20)),
