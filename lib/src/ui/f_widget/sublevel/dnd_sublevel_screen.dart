@@ -20,6 +20,7 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
   DnDSubLevelScreen({
     required DnDSubLevelDomain subLevelDomain,
   }) : super() {
+    Get.delete<DnDSubLevelController>();
     Get.put<DnDSubLevelController>(
       DnDSubLevelControllerImpl(
         subLevelDomain: subLevelDomain,
