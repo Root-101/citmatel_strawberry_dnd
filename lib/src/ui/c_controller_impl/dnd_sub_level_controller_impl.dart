@@ -102,6 +102,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   ///separado en metodos el _doLooseLevel y el _doWinLevel para estandarizar su uso
   ///si se pierde el nivel va para la pantalla de looser, sino no hace nada
+  ///se pierde el nivel cuando las vidas llegan a 0
   void _doLooseLevel() {
     if (remainingLives <= 0) {
       StrawberryFunction.looseLevel();
@@ -109,6 +110,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   }
 
   ///si se gano el nivel ve para otra pantalla de winner, sino no hace nada
+  ///se gana el nivel cuando no quedan mas elementos para arrastrar
   void _doWinLevel() {
     if (itemsToDrag.isEmpty) {
       StrawberryFunction.winLevel();
