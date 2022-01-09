@@ -1,6 +1,6 @@
 import 'package:clean_core/clean_core.dart';
 
-class DnDSubLevelItemDomain extends BasicDomainObject {
+class DnDSubLevelItemDomain extends BasicDomainObject<DnDSubLevelItemDomain> {
   int id;
   final String urlImage;
   final int rowPosition;
@@ -15,6 +15,7 @@ class DnDSubLevelItemDomain extends BasicDomainObject {
     this.hint = "",
   });
 
+  @override
   DnDSubLevelItemDomain clone() {
     return DnDSubLevelItemDomain(
       id: this.id,

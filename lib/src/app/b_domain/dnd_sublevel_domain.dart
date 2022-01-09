@@ -1,7 +1,7 @@
 import 'package:citmatel_strawberry_dnd/src/app/dnd_app_exporter.dart';
 import 'package:clean_core/clean_core.dart';
 
-class DnDSubLevelDomain extends BasicDomainObject {
+class DnDSubLevelDomain extends BasicDomainObject<DnDSubLevelDomain> {
   int id;
   final String urlImage;
   final int rows;
@@ -29,5 +29,17 @@ class DnDSubLevelDomain extends BasicDomainObject {
         throw "$element va en una column fuera de la cantidad maxima o minima";
       }
     });
+  }
+
+  @override
+  DnDSubLevelDomain clone() {
+    return DnDSubLevelDomain(
+      id: this.id,
+      urlImage: this.urlImage,
+      rows: this.rows,
+      columns: this.columns,
+      items: this.items.map((e) => e.clone()).toList(),
+      lives: this.lives,
+    );
   }
 }
