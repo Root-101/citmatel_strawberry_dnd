@@ -59,7 +59,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
                 children: [
                   _buildListOfHearts(),
                   _buildDroppedItems(),
-                  _controller.shouldShake()
+                  _controller.shouldShake
                       ? Shake(
                           child: _buildDraggableItemList(),
                         )

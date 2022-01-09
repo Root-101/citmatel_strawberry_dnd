@@ -12,9 +12,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   late final ConfettiController confettiController;
 
-  bool _shouldShake = false;
-
-  bool shouldShake() => this._shouldShake;
+  bool shouldShake = false;
 
   DnDSubLevelControllerImpl({
     required DnDSubLevelDomain subLevelDomain,
@@ -52,8 +50,6 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   int get rows => subLevelUseCase.rows;
 
   bool onWillAccept(DropTargetItemDomain drop) {
-    _shouldShake = false;
-    update();
     return drop.accepting;
   }
 
@@ -61,7 +57,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
     bool accepted = data.possiblesPositions.contains(drop.position);
 
     if (accepted) {
-      _shouldShake = false;
+      shouldShake = false;
       StrawberryAudio.playAudioCorrect();
       _makeConffeti();
       //busca la posicion del grid donde se soltó el item
@@ -80,7 +76,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
       _doWinLevel();
     } else {
-      _shouldShake = true;
+      shouldShake = true;
       StrawberryVibration.vibrate();
       StrawberryAudio.playAudioWrong();
       _breakHeart();
