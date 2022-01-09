@@ -1,4 +1,5 @@
 import 'dart:math';
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:citmatel_strawberry_tools/tools_exporter.dart';
@@ -197,7 +198,7 @@ class DnDSubLevelScreen extends GetView<DnDSubLevelController> {
     double defaultW = defaultH;
     int initialPage = max((controller.itemsToDrag.length / 2).round() - 1, 0);
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: CarouselSlider(
         options: CarouselOptions(
           height: defaultH,
