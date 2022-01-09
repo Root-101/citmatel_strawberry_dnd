@@ -15,7 +15,7 @@ abstract class DnDSubLevelController extends GetxController {
 
   int get rows;
 
-  bool shouldShake();
+  bool get shouldShake;
 
   ConfettiController get confettiController;
 

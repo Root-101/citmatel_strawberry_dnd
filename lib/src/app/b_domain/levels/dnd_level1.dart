@@ -12,19 +12,33 @@ class DnDLevel1 {
         rows: 5,
         columns: 5,
         items: [
-          DnDSubLevelItemDomain(
+          DnDSubLevelItemDomain.singlePosition(
             id: 1,
             urlImage: DnDAssets.DEER,
             rowPosition: 2,
             columnPosition: 2,
           ),
           DnDSubLevelItemDomain(
-            id: 2,
-            urlImage: DnDAssets.MONKEY,
-            rowPosition: 1,
-            columnPosition: 0,
-          ),
-          DnDSubLevelItemDomain(
+              id: 2,
+              urlImage: DnDAssets.MONKEY,
+              possiblesPositions: [
+                DnDPositionDomain(
+                  id: 1,
+                  row: 0,
+                  column: 0,
+                ),
+                DnDPositionDomain(
+                  id: 2,
+                  row: 1,
+                  column: 0,
+                ),
+                DnDPositionDomain(
+                  id: 3,
+                  row: 1,
+                  column: 1,
+                ),
+              ]),
+          DnDSubLevelItemDomain.singlePosition(
             id: 3,
             urlImage: DnDAssets.FROG,
             rowPosition: 3,
@@ -33,10 +47,35 @@ class DnDLevel1 {
           DnDSubLevelItemDomain(
             id: 4,
             urlImage: DnDAssets.BIRD,
-            rowPosition: 0,
-            columnPosition: 4,
+            possiblesPositions: [
+              DnDPositionDomain(
+                id: 1,
+                row: 0,
+                column: 0,
+              ),
+              DnDPositionDomain(
+                id: 2,
+                row: 0,
+                column: 1,
+              ),
+              DnDPositionDomain(
+                id: 3,
+                row: 0,
+                column: 2,
+              ),
+              DnDPositionDomain(
+                id: 4,
+                row: 0,
+                column: 3,
+              ),
+              DnDPositionDomain(
+                id: 5,
+                row: 0,
+                column: 4,
+              ),
+            ],
           ),
-          DnDSubLevelItemDomain(
+          DnDSubLevelItemDomain.singlePosition(
             id: 5,
             urlImage: DnDAssets.FLOWER,
             rowPosition: 4,

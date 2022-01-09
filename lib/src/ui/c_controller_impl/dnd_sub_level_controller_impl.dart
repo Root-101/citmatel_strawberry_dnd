@@ -12,9 +12,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   late final ConfettiController confettiController;
 
-  bool _shouldShake = false;
-
-  bool shouldShake() => this._shouldShake;
+  bool shouldShake = false;
 
   DnDSubLevelControllerImpl({
     required DnDSubLevelDomain subLevelDomain,
@@ -52,24 +50,19 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   int get rows => subLevelUseCase.rows;
 
   bool onWillAccept(DropTargetItemDomain drop) {
-    _shouldShake = false;
-    update();
     return drop.accepting;
   }
 
   void onAccept(DropTargetItemDomain drop, DnDSubLevelItemDomain data) {
-    bool accepted =
-        drop.column == data.columnPosition && drop.row == data.rowPosition;
+    bool accepted = data.possiblesPositions.contains(drop.position);
 
     if (accepted) {
-      _shouldShake = false;
+      shouldShake = false;
       StrawberryAudio.playAudioCorrect();
       _makeConffeti();
       //busca la posicion del grid donde se soltó el item
       int posDropped = itemsDropped.indexWhere(
-        (element) =>
-            element.column == data.columnPosition &&
-            element.row == data.rowPosition,
+        (element) => element.position == drop.position,
       );
       //sutituye el viejo por el item soltado
       itemsDropped[posDropped].item = data; //se le pone el data que se arrastro
@@ -83,7 +76,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
       _doWinLevel();
     } else {
-      _shouldShake = true;
+      shouldShake = true;
       StrawberryVibration.vibrate();
       StrawberryAudio.playAudioWrong();
       _breakHeart();
