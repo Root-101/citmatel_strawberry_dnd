@@ -17,7 +17,7 @@ abstract class DnDSubLevelController extends GetxController {
 
   bool shouldShake();
 
-  ConfettiController confettiController();
+  ConfettiController get confettiController;
 
   List<DnDSubLevelItemDomain> get itemsToDrag;
 
