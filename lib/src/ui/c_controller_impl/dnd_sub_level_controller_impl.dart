@@ -51,13 +51,6 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   @override
   int get rows => subLevelUseCase.rows;
 
-  void _breakHeart() {
-    remainingLives--;
-    if (remainingLives <= 0) {
-      StrawberryFunction.looseLevel();
-    }
-  }
-
   bool onWillAccept(DropTargetItemDomain drop) {
     _shouldShake = false;
     update();
@@ -102,7 +95,20 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
     confettiController.play();
   }
 
-  ///si se gano el nivel ve para otra pantalla, sino no hace nada
+  void _breakHeart() {
+    remainingLives--;
+    _doLooseLevel();
+  }
+
+  ///separado en metodos el _doLooseLevel y el _doWinLevel para estandarizar su uso
+  ///si se pierde el nivel va para la pantalla de looser, sino no hace nada
+  void _doLooseLevel() {
+    if (remainingLives <= 0) {
+      StrawberryFunction.looseLevel();
+    }
+  }
+
+  ///si se gano el nivel ve para otra pantalla de winner, sino no hace nada
   void _doWinLevel() {
     if (itemsToDrag.isEmpty) {
       StrawberryFunction.winLevel();
