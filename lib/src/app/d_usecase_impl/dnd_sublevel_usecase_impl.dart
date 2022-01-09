@@ -4,14 +4,29 @@ class DnDSubLevelUseCaseImpl extends DnDSubLevelUseCase {
   ///domain almacenado para acceder a la info
   final DnDSubLevelDomain subLevelDomain;
 
+  List<DnDSubLevelItemDomain> items() {
+    List<DnDSubLevelItemDomain> items =
+        subLevelDomain.items.map((e) => e.clone()).toList();
+    items.shuffle();
+    return items;
+  }
+
   DnDSubLevelUseCaseImpl({required this.subLevelDomain});
 
   ///cantidad de vidas maximas del nivel
   ///no se usa como getter por si hay que ponerle logica despues con comodines que aumenten las vidas
-  /// si hay algun bono se le suma aqui a las vidad y ya
+  /// si hay algun bono se le suma aqui a las vidas y ya
   @override
   int lives() {
     return subLevelDomain.lives;
   }
 
+  @override
+  int get columns => subLevelDomain.columns;
+
+  @override
+  int get rows => subLevelDomain.rows;
+
+  @override
+  String get urlImage => subLevelDomain.urlImage;
 }
