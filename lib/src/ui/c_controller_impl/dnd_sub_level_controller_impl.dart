@@ -50,6 +50,8 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   int get rows => subLevelUseCase.rows;
 
   bool onWillAccept(DropTargetItemDomain drop) {
+    shouldShake = false;
+    update();
     return drop.accepting;
   }
 
