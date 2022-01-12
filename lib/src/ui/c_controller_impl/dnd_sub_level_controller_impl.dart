@@ -98,7 +98,13 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   ///se pierde el nivel cuando las vidas llegan a 0
   void _doLooseLevel() {
     if (remainingLives <= 0) {
-      StrawberryFunction.looseLevel();
+      StrawberryFunction.looseLevel(
+        childFirstText: StrawberryAnimatedTextKit.rotateAnimatedText(texts: [
+          'Te has quedado sin vidas.',
+          'Inténtalo de nuevo.',
+          'El que persevera triunfa.',
+        ]),
+      );
     }
   }
 
