@@ -1,0 +1,69 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:7782641939549781418",
+      "lastPropertyId": "2:508750262797910372",
+      "name": "DnDLevelProgressEntity",
+      "properties": [
+        {
+          "id": "1:8514054994835219442",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:508750262797910372",
+          "name": "dndLevelId",
+          "type": 6
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:7471396029692214794",
+      "lastPropertyId": "4:490946847768597880",
+      "name": "DnDSubLevelProgressEntity",
+      "properties": [
+        {
+          "id": "1:5900396288343249655",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6186709881952854201",
+          "name": "dndSubLevelId",
+          "type": 6
+        },
+        {
+          "id": "3:4175071903962226278",
+          "name": "dndLevelProgressFKId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "1:1208825187005488828",
+          "relationTarget": "DnDLevelProgressEntity"
+        },
+        {
+          "id": "4:490946847768597880",
+          "name": "contPlayedTimes",
+          "type": 6
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "2:7471396029692214794",
+  "lastIndexId": "1:1208825187005488828",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
