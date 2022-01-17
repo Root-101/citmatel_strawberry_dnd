@@ -24,6 +24,7 @@ class DnDSubLevelProgressConverter extends DefaultGeneralConverter<
       dndSubLevelId: entity.dndSubLevelId,
       dndLevelProgressDomainId: entity.dndLevelProgressFK.targetId,
       contPlayedTimes: entity.contPlayedTimes,
+      stars: entity.stars,
     );
   }
 
@@ -34,6 +35,7 @@ class DnDSubLevelProgressConverter extends DefaultGeneralConverter<
       dndSubLevelId: domain.dndSubLevelId,
       dndLevelProgressEntityId: domain.dndLevelProgressDomainId,
       contPlayedTimes: domain.contPlayedTimes,
+      stars: domain.stars,
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:clean_core/clean_core.dart';
 import 'package:objectbox/objectbox.dart';
 
@@ -6,6 +7,7 @@ class DnDLevelProgressEntity extends BasicEntityObject {
   @Id()
   int id;
 
+  //@Unique(onConflict: ConflictStrategy.replace)
   final int dndLevelId;
 
   @Backlink()
@@ -38,11 +40,14 @@ class DnDSubLevelProgressEntity extends BasicEntityObject {
 
   int contPlayedTimes;
 
+  int stars;
+
   //default construct, DON'T REMOVE
   DnDSubLevelProgressEntity({
     required this.dndSubLevelId,
     this.id = 0,
     this.contPlayedTimes = 0,
+    this.stars = 0,
   });
 
   //the one to use
@@ -51,6 +56,7 @@ class DnDSubLevelProgressEntity extends BasicEntityObject {
     required int dndLevelProgressEntityId,
     this.id = 0,
     this.contPlayedTimes = 0,
+    this.stars = 0,
   }) {
     this.dndLevelProgressFK.targetId = dndLevelProgressEntityId;
   }
