@@ -9,16 +9,22 @@ class DnDLevelProgressEntity extends BasicEntityObject {
   final int dndLevelId;
 
   @Backlink()
-  final ToMany<DnDSubLevelProgressEntity> dndSubLevelProgress;
+  final dndSubLevelProgress = ToMany<DnDSubLevelProgressEntity>();
 
   //default construct, DON'T REMOVE
   DnDLevelProgressEntity({
     required this.dndLevelId,
+    this.id = 0,
+  });
+
+  //the one to use
+  DnDLevelProgressEntity.build({
+    required this.dndLevelId,
     required List<DnDSubLevelProgressEntity> subLevelsProgress,
     this.id = 0,
-  }) : dndSubLevelProgress = ToMany<DnDSubLevelProgressEntity>(
-          items: subLevelsProgress,
-        );
+  }) {
+    dndSubLevelProgress.addAll(subLevelsProgress);
+  }
 }
 
 @Entity() //flutter pub run build_runner build
@@ -28,15 +34,24 @@ class DnDSubLevelProgressEntity extends BasicEntityObject {
 
   int dndSubLevelId;
 
-  final ToOne<DnDLevelProgressEntity> dndLevelProgressFK;
+  final dndLevelProgressFK = ToOne<DnDLevelProgressEntity>();
 
   int contPlayedTimes;
 
+  //default construct, DON'T REMOVE
   DnDSubLevelProgressEntity({
+    required this.dndSubLevelId,
+    this.id = 0,
+    this.contPlayedTimes = 0,
+  });
+
+  //the one to use
+  DnDSubLevelProgressEntity.build({
     required this.dndSubLevelId,
     required int dndLevelProgressEntityId,
     this.id = 0,
     this.contPlayedTimes = 0,
-  }) : this.dndLevelProgressFK =
-            ToOne<DnDLevelProgressEntity>(targetId: dndLevelProgressEntityId);
+  }) {
+    this.dndLevelProgressFK.targetId = dndLevelProgressEntityId;
+  }
 }

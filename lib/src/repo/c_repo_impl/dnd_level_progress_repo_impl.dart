@@ -30,7 +30,7 @@ class DnDLevelProgressConverter extends DefaultGeneralConverter<
 
   @override
   DnDLevelProgressEntity toEntity(DnDLevelProgressDomain domain) {
-    return DnDLevelProgressEntity(
+    return DnDLevelProgressEntity.build(
       id: domain.id,
       dndLevelId: domain.dndLevelId,
       subLevelsProgress: DnDSubLevelProgressConverter.converter.toEntityAll(
