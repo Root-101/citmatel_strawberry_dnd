@@ -1,7 +1,7 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:clean_core/clean_core.dart';
 
-abstract class DnDSubLevelProgressUseCaseImpl
+class DnDSubLevelProgressUseCaseImpl
     extends DefaultCRUDUseCase<DnDSubLevelProgressDomain>
     implements DnDSubLevelProgressUseCase {
   late DnDSubLevelProgressRepo _repo;
