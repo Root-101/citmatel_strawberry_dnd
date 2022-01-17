@@ -41,7 +41,7 @@ final _entities = <ModelEntity>[
   ModelEntity(
       id: const IdUid(2, 7471396029692214794),
       name: 'DnDSubLevelProgressEntity',
-      lastPropertyId: const IdUid(4, 490946847768597880),
+      lastPropertyId: const IdUid(5, 3691528672181410001),
       flags: 0,
       properties: <ModelProperty>[
         ModelProperty(
@@ -64,6 +64,11 @@ final _entities = <ModelEntity>[
         ModelProperty(
             id: const IdUid(4, 490946847768597880),
             name: 'contPlayedTimes',
+            type: 6,
+            flags: 0),
+        ModelProperty(
+            id: const IdUid(5, 3691528672181410001),
+            name: 'stars',
             type: 6,
             flags: 0)
       ],
@@ -154,11 +159,12 @@ ModelDefinition getObjectBoxModel() {
           object.id = id;
         },
         objectToFB: (DnDSubLevelProgressEntity object, fb.Builder fbb) {
-          fbb.startTable(5);
+          fbb.startTable(6);
           fbb.addInt64(0, object.id);
           fbb.addInt64(1, object.dndSubLevelId);
           fbb.addInt64(2, object.dndLevelProgressFK.targetId);
           fbb.addInt64(3, object.contPlayedTimes);
+          fbb.addInt64(4, object.stars);
           fbb.finish(fbb.endTable());
           return object.id;
         },
@@ -171,7 +177,9 @@ ModelDefinition getObjectBoxModel() {
                   const fb.Int64Reader().vTableGet(buffer, rootOffset, 6, 0),
               id: const fb.Int64Reader().vTableGet(buffer, rootOffset, 4, 0),
               contPlayedTimes:
-                  const fb.Int64Reader().vTableGet(buffer, rootOffset, 10, 0));
+                  const fb.Int64Reader().vTableGet(buffer, rootOffset, 10, 0),
+              stars:
+                  const fb.Int64Reader().vTableGet(buffer, rootOffset, 12, 0));
           object.dndLevelProgressFK.targetId =
               const fb.Int64Reader().vTableGet(buffer, rootOffset, 8, 0);
           object.dndLevelProgressFK.attach(store);
@@ -212,4 +220,8 @@ class DnDSubLevelProgressEntity_ {
   static final contPlayedTimes =
       QueryIntegerProperty<DnDSubLevelProgressEntity>(
           _entities[1].properties[3]);
+
+  /// see [DnDSubLevelProgressEntity.stars]
+  static final stars = QueryIntegerProperty<DnDSubLevelProgressEntity>(
+      _entities[1].properties[4]);
 }

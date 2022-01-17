@@ -24,7 +24,7 @@
     },
     {
       "id": "2:7471396029692214794",
-      "lastPropertyId": "4:490946847768597880",
+      "lastPropertyId": "5:3691528672181410001",
       "name": "DnDSubLevelProgressEntity",
       "properties": [
         {
@@ -49,6 +49,11 @@
         {
           "id": "4:490946847768597880",
           "name": "contPlayedTimes",
+          "type": 6
+        },
+        {
+          "id": "5:3691528672181410001",
+          "name": "stars",
           "type": 6
         }
       ],
