@@ -1,21 +1,22 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
-import 'package:get/get.dart';
-import 'package:objectbox/objectbox.dart';
 
 class DnDRepoModule {
   static late final Store
       STORE; //todo: posible null pointer, llamar primero al constructor
 
-  static Future<Store> init() async {
-    Store store = await openStore().then((value) {
+  static late final DnDLevelProgressRepo levelProgressRepo;
+  static late final DnDSubLevelProgressRepo subLevelProgressRepo;
+
+  static Future<bool> init() async {
+    await openStore().then((value) {
       STORE = value;
 
-      Get.put<DnDLevelProgressRepo>(DnDLevelProgressRepoImpl());
-      Get.put<DnDSubLevelProgressRepo>(DnDSubLevelProgressRepoImpl());
+      levelProgressRepo = DnDLevelProgressRepoImpl();
+      subLevelProgressRepo = DnDSubLevelProgressRepoImpl();
 
       return value;
     });
-    return store;
+    return true;
   }
 
   static void dispose() {
