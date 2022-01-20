@@ -4,16 +4,24 @@ import 'package:flutter/material.dart';
 
 class DnDSubLevelLoading extends StatelessWidget {
   final DnDSubLevelDomain subLevelDomain;
+  final DnDSubLevelProgressDomain subLevelProgressDomain;
 
-  DnDSubLevelLoading({required this.subLevelDomain, Key? key})
-      : super(key: key);
+  DnDSubLevelLoading({
+    required this.subLevelDomain,
+    required this.subLevelProgressDomain,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return PlainSubLevelLoading(
-        backgroundURL: DnDAssets.WALLPAPER,
-        loading: _loadingWidget(),
-        subLevel: DnDSubLevelScreen(subLevelDomain: subLevelDomain));
+      backgroundURL: DnDAssets.WALLPAPER,
+      loading: _loadingWidget(),
+      subLevel: DnDSubLevelScreen(
+        subLevelDomain: subLevelDomain,
+        subLevelProgressDomain: subLevelProgressDomain,
+      ),
+    );
   }
 
   _loadingWidget() {

@@ -30,7 +30,8 @@ class DnDSingleLevelTile extends StatelessWidget {
     return Container(
       child: Column(
         children: [
-          Text('level ${subLevelDomain.id}'),
+          Text('level id ${subLevelProgressDomain.dndLevelDomainId}'),
+          Text('sub level id ${subLevelProgressDomain.dndSubLevelDomainId}'),
           Text('start ${subLevelProgressDomain.stars}'),
           Text('played times ${subLevelProgressDomain.contPlayedTimes}'),
         ],
@@ -40,6 +41,9 @@ class DnDSingleLevelTile extends StatelessWidget {
 
   //Screen grande para cuando se entra al subnivel, pantalla de cargando para el sub nivel
   _buildOpen() {
-    return DnDSubLevelLoading(subLevelDomain: subLevelDomain);
+    return DnDSubLevelLoading(
+      subLevelDomain: subLevelDomain,
+      subLevelProgressDomain: subLevelProgressDomain,
+    );
   }
 }
