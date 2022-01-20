@@ -8,6 +8,8 @@ abstract class DnDSubLevelUseCase extends AbstractUseCase {
 
   int get rows;
 
+  int get stars;
+
   List<DnDSubLevelItemDomain> items();
 
   ///cantidad de vidas maximas del nivel

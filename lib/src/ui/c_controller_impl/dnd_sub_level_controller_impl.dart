@@ -16,8 +16,10 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   DnDSubLevelControllerImpl({
     required DnDSubLevelDomain subLevelDomain,
+    required DnDSubLevelProgressDomain subLevelProgressDomain,
   }) : subLevelUseCase = DnDSubLevelUseCaseImpl(
           subLevelDomain: subLevelDomain,
+          subLevelProgressDomain: subLevelProgressDomain,
         ) {
     remainingLives = subLevelUseCase.lives();
     itemsToDrag = subLevelUseCase.items();
@@ -48,6 +50,9 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   @override
   int get rows => subLevelUseCase.rows;
+
+  @override
+  int get stars => subLevelUseCase.stars;
 
   bool onWillAccept(DropTargetItemDomain drop) {
     shouldShake = false;
