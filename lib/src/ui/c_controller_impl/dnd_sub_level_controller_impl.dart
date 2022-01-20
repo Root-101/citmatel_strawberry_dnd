@@ -63,10 +63,13 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   void onAccept(DropTargetItemDomain drop, DnDSubLevelItemDomain data) {
     bool accepted = data.possiblesPositions.contains(drop.position);
 
+    //si lo acepta no vibra, si no lo acepta si vibra
+    shouldShake = !accepted;
     if (accepted) {
-      shouldShake = false;
+      //si es correcto reproduce audio y hace conffeti
       StrawberryAudio.playAudioCorrect();
       _makeConffeti();
+
       //busca la posicion del grid donde se soltó el item
       int posDropped = itemsDropped.indexWhere(
         (element) => element.position == drop.position,
@@ -81,9 +84,10 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
         (element) => element.id == data.id,
       );
 
+      //revisa si se gano el nivel
       _doWinLevel();
     } else {
-      shouldShake = true;
+      //si está mal vibra, reproduce audio de error y rompe un corazon
       StrawberryVibration.vibrate();
       StrawberryAudio.playAudioWrong();
       _breakHeart();
@@ -97,6 +101,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   void _breakHeart() {
     remainingLives--;
+    //revisa si se perdio por completo el nivel
     _doLooseLevel();
   }
 
@@ -112,6 +117,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
           'El que persevera triunfa.',
         ]),
       );
+      _doSaveProgress(0);
     }
   }
 
@@ -120,6 +126,11 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   void _doWinLevel() {
     if (itemsToDrag.isEmpty) {
       StrawberryFunction.winLevel();
+      _doSaveProgress(3);
     }
+  }
+
+  void _doSaveProgress(int stars) {
+    subLevelUseCase.saveProgress(stars);
   }
 }

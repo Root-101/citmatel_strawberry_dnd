@@ -1,4 +1,7 @@
+import 'dart:math';
+
 import 'package:citmatel_strawberry_dnd/src/app/dnd_app_exporter.dart';
+import 'package:get/get.dart';
 
 class DnDSubLevelUseCaseImpl extends DnDSubLevelUseCase {
   ///domain almacenado para acceder a la info
@@ -37,4 +40,20 @@ class DnDSubLevelUseCaseImpl extends DnDSubLevelUseCase {
 
   @override
   int get stars => subLevelProgressDomain.stars;
+
+  void saveProgress(int stars) {
+    //me quedo siempre con la mejor cantidad de estrellas
+    subLevelProgressDomain.stars = max(subLevelProgressDomain.stars, stars);
+
+    //aumento la cantidad de veces que se jugo el nivel
+    subLevelProgressDomain.contPlayedTimes =
+        subLevelProgressDomain.contPlayedTimes + 1;
+
+    //salvo el progreso
+    _executeProgressUpdate();
+  }
+
+  void _executeProgressUpdate() {
+    Get.find<DnDSubLevelProgressUseCase>().edit(subLevelProgressDomain);
+  }
 }
