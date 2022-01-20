@@ -5,6 +5,9 @@ import 'package:get/get.dart';
 abstract class DnDSubLevelController extends GetxController {
   static const String TAG = "dnd-sub-level-controller";
 
+  //la cantidad de estrellas va a estar entre [0,3] inclusive
+  static const int MAX_STARS = 3;
+
   int get lives;
 
   int get remainingLives;
@@ -18,6 +21,8 @@ abstract class DnDSubLevelController extends GetxController {
   int get stars;
 
   bool get shouldShake;
+
+  int generateProgress();
 
   ConfettiController get confettiController;
 

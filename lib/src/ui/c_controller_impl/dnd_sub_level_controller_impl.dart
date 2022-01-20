@@ -127,7 +127,21 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   void _doWinLevel() {
     if (itemsToDrag.isEmpty) {
       StrawberryFunction.winLevel();
-      _doSaveProgress(3);
+      _doSaveProgress(generateProgress());
+    }
+  }
+
+  int generateProgress() {
+    //TODO corregir a mejor logica
+    double progress = (remainingLives / lives) * 100;
+    if (progress >= 80) {
+      return DnDSubLevelController.MAX_STARS;
+    } else if (progress >= 60) {
+      return 2;
+    } else if (progress >= 20) {
+      return 1;
+    } else {
+      return 0;
     }
   }
 
