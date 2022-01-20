@@ -4,10 +4,33 @@ import 'package:clean_core/clean_core.dart';
 class DnDSubLevelProgressRepoImpl extends DefaultCRUDRepo<
     DnDSubLevelProgressDomain,
     DnDSubLevelProgressEntity> implements DnDSubLevelProgressRepo {
-  DnDSubLevelProgressRepoImpl()
-      : super(
-            externalRepo: DnDSubLevelProgressRepoExternalImpl(),
+  DnDSubLevelProgressRepoExternal _externalRepo;
+
+  DnDSubLevelProgressRepoImpl(DnDSubLevelProgressRepoExternal repoExternal)
+      : _externalRepo = repoExternal,
+        super(
+            externalRepo: repoExternal,
             converter: DnDSubLevelProgressConverter.converter);
+
+  @override
+  List<DnDSubLevelProgressDomain> findByLevelId(int levelId) {
+    //siempre devuelvo la lista aunque esté vacia
+    return converter.toDomainAll(
+      _externalRepo.findByLevelId(levelId),
+    );
+  }
+
+  @override
+  DnDSubLevelProgressDomain? findByAllId(int levelId, int subLevelId) {
+    DnDSubLevelProgressEntity? entity =
+        _externalRepo.findByAllId(levelId, subLevelId);
+    //si es null, o sea que no existe, devuelve null y que lo procese el UC, si no lo convierto en Domain y devuelvo
+    return entity == null
+        ? null
+        : converter.toDomain(
+            entity,
+          );
+  }
 }
 
 class DnDSubLevelProgressConverter extends DefaultGeneralConverter<
