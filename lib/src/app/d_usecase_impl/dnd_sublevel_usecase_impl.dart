@@ -7,6 +7,7 @@ class DnDSubLevelUseCaseImpl extends DnDSubLevelUseCase {
   ///domain almacenado para acceder a la info
   final DnDSubLevelDomain subLevelDomain;
 
+  ///domain con la info del progreso
   final DnDSubLevelProgressDomain subLevelProgressDomain;
 
   List<DnDSubLevelItemDomain> items() {

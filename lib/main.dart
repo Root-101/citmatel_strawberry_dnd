@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'HanMan Tutorial',
+      title: 'DnD Tutorial',
       //--------------------- <THEAMING> -----------------------------------
       darkTheme: ThemeData(
         primarySwatch: Colors.purple,
