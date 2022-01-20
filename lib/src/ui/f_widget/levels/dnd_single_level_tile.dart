@@ -4,9 +4,13 @@ import 'package:flutter/material.dart';
 
 class DnDSingleLevelTile extends StatelessWidget {
   final DnDSubLevelDomain subLevelDomain;
+  final DnDSubLevelProgressDomain subLevelProgressDomain;
 
-  const DnDSingleLevelTile({required this.subLevelDomain, Key? key})
-      : super(key: key);
+  const DnDSingleLevelTile({
+    required this.subLevelDomain,
+    required this.subLevelProgressDomain,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,14 +28,22 @@ class DnDSingleLevelTile extends StatelessWidget {
   //Tile chiquito que se muestra en la lista con todos los subniveles
   _buildClosed() {
     return Container(
-      child: Center(
-        child: Text('level ${subLevelDomain.id}'),
+      child: Column(
+        children: [
+          Text('level id ${subLevelProgressDomain.dndLevelDomainId}'),
+          Text('sub level id ${subLevelProgressDomain.dndSubLevelDomainId}'),
+          Text('start ${subLevelProgressDomain.stars}'),
+          Text('played times ${subLevelProgressDomain.contPlayedTimes}'),
+        ],
       ),
     );
   }
 
   //Screen grande para cuando se entra al subnivel, pantalla de cargando para el sub nivel
   _buildOpen() {
-    return DnDSubLevelLoading(subLevelDomain: subLevelDomain);
+    return DnDSubLevelLoading(
+      subLevelDomain: subLevelDomain,
+      subLevelProgressDomain: subLevelProgressDomain,
+    );
   }
 }

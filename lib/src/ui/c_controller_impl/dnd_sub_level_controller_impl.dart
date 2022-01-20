@@ -1,6 +1,7 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:citmatel_strawberry_tools/tools_exporter.dart';
 import 'package:confetti/confetti.dart';
+import 'package:get/get.dart';
 
 class DnDSubLevelControllerImpl extends DnDSubLevelController {
   late final DnDSubLevelUseCase subLevelUseCase;
@@ -16,8 +17,10 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   DnDSubLevelControllerImpl({
     required DnDSubLevelDomain subLevelDomain,
+    required DnDSubLevelProgressDomain subLevelProgressDomain,
   }) : subLevelUseCase = DnDSubLevelUseCaseImpl(
           subLevelDomain: subLevelDomain,
+          subLevelProgressDomain: subLevelProgressDomain,
         ) {
     remainingLives = subLevelUseCase.lives();
     itemsToDrag = subLevelUseCase.items();
@@ -49,6 +52,9 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   @override
   int get rows => subLevelUseCase.rows;
 
+  @override
+  int get stars => subLevelUseCase.stars;
+
   bool onWillAccept(DropTargetItemDomain drop) {
     shouldShake = false;
     update();
@@ -58,10 +64,13 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   void onAccept(DropTargetItemDomain drop, DnDSubLevelItemDomain data) {
     bool accepted = data.possiblesPositions.contains(drop.position);
 
+    //si lo acepta no vibra, si no lo acepta si vibra
+    shouldShake = !accepted;
     if (accepted) {
-      shouldShake = false;
+      //si es correcto reproduce audio y hace conffeti
       StrawberryAudio.playAudioCorrect();
       _makeConffeti();
+
       //busca la posicion del grid donde se soltó el item
       int posDropped = itemsDropped.indexWhere(
         (element) => element.position == drop.position,
@@ -76,9 +85,10 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
         (element) => element.id == data.id,
       );
 
+      //revisa si se gano el nivel
       _doWinLevel();
     } else {
-      shouldShake = true;
+      //si está mal vibra, reproduce audio de error y rompe un corazon
       StrawberryVibration.vibrate();
       StrawberryAudio.playAudioWrong();
       _breakHeart();
@@ -92,6 +102,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   void _breakHeart() {
     remainingLives--;
+    //revisa si se perdio por completo el nivel
     _doLooseLevel();
   }
 
@@ -107,6 +118,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
           'El que persevera triunfa.',
         ]),
       );
+      _doSaveProgress(0);
     }
   }
 
@@ -115,6 +127,29 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   void _doWinLevel() {
     if (itemsToDrag.isEmpty) {
       StrawberryFunction.winLevel();
+      _doSaveProgress(generateProgress());
     }
+  }
+
+  int generateProgress() {
+    //TODO corregir a mejor logica
+    double progress = (remainingLives / lives) * 100;
+    if (progress >= 80) {
+      return DnDSubLevelController.MAX_STARS;
+    } else if (progress >= 60) {
+      return 2;
+    } else if (progress >= 20) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
+
+  void _doSaveProgress(int stars) {
+    //salva el progreso
+    subLevelUseCase.saveProgress(stars);
+
+    //actualiza manual la lista del level para que al volver atras ya este actualizado
+    Get.find<DnDLevelController>().update();
   }
 }

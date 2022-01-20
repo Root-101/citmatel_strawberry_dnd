@@ -69,6 +69,7 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
   }
 
   _buildLevelGridView(DnDLevelDomain level) {
+    //con un GetBuilder para que actualize el progreso cuando se gane un nivel
     return GridView(
       physics: BouncingScrollPhysics(),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -76,7 +77,18 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
       ),
       children: level.sublevel
           .map(
-            (subLevel) => DnDSingleLevelTile(subLevelDomain: subLevel),
+            (subLevel) => GetBuilder<DnDLevelController>(
+              builder: (_) {
+                return DnDSingleLevelTile(
+                  subLevelDomain: subLevel,
+                  subLevelProgressDomain:
+                      Get.find<DnDSubLevelProgressUseCase>().findByAll(
+                    level,
+                    subLevel,
+                  ),
+                );
+              },
+            ),
           )
           .toList(),
     );

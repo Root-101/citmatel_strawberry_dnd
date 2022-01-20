@@ -2,9 +2,12 @@ import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:get/get.dart';
 
 class DnDUIModule {
-  static void init() {
-    DnDCoreModule.init();
+  static Future init() async {
+    await DnDCoreModule.init().then((value) {
+      Get.put<DnDLevelController>(
+          DnDLevelControllerImpl()); //no depende de nadie
 
-    Get.put<DnDLevelController>(DnDLevelControllerImpl());
+      return value;
+    });
   }
 }

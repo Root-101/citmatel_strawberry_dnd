@@ -1,11 +1,9 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
-import 'package:citmatel_strawberry_tools/tools_exporter.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 void main() {
-  DnDUIModule.init();
-  runApp(MyApp());
+  runApp(SplashScreen());
 }
 
 class MyApp extends StatelessWidget {
@@ -38,5 +36,33 @@ class MyApp extends StatelessWidget {
           page: () => UnknownRouteScreen()),*/
       //--------------------- </PAGINATION> -----------------------------------
     );
+  }
+}
+
+class SplashScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder(
+      future: Init.instance.initialize(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return Center(
+            child: CircularProgressIndicator(),
+          );
+        } else {
+          return MyApp();
+        }
+      },
+    );
+  }
+}
+
+class Init {
+  Init._();
+
+  static final instance = Init._();
+
+  Future initialize() async {
+    await DnDUIModule.init();
   }
 }
