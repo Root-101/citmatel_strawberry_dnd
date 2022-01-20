@@ -1,6 +1,7 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:citmatel_strawberry_tools/tools_exporter.dart';
 import 'package:confetti/confetti.dart';
+import 'package:get/get.dart';
 
 class DnDSubLevelControllerImpl extends DnDSubLevelController {
   late final DnDSubLevelUseCase subLevelUseCase;
@@ -131,6 +132,10 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   }
 
   void _doSaveProgress(int stars) {
+    //salva el progreso
     subLevelUseCase.saveProgress(stars);
+
+    //actualiza manual la lista del level para que al volver atras ya este actualizado
+    Get.find<DnDLevelController>().update();
   }
 }
