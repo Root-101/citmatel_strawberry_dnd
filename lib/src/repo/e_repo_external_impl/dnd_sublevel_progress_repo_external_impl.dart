@@ -4,7 +4,7 @@ import 'package:clean_repo_objectbox/clean_objectbox_exporter.dart';
 class DnDSubLevelProgressRepoExternalImpl
     extends DefaultObjectBoxCRUDRepositoryExternal<DnDSubLevelProgressEntity>
     implements DnDSubLevelProgressRepoExternal {
-  DnDSubLevelProgressRepoExternalImpl() : super(DnDRepoModule.STORE);
+  DnDSubLevelProgressRepoExternalImpl(Store store) : super(store);
 
   @override
   DnDSubLevelProgressEntity? findByAllId(int levelId, int subLevelId) {

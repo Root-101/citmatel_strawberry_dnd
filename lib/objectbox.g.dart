@@ -15,33 +15,33 @@ export 'package:objectbox/objectbox.dart'; // so that callers only have to impor
 
 final _entities = <ModelEntity>[
   ModelEntity(
-      id: const IdUid(1, 1234053485221926994),
+      id: const IdUid(1, 1581552399816619571),
       name: 'DnDSubLevelProgressEntity',
-      lastPropertyId: const IdUid(5, 5906812749842935266),
+      lastPropertyId: const IdUid(5, 1082563762284836564),
       flags: 0,
       properties: <ModelProperty>[
         ModelProperty(
-            id: const IdUid(1, 3675706089943922387),
+            id: const IdUid(1, 5792303986787254365),
             name: 'id',
             type: 6,
             flags: 1),
         ModelProperty(
-            id: const IdUid(2, 5591153833384756507),
+            id: const IdUid(2, 5646734147605479094),
             name: 'dndSubLevelDomainId',
             type: 6,
             flags: 0),
         ModelProperty(
-            id: const IdUid(3, 2417940188493570325),
+            id: const IdUid(3, 1904988861449175904),
             name: 'dndLevelDomainId',
             type: 6,
             flags: 0),
         ModelProperty(
-            id: const IdUid(4, 7239659590012607493),
+            id: const IdUid(4, 8813595764462886628),
             name: 'contPlayedTimes',
             type: 6,
             flags: 0),
         ModelProperty(
-            id: const IdUid(5, 5906812749842935266),
+            id: const IdUid(5, 1082563762284836564),
             name: 'stars',
             type: 6,
             flags: 0)
@@ -70,7 +70,7 @@ Future<Store> openStore(
 ModelDefinition getObjectBoxModel() {
   final model = ModelInfo(
       entities: _entities,
-      lastEntityId: const IdUid(1, 1234053485221926994),
+      lastEntityId: const IdUid(1, 1581552399816619571),
       lastIndexId: const IdUid(0, 0),
       lastRelationId: const IdUid(0, 0),
       lastSequenceId: const IdUid(0, 0),

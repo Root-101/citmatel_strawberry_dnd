@@ -2,15 +2,18 @@ import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:get/get.dart';
 
 class DnDCoreModule {
-  static Future<bool> init() async {
-    await DnDRepoModule.init();
+  static Future init() async {
+    await DnDRepoModule.init().then((value) {
+      //sin dependencia
+      Get.put<DnDLevelUseCase>(DnDLevelUseCaseImpl(DnDLevelsAll.levels));
 
-    Get.put<DnDLevelUseCase>(DnDLevelUseCaseImpl(DnDLevelsAll.levels));
+      //el de progreso con la BD
+      Get.put<DnDSubLevelProgressUseCase>(
+        DnDSubLevelProgressUseCaseImpl(DnDRepoModule.subLevelProgressRepo),
+      );
 
-    Get.put<DnDSubLevelProgressUseCase>(
-        DnDSubLevelProgressUseCaseImpl(DnDRepoModule.subLevelProgressRepo));
-
-    return true;
+      return value;
+    });
   }
 
   static void dispose() {

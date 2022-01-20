@@ -7,11 +7,9 @@ class DnDSubLevelProgressEntity extends BasicEntityObject {
   @Id()
   int id;
 
-  final String unique = "";
+  int dndSubLevelDomainId;
 
-  final int dndSubLevelDomainId;
-
-  final int dndLevelDomainId;
+  int dndLevelDomainId;
 
   int contPlayedTimes;
 
