@@ -76,7 +76,14 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
       ),
       children: level.sublevel
           .map(
-            (subLevel) => DnDSingleLevelTile(subLevelDomain: subLevel),
+            (subLevel) => DnDSingleLevelTile(
+              subLevelDomain: subLevel,
+              subLevelProgressDomain:
+                  Get.find<DnDSubLevelProgressUseCase>().findByAll(
+                level,
+                subLevel,
+              ),
+            ),
           )
           .toList(),
     );
