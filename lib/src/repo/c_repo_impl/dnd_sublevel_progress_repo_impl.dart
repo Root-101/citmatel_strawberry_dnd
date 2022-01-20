@@ -21,8 +21,8 @@ class DnDSubLevelProgressConverter extends DefaultGeneralConverter<
   DnDSubLevelProgressDomain toDomain(DnDSubLevelProgressEntity entity) {
     return DnDSubLevelProgressDomain(
       id: entity.id,
-      dndSubLevelId: entity.dndSubLevelId,
-      dndLevelProgressDomainId: entity.dndLevelProgressFK.targetId,
+      dndLevelDomainId: entity.dndLevelDomainId,
+      dndSubLevelDomainId: entity.dndSubLevelDomainId,
       contPlayedTimes: entity.contPlayedTimes,
       stars: entity.stars,
     );
@@ -32,8 +32,8 @@ class DnDSubLevelProgressConverter extends DefaultGeneralConverter<
   DnDSubLevelProgressEntity toEntity(DnDSubLevelProgressDomain domain) {
     return DnDSubLevelProgressEntity.build(
       id: domain.id,
-      dndSubLevelId: domain.dndSubLevelId,
-      dndLevelProgressEntityId: domain.dndLevelProgressDomainId,
+      dndLevelDomainId: domain.dndLevelDomainId,
+      dndSubLevelDomainId: domain.dndSubLevelDomainId,
       contPlayedTimes: domain.contPlayedTimes,
       stars: domain.stars,
     );

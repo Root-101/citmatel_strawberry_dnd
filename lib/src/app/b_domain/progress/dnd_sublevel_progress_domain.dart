@@ -4,16 +4,16 @@ class DnDSubLevelProgressDomain
     extends BasicDomainObject<DnDSubLevelProgressDomain> {
   int id;
 
-  final int dndSubLevelId;
+  final int dndSubLevelDomainId;
 
-  final int dndLevelProgressDomainId;
+  final int dndLevelDomainId;
 
   int contPlayedTimes;
   int stars;
 
   DnDSubLevelProgressDomain({
-    required this.dndSubLevelId,
-    required this.dndLevelProgressDomainId,
+    required this.dndSubLevelDomainId,
+    required this.dndLevelDomainId,
     this.id = 0,
     this.contPlayedTimes = 0,
     this.stars = 0,

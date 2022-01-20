@@ -7,8 +7,6 @@ class DnDCoreModule {
 
     Get.put<DnDLevelUseCase>(DnDLevelUseCaseImpl(DnDLevelsAll.levels));
 
-    Get.put<DnDLevelProgressUseCase>(
-        DnDLevelProgressUseCaseImpl(DnDRepoModule.levelProgressRepo));
     Get.put<DnDSubLevelProgressUseCase>(
         DnDSubLevelProgressUseCaseImpl(DnDRepoModule.subLevelProgressRepo));
 
