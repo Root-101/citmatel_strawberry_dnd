@@ -3,11 +3,8 @@ import 'package:get/get.dart';
 
 class DnDUIModule {
   static Future init() async {
-    await DnDCoreModule.init().then((value) {
-      Get.put<DnDLevelController>(
-          DnDLevelControllerImpl()); //no depende de nadie
+    await DnDCoreModule.init();
 
-      return value;
-    });
+    Get.put<DnDLevelController>(DnDLevelControllerImpl());
   }
 }
