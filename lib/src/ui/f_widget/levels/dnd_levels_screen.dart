@@ -80,6 +80,10 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
             (subLevel) => GetBuilder<DnDLevelController>(
               builder: (_) {
                 return DnDSingleLevelTile(
+                  showTutorial: controller.showTutorial(
+                    level.id,
+                    subLevel.id,
+                  ),
                   subLevelDomain: subLevel,
                   subLevelProgressDomain:
                       Get.find<DnDSubLevelProgressUseCase>().findByAll(

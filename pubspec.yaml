@@ -31,6 +31,7 @@ dependencies:
   dotted_border: ^2.0.0+2
   carousel_slider: ^4.0.0
   confetti: ^0.6.0
+  tutorial_coach_mark: ^1.2.1
 
   #Tools
   citmatel_strawberry_tools:
