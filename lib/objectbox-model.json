@@ -1,0 +1,52 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:1581552399816619571",
+      "lastPropertyId": "5:1082563762284836564",
+      "name": "DnDSubLevelProgressEntity",
+      "properties": [
+        {
+          "id": "1:5792303986787254365",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:5646734147605479094",
+          "name": "dndSubLevelDomainId",
+          "type": 6
+        },
+        {
+          "id": "3:1904988861449175904",
+          "name": "dndLevelDomainId",
+          "type": 6
+        },
+        {
+          "id": "4:8813595764462886628",
+          "name": "contPlayedTimes",
+          "type": 6
+        },
+        {
+          "id": "5:1082563762284836564",
+          "name": "stars",
+          "type": 6
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "1:1581552399816619571",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
