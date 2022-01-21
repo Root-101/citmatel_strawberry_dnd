@@ -7,4 +7,6 @@ abstract class DnDLevelController extends GetxController {
   DnDLevelDomain findBy(int keyId);
 
   int count();
+
+  bool showTutorial(int levelId, int subLevelid);
 }
