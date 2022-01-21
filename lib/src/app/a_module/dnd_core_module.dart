@@ -3,17 +3,15 @@ import 'package:get/get.dart';
 
 class DnDCoreModule {
   static Future init() async {
-    await DnDRepoModule.init().then((value) {
-      //sin dependencia
-      Get.put<DnDLevelUseCase>(DnDLevelUseCaseImpl(DnDLevelsAll.levels));
+    await DnDRepoModule.init();
 
-      //el de progreso con la BD
-      Get.put<DnDSubLevelProgressUseCase>(
-        DnDSubLevelProgressUseCaseImpl(DnDRepoModule.subLevelProgressRepo),
-      );
+    //sin dependencia
+    Get.put<DnDLevelUseCase>(DnDLevelUseCaseImpl(DnDLevelsAll.levels));
 
-      return value;
-    });
+    //el de progreso con la BD
+    Get.put<DnDSubLevelProgressUseCase>(
+      DnDSubLevelProgressUseCaseImpl(DnDRepoModule.subLevelProgressRepo),
+    );
   }
 
   static void dispose() {
