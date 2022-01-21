@@ -112,6 +112,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   void _doLooseLevel() {
     if (remainingLives <= 0) {
       StrawberryFunction.looseLevel(
+        rightButtonFunction: () => Get.back(closeOverlays: true),
         childFirstText: StrawberryAnimatedTextKit.rotateAnimatedText(texts: [
           'Te has quedado sin vidas.',
           'Inténtalo de nuevo.',
@@ -126,7 +127,9 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   ///se gana el nivel cuando no quedan mas elementos para arrastrar
   void _doWinLevel() {
     if (itemsToDrag.isEmpty) {
-      StrawberryFunction.winLevel();
+      StrawberryFunction.winLevel(
+        rightButtonFunction: () => Get.back(closeOverlays: true),
+      );
       _doSaveProgress(generateProgress());
     }
   }
