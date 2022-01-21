@@ -25,9 +25,6 @@ class DnDSubLevelProgressUseCaseImpl
 
   @override
   DnDSubLevelProgressDomain findByAllId(int levelId, int subLevelId) {
-    print(
-        "buscando el sublevel con levelId: '$levelId' y subLevelId: '$subLevelId'");
-
     DnDSubLevelProgressDomain? domain = _repo.findByAllId(levelId, subLevelId);
     // si es null devuelvo uno vacio para mostrarlo sin progreso en el main menu
     // si tiene algo lo devuelvo
