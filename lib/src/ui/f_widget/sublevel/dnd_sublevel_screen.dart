@@ -12,14 +12,17 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
 
 // ignore: must_be_immutable
 class DnDSubLevelScreen extends StatefulWidget {
   static const ROUTE_NAME = "/dnd-sublevel-screen";
+  final bool showTutorial;
 
   DnDSubLevelScreen({
     required DnDSubLevelDomain subLevelDomain,
     required DnDSubLevelProgressDomain subLevelProgressDomain,
+    required this.showTutorial,
   }) : super() {
     Get.put<DnDSubLevelController>(
       DnDSubLevelControllerImpl(
@@ -36,9 +39,33 @@ class DnDSubLevelScreen extends StatefulWidget {
 class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
   late final DnDSubLevelController _controller;
 
+  List<TargetFocus> targets = [];
+
+  // Steps in the tutorial.
+  GlobalKey _key1 = GlobalKey();
+  GlobalKey _key2 = GlobalKey();
+  GlobalKey _key3 = GlobalKey();
+  GlobalKey _key4 = GlobalKey();
+  GlobalKey _key5 = GlobalKey();
+  GlobalKey _key6 = GlobalKey();
+  GlobalKey _key7 = GlobalKey();
+
   @override
   void initState() {
     _controller = Get.find();
+
+    if (widget.showTutorial) {
+      //Start showcase view after current widget frames are drawn.
+      WidgetsBinding.instance!.addPostFrameCallback((duration) async {
+        // Is necessary to wait a few seconds because the widgets haven't been created.
+        await Future.delayed(Duration(milliseconds: 500));
+        // Initialice the steps of the tutorial.
+        initTargets();
+        // Start the tutorial.
+        StrawberryTutorial.showTutorial(context: context, targets: targets);
+      });
+    }
+
     super.initState();
   }
 
@@ -82,6 +109,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
   _buildListOfHearts() {
     int countOfColumns = _controller.lives;
     return Padding(
+      key: _key1,
       padding: const EdgeInsets.symmetric(horizontal: 12),
       child: _animatedGridView(
         countOfColumns,
@@ -144,6 +172,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
   _buildDroppedItems() {
     final double padding = 12.0;
     return Padding(
+      key: _key3,
       padding: EdgeInsets.all(padding),
       child: ClipRRect(
         borderRadius: BorderRadius.all(Radius.circular(15)),
@@ -198,7 +227,11 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
         color: Colors.white38,
         dashPattern: const <double>[3, 5],
         child: drop.item == null
-            ? Container()
+            ? Container(
+                key: drop.position.column == 0 && drop.position.row == 1
+                    ? _key5
+                    : Key(""),
+              )
             : Container(
                 decoration: BoxDecoration(
                   color: Colors.transparent,
@@ -218,6 +251,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
     double defaultW = defaultH;
     int initialPage = max((_controller.itemsToDrag.length / 2).round() - 1, 0);
     return Padding(
+      key: _key2,
       padding: const EdgeInsets.symmetric(vertical: 8.0),
       child: CarouselSlider(
         options: CarouselOptions(
@@ -237,8 +271,8 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
                       defaultW, defaultH, item.urlImage),
                   childWhenDragging: _buildDraggableChildWhenDragging(
                       defaultW, defaultH, item.urlImage),
-                  child:
-                      _buildDraggableChild(defaultW, defaultH, item.urlImage),
+                  child: _buildDraggableChild(
+                      defaultW, defaultH, item.urlImage, item.id),
                 ),
               ),
             )
@@ -248,8 +282,9 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
   }
 
   //child normal en la lista
-  _buildDraggableChild(double w, double h, String image) {
+  _buildDraggableChild(double w, double h, String image, int item) {
     return Container(
+      key: item == 2 ? _key4 : Key(""),
       width: w,
       height: h,
       child: Image.asset(
@@ -285,6 +320,91 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
           image,
           fit: BoxFit.cover,
         ),
+      ),
+    );
+  }
+
+  // Targets for the tutorial.
+  void initTargets() {
+    targets.add(
+      StrawberryTutorial.addTarget(
+        identify: "Target Hearts",
+        keyTarget: _key1,
+        shadowColor: Colors.pink,
+        title: 'Cantidad de vidas.',
+        description:
+            'Las vidas son la cantidad de intentos que tienes para equivocarte.\n Si las pierdes todas deberás empezar el nivel de nuevo.',
+      ),
+    );
+
+    targets.add(
+      StrawberryTutorial.addTarget(
+        identify: "Target Draggable Items",
+        keyTarget: _key2,
+        shadowColor: Colors.red,
+        contentAlign: ContentAlign.top,
+        title: 'Elementos arrastrables.',
+        description:
+            'Debe arrastrar, cada uno de los elementos de esta lista, hacia la posición correcta, en la imagen de arriba, para poder ganar.',
+      ),
+    );
+
+    targets.add(
+      StrawberryTutorial.addTarget(
+        identify: "Target Dropped Items",
+        keyTarget: _key3,
+        shadowColor: Colors.deepOrange,
+        contentAlign: ContentAlign.top,
+        title: 'Imagen a completar.',
+        shape: ShapeLightFocus.Circle,
+        description:
+            'Debe arrastrar los elementos de la lista inferior hacia la posición correcta en esta imagen.',
+      ),
+    );
+
+    targets.add(
+      StrawberryTutorial.addTarget(
+        identify: "Target Draggable Item",
+        keyTarget: _key4,
+        shadowColor: Colors.amber,
+        contentAlign: ContentAlign.top,
+        title: 'Mono.',
+        description:
+            'Arrastra el mono hacia la posición que se te indicará a continuación.',
+      ),
+    );
+    targets.add(
+      StrawberryTutorial.addTarget(
+        identify: "Target Drop",
+        keyTarget: _key5,
+        shadowColor: Colors.purple,
+        contentAlign: ContentAlign.top,
+        title: 'Lugar del Mono.',
+        description:
+            'Esta es la posición correcta del mono, aqui debes soltarlo.'
+            '\n Algunos elementos tienen varias hubicaciones. Por ejemplo el mono se puede hubicar en varias partes del árbol.',
+        shape: ShapeLightFocus.Circle,
+      ),
+    );
+    targets.add(
+      StrawberryTutorial.addTarget(
+        identify: "Target Answer Right",
+        keyTarget: _key6,
+        shadowColor: Colors.green,
+        title: 'Respuesta correcta.',
+        description:
+            'Felicidades lo has conseguido. Continúa así para ganar el nivel.',
+      ),
+    );
+    targets.add(
+      StrawberryTutorial.addTarget(
+        identify: "Target Answer Wrong",
+        keyTarget: _key7,
+        shadowColor: Colors.red,
+        title: 'Respuesta incorrecta.',
+        description: 'Cuando se responde incorrectamente pierdes una vida.'
+            '\n Cuando te quedes sin vidas se te dará la posibilidad de intentarlo de nuevo.'
+            '\n Solo si colocas todos los elementos correctamente podrás pasar de nivel.',
       ),
     );
   }
