@@ -28,6 +28,7 @@ class DnDSubLevelScreen extends StatefulWidget {
       DnDSubLevelControllerImpl(
         subLevelDomain: subLevelDomain,
         subLevelProgressDomain: subLevelProgressDomain,
+        showTutorial: showTutorial,
       ),
     );
   }
@@ -118,6 +119,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
           (int index) {
             return index < _controller.lives - _controller.remainingLives
                 ? Swing(
+                    key: index == 0 ? _key7 : null,
                     child: Icon(
                       FontAwesomeIcons.heartBroken,
                       color: Colors.red.shade900,
@@ -222,7 +224,8 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
   _buildSingleDragTarget(DropTargetItemDomain drop) {
     return DragTarget<DnDSubLevelItemDomain>(
       onWillAccept: (_) => _controller.onWillAccept(drop),
-      onAccept: (data) => _controller.onAccept(drop, data),
+      onAccept: (data) =>
+          _controller.onAccept(drop, data, context, _key6, _key7),
       builder: (context, acceptedItems, rejectedItems) => DottedBorder(
         color: Colors.white38,
         dashPattern: const <double>[3, 5],
@@ -233,6 +236,9 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
                     : Key(""),
               )
             : Container(
+                key: drop.position.column == 0 && drop.position.row == 1
+                    ? _key6
+                    : null,
                 decoration: BoxDecoration(
                   color: Colors.transparent,
                   image: DecorationImage(
@@ -334,6 +340,8 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
         title: 'Cantidad de vidas.',
         description:
             'Las vidas son la cantidad de intentos que tienes para equivocarte.\n Si las pierdes todas deberás empezar el nivel de nuevo.',
+        showImageOnTop: false,
+        imagePadding: 50,
       ),
     );
 
@@ -346,19 +354,20 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
         title: 'Elementos arrastrables.',
         description:
             'Debe arrastrar, cada uno de los elementos de esta lista, hacia la posición correcta, en la imagen de arriba, para poder ganar.',
+        imagePadding: 50,
       ),
     );
 
     targets.add(
-      StrawberryTutorial.addTarget(
+      StrawberryTutorial.addMultipleTarget(
         identify: "Target Dropped Items",
         keyTarget: _key3,
         shadowColor: Colors.deepOrange,
-        contentAlign: ContentAlign.top,
         title: 'Imagen a completar.',
         shape: ShapeLightFocus.Circle,
         description:
             'Debe arrastrar los elementos de la lista inferior hacia la posición correcta en esta imagen.',
+        showImage: false,
       ),
     );
 
@@ -371,40 +380,21 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
         title: 'Mono.',
         description:
             'Arrastra el mono hacia la posición que se te indicará a continuación.',
+        shape: ShapeLightFocus.Circle,
+        imagePadding: 50,
       ),
     );
     targets.add(
-      StrawberryTutorial.addTarget(
+      StrawberryTutorial.addMultipleTarget(
         identify: "Target Drop",
         keyTarget: _key5,
         shadowColor: Colors.purple,
-        contentAlign: ContentAlign.top,
         title: 'Lugar del Mono.',
         description:
             'Esta es la posición correcta del mono, aqui debes soltarlo.'
             '\n Algunos elementos tienen varias hubicaciones. Por ejemplo el mono se puede hubicar en varias partes del árbol.',
         shape: ShapeLightFocus.Circle,
-      ),
-    );
-    targets.add(
-      StrawberryTutorial.addTarget(
-        identify: "Target Answer Right",
-        keyTarget: _key6,
-        shadowColor: Colors.green,
-        title: 'Respuesta correcta.',
-        description:
-            'Felicidades lo has conseguido. Continúa así para ganar el nivel.',
-      ),
-    );
-    targets.add(
-      StrawberryTutorial.addTarget(
-        identify: "Target Answer Wrong",
-        keyTarget: _key7,
-        shadowColor: Colors.red,
-        title: 'Respuesta incorrecta.',
-        description: 'Cuando se responde incorrectamente pierdes una vida.'
-            '\n Cuando te quedes sin vidas se te dará la posibilidad de intentarlo de nuevo.'
-            '\n Solo si colocas todos los elementos correctamente podrás pasar de nivel.',
+        imagePadding: 50,
       ),
     );
   }

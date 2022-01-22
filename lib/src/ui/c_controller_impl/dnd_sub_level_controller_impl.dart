@@ -1,7 +1,10 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:citmatel_strawberry_tools/tools_exporter.dart';
 import 'package:confetti/confetti.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
 
 class DnDSubLevelControllerImpl extends DnDSubLevelController {
   late final DnDSubLevelUseCase subLevelUseCase;
@@ -14,10 +17,13 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   late final ConfettiController confettiController;
 
   bool shouldShake = false;
+  bool isFirstTime = true;
+  final bool showTutorial;
 
   DnDSubLevelControllerImpl({
     required DnDSubLevelDomain subLevelDomain,
     required DnDSubLevelProgressDomain subLevelProgressDomain,
+    required this.showTutorial,
   }) : subLevelUseCase = DnDSubLevelUseCaseImpl(
           subLevelDomain: subLevelDomain,
           subLevelProgressDomain: subLevelProgressDomain,
@@ -61,7 +67,8 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
     return drop.accepting;
   }
 
-  void onAccept(DropTargetItemDomain drop, DnDSubLevelItemDomain data) {
+  void onAccept(DropTargetItemDomain drop, DnDSubLevelItemDomain data,
+      BuildContext context, GlobalKey key6, GlobalKey key7) {
     bool accepted = data.possiblesPositions.contains(drop.position);
 
     //si lo acepta no vibra, si no lo acepta si vibra
@@ -85,13 +92,33 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
         (element) => element.id == data.id,
       );
 
+      if (isFirstTime && showTutorial) {
+        isFirstTime = false;
+        // Continue the tutorial.
+        StrawberryTutorial.showTutorial(
+          context: context,
+          targets: [
+            StrawberryTutorial.addMultipleTarget(
+              identify: "Target Answer Right",
+              keyTarget: key6,
+              shadowColor: Colors.green,
+              title: 'Respuesta correcta.',
+              description:
+                  'Felicidades lo has conseguido. Continúa así para ganar el nivel.',
+              shape: ShapeLightFocus.Circle,
+              contentTextAlign: ContentAlign.right,
+            ),
+          ],
+        );
+      }
+
       //revisa si se gano el nivel
       _doWinLevel();
     } else {
       //si está mal vibra, reproduce audio de error y rompe un corazon
       StrawberryVibration.vibrate();
       StrawberryAudio.playAudioWrong();
-      _breakHeart();
+      _breakHeart(context, key7);
     }
     update();
   }
@@ -100,8 +127,28 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
     confettiController.play();
   }
 
-  void _breakHeart() {
+  void _breakHeart(BuildContext context, GlobalKey key7) {
     remainingLives--;
+    if (lives - remainingLives == 1 && showTutorial) {
+      // Continue the tutorial.
+      StrawberryTutorial.showTutorial(
+        context: context,
+        targets: [
+          StrawberryTutorial.addTarget(
+            identify: "Target Answer Wrong",
+            keyTarget: key7,
+            shadowColor: Colors.red,
+            title: 'Respuesta incorrecta.',
+            description: 'Cuando se responde incorrectamente pierdes una vida.'
+                '\n Cuando te quedes sin vidas se te dará la posibilidad de intentarlo de nuevo.'
+                '\n Solo si colocas todos los elementos correctamente podrás pasar de nivel.',
+            shape: ShapeLightFocus.Circle,
+            showImageOnTop: false,
+            imagePadding: 50,
+          ),
+        ],
+      );
+    }
     //revisa si se perdio por completo el nivel
     _doLooseLevel();
   }

@@ -1,5 +1,6 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:confetti/confetti.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 abstract class DnDSubLevelController extends GetxController {
@@ -32,5 +33,6 @@ abstract class DnDSubLevelController extends GetxController {
 
   bool onWillAccept(DropTargetItemDomain drop);
 
-  void onAccept(DropTargetItemDomain drop, DnDSubLevelItemDomain data);
+  void onAccept(DropTargetItemDomain drop, DnDSubLevelItemDomain data,
+      BuildContext context, GlobalKey key6, GlobalKey key7);
 }
