@@ -1,7 +1,6 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:citmatel_strawberry_tools/tools_exporter.dart';
 import 'package:confetti/confetti.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
@@ -18,12 +17,10 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   bool shouldShake = false;
   bool isFirstTime = true;
-  final bool showTutorial;
 
   DnDSubLevelControllerImpl({
     required DnDSubLevelDomain subLevelDomain,
     required DnDSubLevelProgressDomain subLevelProgressDomain,
-    required this.showTutorial,
   }) : subLevelUseCase = DnDSubLevelUseCaseImpl(
           subLevelDomain: subLevelDomain,
           subLevelProgressDomain: subLevelProgressDomain,
@@ -60,6 +57,9 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   @override
   int get stars => subLevelUseCase.stars;
+
+  // Show the tutorial if is the first sublevel of the first level.
+  bool get showTutorial => subLevelUseCase.showTutorial();
 
   bool onWillAccept(DropTargetItemDomain drop) {
     shouldShake = false;

@@ -23,6 +23,9 @@ abstract class DnDSubLevelController extends GetxController {
 
   bool get shouldShake;
 
+  // Show the tutorial if is the first sublevel of the first level.
+  bool get showTutorial;
+
   int generateProgress();
 
   ConfettiController get confettiController;

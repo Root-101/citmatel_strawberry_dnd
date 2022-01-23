@@ -17,18 +17,15 @@ import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
 // ignore: must_be_immutable
 class DnDSubLevelScreen extends StatefulWidget {
   static const ROUTE_NAME = "/dnd-sublevel-screen";
-  final bool showTutorial;
 
   DnDSubLevelScreen({
     required DnDSubLevelDomain subLevelDomain,
     required DnDSubLevelProgressDomain subLevelProgressDomain,
-    required this.showTutorial,
   }) : super() {
     Get.put<DnDSubLevelController>(
       DnDSubLevelControllerImpl(
         subLevelDomain: subLevelDomain,
         subLevelProgressDomain: subLevelProgressDomain,
-        showTutorial: showTutorial,
       ),
     );
   }
@@ -55,7 +52,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
   void initState() {
     _controller = Get.find();
 
-    if (widget.showTutorial) {
+    if (_controller.showTutorial) {
       //Start showcase view after current widget frames are drawn.
       WidgetsBinding.instance!.addPostFrameCallback((duration) async {
         // Is necessary to wait a few seconds because the widgets haven't been created.
