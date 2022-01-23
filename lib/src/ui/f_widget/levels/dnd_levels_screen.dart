@@ -30,10 +30,6 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
                 openWidget: DnDSubLevelLoading(
                   subLevelDomain: subLevelDomain,
                   subLevelProgressDomain: progressDomain,
-                  showTutorial: controller.showTutorial(
-                    levelDomain.id,
-                    subLevelDomain.id,
-                  ),
                 ),
               );
             });
