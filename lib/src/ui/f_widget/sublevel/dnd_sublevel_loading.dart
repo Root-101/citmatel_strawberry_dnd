@@ -5,12 +5,10 @@ import 'package:flutter/material.dart';
 class DnDSubLevelLoading extends StatelessWidget {
   final DnDSubLevelDomain subLevelDomain;
   final DnDSubLevelProgressDomain subLevelProgressDomain;
-  final bool showTutorial;
 
   DnDSubLevelLoading({
     required this.subLevelDomain,
     required this.subLevelProgressDomain,
-    required this.showTutorial,
     Key? key,
   }) : super(key: key);
 
@@ -22,7 +20,6 @@ class DnDSubLevelLoading extends StatelessWidget {
       subLevel: DnDSubLevelScreen(
         subLevelDomain: subLevelDomain,
         subLevelProgressDomain: subLevelProgressDomain,
-        showTutorial: showTutorial,
       ),
     );
   }
