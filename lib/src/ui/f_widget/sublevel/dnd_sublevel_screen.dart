@@ -263,7 +263,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
         options: CarouselOptions(
           height: defaultH,
           initialPage: initialPage,
-          viewportFraction: 0.25,
+          viewportFraction: 0.4,
           enableInfiniteScroll: false,
           enlargeCenterPage: true,
         ),
