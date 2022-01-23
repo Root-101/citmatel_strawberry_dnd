@@ -3,7 +3,7 @@ import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 class DnDLevel1 {
   static final sublevel = DnDSubLevelDomain(
     id: 1,
-    urlImage: DnDAssets.LEVEL1TEST,
+    urlImage: DnDAssets.WALLPAPER,
     rows: 5,
     columns: 5,
     items: [
@@ -89,6 +89,9 @@ class DnDLevel1 {
       sublevel.clone()..id = 4,
       sublevel.clone()..id = 5,
       sublevel.clone()..id = 6,
+      sublevel.clone()..id = 7,
+      sublevel.clone()..id = 8,
+      sublevel.clone()..id = 9,
     ],
   );
 }
