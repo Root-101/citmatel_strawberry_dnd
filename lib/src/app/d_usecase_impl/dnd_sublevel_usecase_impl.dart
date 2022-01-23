@@ -57,4 +57,12 @@ class DnDSubLevelUseCaseImpl extends DnDSubLevelUseCase {
   void _executeProgressUpdate() {
     Get.find<DnDSubLevelProgressUseCase>().edit(subLevelProgressDomain);
   }
+
+  @override
+  bool showTutorial() {
+    return subLevelProgressDomain.dndLevelDomainId ==
+            Get.find<DnDLevelUseCase>().findAll()[0].id &&
+        subLevelProgressDomain.dndSubLevelDomainId ==
+            Get.find<DnDLevelUseCase>().findAll()[0].sublevel[0].id;
+  }
 }
