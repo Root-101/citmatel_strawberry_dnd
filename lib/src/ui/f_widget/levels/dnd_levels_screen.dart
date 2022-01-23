@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class DnDLevelsScreen extends GetView<DnDLevelController> {
-  //TODO: valorar ese nombre que no me convence
   static const ROUTE_NAME = "/dnd-levels-screen";
 
   DnDLevelsScreen({Key? key}) : super(key: key);
