@@ -7,4 +7,10 @@ abstract class DnDLevelController extends GetxController {
   DnDLevelDomain findBy(int keyId);
 
   int count();
+
+  //devuelve la cantidad de estrellas maximo del nivel
+  int maxStars(DnDLevelDomain levelDomain);
+
+  //devuelve la cantidad de estrellas ganadas del nivel
+  int winedStars(DnDLevelDomain levelDomain);
 }
