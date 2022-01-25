@@ -18,4 +18,19 @@ class DnDLevelControllerImpl extends DnDLevelController {
   int count() {
     return levelUseCase.count();
   }
+
+  @override
+  int maxStars(DnDLevelDomain levelDomain) {
+    return levelDomain.sublevel.length * DnDSubLevelController.MAX_STARS;
+  }
+
+  @override
+  int winedStars(DnDLevelDomain levelDomain) {
+    return Get.find<DnDSubLevelProgressUseCase>()
+        .findByLevelId(levelDomain.id)
+        .fold(
+          0,
+          (previousValue, element) => previousValue + element.stars,
+        );
+  }
 }
