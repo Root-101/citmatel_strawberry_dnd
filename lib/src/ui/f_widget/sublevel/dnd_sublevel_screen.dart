@@ -76,31 +76,37 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: GetBuilder<DnDSubLevelController>(
-        builder: (_) {
-          return Stack(
-            children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  _buildListOfHearts(),
-                  _buildDroppedItems(),
-                  _controller.shouldShake
-                      ? Shake(
-                          child: _buildDraggableItemList(),
-                        )
-                      : _buildDraggableItemList(),
-                ],
-              ),
-              Align(
-                  alignment: Alignment.topCenter,
-                  child: StrawberryWidgets.confettiWidget(
-                      confettiController: _controller.confettiController)),
-            ],
-          );
-        },
-      ),
+    return GetBuilder<DnDSubLevelController>(
+      builder: (context) {
+        return CommonsSubLevelBuilder.buildScaffold(
+          appBarTitle: _controller.subLevelTheme(),
+          level: _controller.subLevelNumber(),
+          winedStars: _controller.generateProgress(),
+          maxStars: DnDSubLevelController.MAX_STARS,
+          body: SafeArea(
+            child: Stack(
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    _buildListOfHearts(),
+                    _buildDroppedItems(),
+                    _controller.shouldShake
+                        ? Shake(
+                            child: _buildDraggableItemList(),
+                          )
+                        : _buildDraggableItemList(),
+                  ],
+                ),
+                Align(
+                    alignment: Alignment.topCenter,
+                    child: StrawberryWidgets.confettiWidget(
+                        confettiController: _controller.confettiController)),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 
