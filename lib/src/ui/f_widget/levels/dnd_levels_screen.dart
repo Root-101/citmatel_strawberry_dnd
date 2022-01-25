@@ -13,11 +13,15 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
     return CommonsLevelsScreen<DnDLevelDomain>(
       levelsFindAll: controller.findAll(),
       buildSingleLevel: (levelDomain) {
-        return CommonsSingleLevel<DnDSubLevelDomain>(
-          urlThemePicture: levelDomain.urlThemePicture,
-          subLevelsAll: (levelDomain).sublevel,
-          singleLevelBuilder: (subLevelDomain) {
-            return GetBuilder<DnDLevelController>(builder: (context) {
+        return GetBuilder<DnDLevelController>(builder: (context) {
+          return CommonsSingleLevel<DnDSubLevelDomain>(
+            moduleName: "DnD",
+            themeTitle: levelDomain.theme,
+            maxStars: Get.find<DnDLevelController>().maxStars(levelDomain),
+            winedStars: Get.find<DnDLevelController>().winedStars(levelDomain),
+            urlThemePicture: levelDomain.urlThemePicture,
+            subLevelsAll: (levelDomain).sublevel,
+            singleLevelBuilder: (subLevelDomain) {
               DnDSubLevelProgressDomain progressDomain =
                   Get.find<DnDSubLevelProgressUseCase>().findByAll(
                 levelDomain,
@@ -31,9 +35,9 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
                   subLevelProgressDomain: progressDomain,
                 ),
               );
-            });
-          },
-        );
+            },
+          );
+        });
       },
     );
   }
