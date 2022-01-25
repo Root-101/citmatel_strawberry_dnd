@@ -202,4 +202,8 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
     //actualiza manual la lista del level para que al volver atras ya este actualizado
     Get.find<DnDLevelController>().update();
   }
+
+  String subLevelTheme() => subLevelUseCase.subLevelTheme();
+
+  int subLevelNumber() => subLevelUseCase.subLevelNumber();
 }
