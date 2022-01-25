@@ -65,4 +65,14 @@ class DnDSubLevelUseCaseImpl extends DnDSubLevelUseCase {
         subLevelProgressDomain.dndSubLevelDomainId ==
             Get.find<DnDLevelUseCase>().findAll()[0].sublevel[0].id;
   }
+
+  String subLevelTheme() {
+    return Get.find<DnDLevelUseCase>()
+        .findAll()[subLevelProgressDomain.dndLevelDomainId]
+        .theme;
+  }
+
+  int subLevelNumber() {
+    return subLevelDomain.id;
+  }
 }
