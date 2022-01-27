@@ -19,6 +19,8 @@ abstract class DnDSubLevelController extends GetxController {
 
   int get stars;
 
+  DnDSubLevelItemDomain get firstAccepted;
+
   bool get shouldShake;
 
   // Show the tutorial if is the first sublevel of the first level.

@@ -18,6 +18,8 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   bool shouldShake = false;
   bool isFirstTime = true;
 
+  late DnDSubLevelItemDomain firstAccepted;
+
   DnDSubLevelControllerImpl({
     required DnDSubLevelDomain subLevelDomain,
     required DnDSubLevelProgressDomain subLevelProgressDomain,
@@ -88,27 +90,28 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
       itemsToDrag.removeWhere(
         (element) => element.id == data.id,
       );
-
-      if (isFirstTime && showTutorial) {
+      if (isFirstTime) {
+        firstAccepted = data;
         isFirstTime = false;
-        // Continue the tutorial.
-        StrawberryTutorial.showTutorial(
-          context: context,
-          targets: [
-            StrawberryTutorial.addMultipleTarget(
-              identify: "Target Answer Right",
-              keyTarget: key6,
-              shadowColor: Colors.green,
-              title: 'Respuesta correcta.',
-              description:
-                  'Felicidades lo has conseguido. Continúa así para ganar el nivel.',
-              shape: ShapeLightFocus.Circle,
-              contentTextAlign: ContentAlign.right,
-            ),
-          ],
-        );
+        if (showTutorial) {
+          // Continue the tutorial.
+          StrawberryTutorial.showTutorial(
+            context: context,
+            targets: [
+              StrawberryTutorial.addTarget(
+                  identify: "Target Answer Right",
+                  keyTarget: key6,
+                  shadowColor: Colors.green,
+                  title: 'Respuesta correcta.',
+                  description:
+                      'Felicidades lo has conseguido. Continúa así para ganar el nivel.',
+                  shape: ShapeLightFocus.Circle,
+                  contentAlign: ContentAlign.top,
+                  showImage: false),
+            ],
+          );
+        }
       }
-
       //revisa si se gano el nivel
       _doWinLevel();
     } else {

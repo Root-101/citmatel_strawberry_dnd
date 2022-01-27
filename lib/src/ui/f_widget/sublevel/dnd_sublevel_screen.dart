@@ -236,12 +236,10 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
             ? Container(
                 key: drop.position.column == 0 && drop.position.row == 1
                     ? _key5
-                    : Key(""),
+                    : null,
               )
             : Container(
-                key: drop.position.column == 0 && drop.position.row == 1
-                    ? _key6
-                    : null,
+                key: _controller.firstAccepted == drop.item ? _key6 : null,
                 decoration: BoxDecoration(
                   color: Colors.transparent,
                   image: DecorationImage(
