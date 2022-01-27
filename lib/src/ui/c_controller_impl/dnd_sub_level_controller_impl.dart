@@ -47,9 +47,6 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   int get lives => subLevelUseCase.lives();
 
   @override
-  String get imageUrl => subLevelUseCase.urlImage;
-
-  @override
   int get columns => subLevelUseCase.columns;
 
   @override

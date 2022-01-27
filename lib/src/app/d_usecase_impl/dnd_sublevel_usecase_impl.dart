@@ -37,9 +37,6 @@ class DnDSubLevelUseCaseImpl extends DnDSubLevelUseCase {
   int get rows => subLevelDomain.rows;
 
   @override
-  String get urlImage => subLevelDomain.urlImage;
-
-  @override
   int get stars => subLevelProgressDomain.stars;
 
   void saveProgress(int stars) {
