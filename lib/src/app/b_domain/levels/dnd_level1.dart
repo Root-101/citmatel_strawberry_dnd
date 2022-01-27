@@ -85,7 +85,7 @@ class DnDLevel1 {
     themeBackgroundImage: ToolsThemesBackgroundImage(
       urlImage: ToolsThemesAssets.THEME_CULTURA_GENERAL,
       colorStrong: Color(0xffd4801c),
-      colorLight: Color(0xffe1a41b),
+      colorLight: Color(0xffe1a41b).withOpacity(0.5),
     ),
     sublevel: [
       sublevel,

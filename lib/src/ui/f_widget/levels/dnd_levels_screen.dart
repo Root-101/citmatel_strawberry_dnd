@@ -18,14 +18,15 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
           singleThemeTileBuilder: (levelDomain) {
             return CommonsLevelsThemeSingleTile<DnDLevelDomain>(
               singleLevelDomain: levelDomain,
+              colorPrimary: levelDomain.themeBackgroundImage.colorStrong,
               buildThemeName: (levelDomain) => levelDomain.theme,
               buildThemeUrlImage: (levelDomain) =>
                   levelDomain.themeBackgroundImage.urlImage,
               openWidget: CommonsSingleLevel<DnDSubLevelDomain>(
                 themeTitle: levelDomain.theme,
                 urlThemePicture: levelDomain.themeBackgroundImage.urlImage,
-                colorStrong: levelDomain.themeBackgroundImage.colorStrong,
-                colorLight: levelDomain.themeBackgroundImage.colorLight,
+                colorPrimary: levelDomain.themeBackgroundImage.colorStrong,
+                colorSecondary: levelDomain.themeBackgroundImage.colorLight,
                 maxStars: 0,
                 winedStars: 0,
                 subLevelsAll: levelDomain.sublevel,
@@ -36,6 +37,8 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
                     subLevelDomain,
                   );
                   return CommonsSingleSubLevelTile(
+                    //el primario de aqui es el secundario del otro lado
+                    colorPrimary: levelDomain.themeBackgroundImage.colorLight,
                     stars: progressDomain.stars,
                     contPlayedTimes: progressDomain.contPlayedTimes,
                     openWidget: DnDSubLevelLoading(
