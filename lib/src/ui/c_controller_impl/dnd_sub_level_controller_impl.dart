@@ -55,6 +55,9 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   @override
   int get stars => subLevelUseCase.stars;
 
+  @override
+  String get imageUrl => subLevelUseCase.imageUrl;
+
   // Show the tutorial if is the first sublevel of the first level.
   bool get showTutorial => subLevelUseCase.showTutorial();
 

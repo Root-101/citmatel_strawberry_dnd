@@ -190,7 +190,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
               height: MediaQuery.of(Get.context!).size.width - 2 * padding,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage(DnDAssets.WALLPAPER), //TODO: random
+                  image: AssetImage(_controller.imageUrl),
                   fit: BoxFit.fill,
                 ),
               ),

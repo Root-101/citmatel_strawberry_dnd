@@ -3,6 +3,7 @@ import 'package:clean_core/clean_core.dart';
 
 class DnDSubLevelDomain extends BasicDomainObject<DnDSubLevelDomain> {
   int id;
+  final String urlImage;
   final int rows;
   final int columns;
   final List<DnDSubLevelItemDomain> items;
@@ -10,6 +11,7 @@ class DnDSubLevelDomain extends BasicDomainObject<DnDSubLevelDomain> {
 
   DnDSubLevelDomain({
     required this.id,
+    required this.urlImage,
     required this.rows,
     required this.columns,
     required this.items,
@@ -42,6 +44,7 @@ class DnDSubLevelDomain extends BasicDomainObject<DnDSubLevelDomain> {
   DnDSubLevelDomain clone() {
     return DnDSubLevelDomain(
       id: this.id,
+      urlImage: this.urlImage,
       rows: this.rows,
       columns: this.columns,
       items: this.items.map((e) => e.clone()).toList(),

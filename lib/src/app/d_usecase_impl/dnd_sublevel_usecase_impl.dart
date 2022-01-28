@@ -39,6 +39,9 @@ class DnDSubLevelUseCaseImpl extends DnDSubLevelUseCase {
   @override
   int get stars => subLevelProgressDomain.stars;
 
+  @override
+  String get imageUrl => subLevelDomain.urlImage;
+
   void saveProgress(int stars) {
     //me quedo siempre con la mejor cantidad de estrellas
     subLevelProgressDomain.stars = max(subLevelProgressDomain.stars, stars);

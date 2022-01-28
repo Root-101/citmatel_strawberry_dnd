@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 class DnDLevel1 {
   static final sublevel = DnDSubLevelDomain(
     id: 1,
+    urlImage: DnDAssets.LEVEL1TEST,
     rows: 5,
     columns: 5,
     items: [

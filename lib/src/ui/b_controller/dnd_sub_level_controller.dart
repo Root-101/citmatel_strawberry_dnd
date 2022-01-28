@@ -13,6 +13,8 @@ abstract class DnDSubLevelController extends GetxController {
 
   int get remainingLives;
 
+  String get imageUrl;
+
   int get columns;
 
   int get rows;
