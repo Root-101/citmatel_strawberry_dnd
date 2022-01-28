@@ -8,6 +8,8 @@ abstract class DnDSubLevelUseCase extends AbstractUseCase {
 
   int get stars;
 
+  String get imageUrl;
+
   void saveProgress(int stars);
 
   List<DnDSubLevelItemDomain> items();
