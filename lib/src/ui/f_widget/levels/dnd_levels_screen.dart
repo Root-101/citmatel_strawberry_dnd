@@ -24,7 +24,7 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
             //foto del tema del tile, generado a partir del `levelDomain`
             buildThemeUrlImage: (levelDomain) =>
                 levelDomain.themeBackgroundImage.urlImage,
-            //nivel abierto, lista de subniveles
+            //nivel abierto, entrar directo al juego
             openWidget: DnDSubLevelLoading(
               subLevelDomain: DnDLevelTutorial.tutorialSubLevel,
               subLevelProgressDomain:
