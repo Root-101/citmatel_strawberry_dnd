@@ -11,8 +11,26 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
   @override
   Widget build(BuildContext context) {
     return GetBuilder<DnDLevelController>(
-      builder: (context) {
+      builder: (_) {
         return CommonsLevelsThemeScreen<DnDLevelDomain>(
+          tutorialTile: CommonsLevelsThemeSingleTile<DnDLevelDomain>(
+            //levelDomain para generar las cosas de aqui
+            singleLevelDomain: DnDLevelTutorial.tutorial,
+            //color primario, principalmente para animaciones
+            colorPrimary:
+                DnDLevelTutorial.tutorial.themeBackgroundImage.colorStrong,
+            //tema del tile, generado a partir del `levelDomain`
+            buildThemeName: (levelDomain) => levelDomain.theme,
+            //foto del tema del tile, generado a partir del `levelDomain`
+            buildThemeUrlImage: (levelDomain) =>
+                levelDomain.themeBackgroundImage.urlImage,
+            //nivel abierto, entrar directo al juego
+            openWidget: DnDSubLevelLoading(
+              subLevelDomain: DnDLevelTutorial.tutorialSubLevel,
+              subLevelProgressDomain:
+                  DnDLevelTutorial.tutorialSubLevelProgress(),
+            ),
+          ),
           //widget que se genera cada vez que se selecciona el aleatorio
           onRandomTap: controller.randomSubLevel,
           //lista de los niveles
