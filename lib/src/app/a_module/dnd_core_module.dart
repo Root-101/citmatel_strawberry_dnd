@@ -7,6 +7,7 @@ class DnDCoreModule {
 
     //sin dependencia
     Get.put<DnDLevelUseCase>(DnDLevelUseCaseImpl(DnDLevelsAll.levels));
+    Get.put<DnDRandomUseCase>(DnDRandomUseCaseImpl());
 
     //el de progreso con la BD
     Get.put<DnDSubLevelProgressUseCase>(
