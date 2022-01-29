@@ -49,7 +49,6 @@ class DnDLevelControllerImpl extends DnDLevelController {
 
   @override
   Widget randomSubLevelOf(DnDLevelDomain level) {
-    print("random sublevel of");
     Tuple2<DnDSubLevelDomain, DnDSubLevelProgressDomain> tuple =
         Get.find<DnDRandomUseCase>().randomSubLevelOf(level);
     return DnDSubLevelLoading(
