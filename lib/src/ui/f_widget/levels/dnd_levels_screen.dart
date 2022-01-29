@@ -13,6 +13,7 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
     return GetBuilder<DnDLevelController>(
       builder: (context) {
         return CommonsLevelsThemeScreen<DnDLevelDomain>(
+          onRandomTap: controller.randomSubLevel,
           levelsFindAll: controller.findAll(),
           urlSliverBackground: DnDAssets.WALLPAPER,
           singleThemeTileBuilder: (levelDomain) {
