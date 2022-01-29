@@ -82,7 +82,7 @@ class DnDLevel1 {
   );
   static final DnDLevelDomain level1 = DnDLevelDomain(
     id: 1,
-    theme: "Tutorial",
+    theme: "Cualquiera",
     themeBackgroundImage: ToolsThemesBackgroundImage(
       urlImage: ToolsThemesAssets.THEME_CULTURA_GENERAL,
       colorStrong: Color(0xffd4801c),
