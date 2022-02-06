@@ -37,10 +37,15 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
           levelsFindAll: controller.findAll(),
           //bakcground del sliver
           urlSliverBackground: DnDAssets.WALLPAPER,
+          winedStars: 0,
+          maxStars: 0,
           //builder de cada tile, uno por tema/uno por nivel
           singleThemeTileBuilder: (levelDomain) {
             //single level/tema tile por defecto
             return GetBuilder<DnDLevelController>(builder: (_) {
+              int winedStars = _.winedStars(levelDomain);
+              int maxStars = _.maxStars(levelDomain);
+
               return CommonsLevelsThemeSingleTile<DnDLevelDomain>(
                 //levelDomain para generar las cosas de aqui
                 singleLevelDomain: levelDomain,
@@ -66,9 +71,9 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
                   //color debil relacionado con la imagen
                   colorSecondary: levelDomain.themeBackgroundImage.colorLight,
                   //estrellas maximas a ganar
-                  maxStars: 0,
+                  maxStars: maxStars,
                   //estrellas ganadas
-                  winedStars: 0,
+                  winedStars: winedStars,
                   //lista de los subniveles del tema
                   subLevelsAll: levelDomain.sublevel,
                   //builder de cada tile
