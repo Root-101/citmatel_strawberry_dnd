@@ -15,6 +15,12 @@ abstract class DnDLevelController extends GetxController {
   //devuelve la cantidad de estrellas ganadas del nivel
   int winedStars(DnDLevelDomain levelDomain);
 
+  //devuelve la cantidad de estrellas maximo de todos los niveles
+  int maxStarsAll();
+
+  //devuelve la cantidad de estrellas ganadas de todos los nivel
+  int winedStarsAll();
+
   Widget randomSubLevel();
 
   Widget randomSubLevelOf(DnDLevelDomain level);
