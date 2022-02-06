@@ -87,6 +87,7 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
                             levelDomain.themeBackgroundImage.colorLight,
                         //estrellas ganadas en el subnivel
                         stars: progressDomain.stars,
+                        maxStars: DnDSubLevelController.MAX_STARS,
                         //cantidad de veces jugado el subnivel
                         contPlayedTimes: progressDomain.contPlayedTimes,
                         //nivel abierto, juego como tal
