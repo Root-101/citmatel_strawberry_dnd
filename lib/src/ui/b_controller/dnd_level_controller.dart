@@ -22,7 +22,7 @@ abstract class DnDLevelController extends GetxController {
   int winedStarsAll();
 
   //check if all sublevels are completed with at most 1 stars
-  bool winedLevel(DnDLevelDomain levelDomain);
+  bool wonedLevel(DnDLevelDomain levelDomain);
 
   Widget randomSubLevel();
 

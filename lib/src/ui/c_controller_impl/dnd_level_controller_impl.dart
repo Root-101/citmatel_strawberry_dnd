@@ -60,7 +60,7 @@ class DnDLevelControllerImpl extends DnDLevelController {
 
   //compruebo todos los progresos de todos los subniveles, y saco los que no tienen progreso
   //el nivel se gano solo si la cantidad de subniveles sin progreso es 0, o sea, que todos tienen algo de progreso
-  bool winedLevel(DnDLevelDomain levelDomain) {
+  bool wonedLevel(DnDLevelDomain levelDomain) {
     int cantEmpty = 0;
     levelDomain.sublevel.forEach((subLevel) {
       if (Get.find<DnDSubLevelProgressUseCase>()
