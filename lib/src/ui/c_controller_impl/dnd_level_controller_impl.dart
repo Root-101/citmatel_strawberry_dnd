@@ -58,6 +58,21 @@ class DnDLevelControllerImpl extends DnDLevelController {
     );
   }
 
+  //compruebo todos los progresos de todos los subniveles, y saco los que no tienen progreso
+  //el nivel se gano solo si la cantidad de subniveles sin progreso es 0, o sea, que todos tienen algo de progreso
+  bool wonedLevel(DnDLevelDomain levelDomain) {
+    int cantEmpty = 0;
+    levelDomain.sublevel.forEach((subLevel) {
+      if (Get.find<DnDSubLevelProgressUseCase>()
+              .findByAllId(levelDomain.id, subLevel.id)
+              .stars ==
+          0) {
+        cantEmpty++;
+      }
+    });
+    return cantEmpty == 0;
+  }
+
   @override
   Widget randomSubLevel() {
     Tuple2<DnDSubLevelDomain, DnDSubLevelProgressDomain> tuple =
