@@ -12,6 +12,9 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
   Widget build(BuildContext context) {
     return GetBuilder<DnDLevelController>(
       builder: (_) {
+        int winedStarsAll = _.winedStarsAll();
+        int maxStarsAll = _.maxStarsAll();
+
         return CommonsLevelsThemeScreen<DnDLevelDomain>(
           tutorialTile: CommonsLevelsThemeSingleTile<DnDLevelDomain>(
             //levelDomain para generar las cosas de aqui
@@ -35,10 +38,10 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
           onRandomTap: controller.randomSubLevel,
           //lista de los niveles
           levelsFindAll: controller.findAll(),
-          //bakcground del sliver
+          //background del sliver
           urlSliverBackground: DnDAssets.WALLPAPER,
-          winedStars: 0,
-          maxStars: 0,
+          winedStars: winedStarsAll,
+          maxStars: maxStarsAll,
           //builder de cada tile, uno por tema/uno por nivel
           singleThemeTileBuilder: (levelDomain) {
             //single level/tema tile por defecto
