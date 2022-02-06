@@ -17,6 +17,8 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
 
         return CommonsLevelsThemeScreen<DnDLevelDomain>(
           tutorialTile: CommonsLevelsThemeSingleTile<DnDLevelDomain>(
+            winedStars: DnDLevelTutorial.tutorialSubLevelProgress().stars,
+            maxStars: DnDSubLevelController.MAX_STARS,
             //levelDomain para generar las cosas de aqui
             singleLevelDomain: DnDLevelTutorial.tutorial,
             //color primario, principalmente para animaciones
@@ -50,6 +52,10 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
               int maxStars = _.maxStars(levelDomain);
 
               return CommonsLevelsThemeSingleTile<DnDLevelDomain>(
+                //estrellas chiquitas de cada tile
+                maxStars: maxStars,
+                winedStars: winedStars,
+
                 //levelDomain para generar las cosas de aqui
                 singleLevelDomain: levelDomain,
                 //color primario, principalmente para animaciones
@@ -73,10 +79,13 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
                   colorPrimary: levelDomain.themeBackgroundImage.colorStrong,
                   //color debil relacionado con la imagen
                   colorSecondary: levelDomain.themeBackgroundImage.colorLight,
+
+                  //estrellas grandes cuando se entra al thema como tal
                   //estrellas maximas a ganar
                   maxStars: maxStars,
                   //estrellas ganadas
                   winedStars: winedStars,
+
                   //lista de los subniveles del tema
                   subLevelsAll: levelDomain.sublevel,
                   //builder de cada tile
