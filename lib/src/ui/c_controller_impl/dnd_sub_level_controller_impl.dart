@@ -20,6 +20,8 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   late DnDSubLevelItemDomain firstAccepted;
 
+  late bool _showTutorial;
+
   DnDSubLevelControllerImpl({
     required DnDSubLevelDomain subLevelDomain,
     required DnDSubLevelProgressDomain subLevelProgressDomain,
@@ -33,6 +35,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
     confettiController = ConfettiController(
       duration: const Duration(milliseconds: 50),
     );
+    _showTutorial = subLevelUseCase.showTutorial();
   }
 
   _initItemsDropped() {
@@ -61,7 +64,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   String get imageUrl => subLevelUseCase.imageUrl;
 
   // Show the tutorial if is the first sublevel of the first level.
-  bool get showTutorial => subLevelUseCase.showTutorial();
+  bool get showTutorial => _showTutorial;
 
   bool onWillAccept(DropTargetItemDomain drop) {
     shouldShake = false;
@@ -112,6 +115,9 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
                   contentAlign: ContentAlign.top,
                   showImage: false),
             ],
+            onSkip: () {
+              stopTutorial();
+            },
           );
         }
       }
@@ -150,6 +156,9 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
             imagePadding: 50,
           ),
         ],
+        onSkip: () {
+          stopTutorial();
+        },
       );
     }
     //revisa si se perdio por completo el nivel
@@ -209,4 +218,9 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   String subLevelTheme() => subLevelUseCase.subLevelTheme();
 
   int subLevelNumber() => subLevelUseCase.subLevelNumber();
+
+  @override
+  void stopTutorial() {
+    _showTutorial = false;
+  }
 }
