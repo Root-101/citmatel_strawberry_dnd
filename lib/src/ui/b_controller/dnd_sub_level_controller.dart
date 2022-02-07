@@ -28,6 +28,8 @@ abstract class DnDSubLevelController extends GetxController {
   // Show the tutorial if is the first sublevel of the first level.
   bool get showTutorial;
 
+  void stopTutorial();
+
   int generateProgress();
 
   ConfettiController get confettiController;
