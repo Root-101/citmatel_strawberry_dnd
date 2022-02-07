@@ -94,4 +94,8 @@ class DnDLevelControllerImpl extends DnDLevelController {
       subLevelProgressDomain: tuple.item2,
     );
   }
+
+  @override
+  String themeOfGivenLevel(DnDSubLevelProgressDomain progressDomain) =>
+      levelUseCase.themeOfGivenLevel(progressDomain);
 }
