@@ -27,4 +27,6 @@ abstract class DnDLevelController extends GetxController {
   Widget randomSubLevel();
 
   Widget randomSubLevelOf(DnDLevelDomain level);
+
+   String themeOfGivenLevel(DnDSubLevelProgressDomain progressDomain);
 }
