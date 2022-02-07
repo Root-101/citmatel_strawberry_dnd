@@ -1,8 +1,9 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:citmatel_strawberry_tools/tools_exporter.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class DnDSubLevelLoading extends StatelessWidget {
+class DnDSubLevelLoading extends GetView<DnDLevelController> {
   final DnDSubLevelDomain subLevelDomain;
   final DnDSubLevelProgressDomain subLevelProgressDomain;
 
@@ -15,25 +16,14 @@ class DnDSubLevelLoading extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PlainSubLevelLoading(
-      backgroundURL: DnDAssets.WALLPAPER, //TODO: random
-      loading: _loadingWidget(),
+      backgroundURL: DnDAssets.WALLPAPER,
+      firstText: [
+        "Tema: ${controller.themeOfGivenLevel(subLevelProgressDomain)}"
+      ],
+      secondText: ["Nivel: ${subLevelProgressDomain.dndSubLevelDomainId}"],
       subLevel: DnDSubLevelScreen(
         subLevelDomain: subLevelDomain,
         subLevelProgressDomain: subLevelProgressDomain,
-      ),
-    );
-  }
-
-  _loadingWidget() {
-    return Container(
-      padding: EdgeInsets.all(30.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Text("Cargando nivel"),
-          StrawberryLoadingSpinkit.randomLoadingSpinkit(),
-          //a random loading every time
-        ],
       ),
     );
   }
