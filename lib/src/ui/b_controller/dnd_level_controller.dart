@@ -1,6 +1,7 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:citmatel_strawberry_tools/assets/assets_exporter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animator/utils/pair.dart';
 import 'package:get/get.dart';
 
 abstract class DnDLevelController extends GetxController {
@@ -33,4 +34,7 @@ abstract class DnDLevelController extends GetxController {
 
   ToolsThemesBackgroundImage themeLooksOfGivenLevel(
       DnDSubLevelProgressDomain progressDomain);
+
+  Pair<DnDSubLevelDomain, DnDSubLevelProgressDomain> nextLevel(
+      DnDSubLevelProgressDomain currentProgress);
 }
