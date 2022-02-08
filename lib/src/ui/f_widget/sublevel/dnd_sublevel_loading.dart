@@ -15,18 +15,23 @@ class DnDSubLevelLoading extends GetView<DnDLevelController> {
 
   @override
   Widget build(BuildContext context) {
-    return PlainSubLevelLoading(
-      firstColor:
-          controller.themeLooksOfGivenLevel(subLevelProgressDomain).colorStrong,
-      secondColor:
-          controller.themeLooksOfGivenLevel(subLevelProgressDomain).colorLight,
-      firstText: [
-        "Tema: ${controller.themeOfGivenLevel(subLevelProgressDomain)}"
-      ],
-      secondText: ["Nivel: ${subLevelProgressDomain.dndSubLevelDomainId}"],
-      subLevel: DnDSubLevelScreen(
-        subLevelDomain: subLevelDomain,
-        subLevelProgressDomain: subLevelProgressDomain,
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: PlainSubLevelLoading(
+        firstColor: controller
+            .themeLooksOfGivenLevel(subLevelProgressDomain)
+            .colorStrong,
+        secondColor: controller
+            .themeLooksOfGivenLevel(subLevelProgressDomain)
+            .colorLight,
+        firstText: [
+          "Tema: ${controller.themeOfGivenLevel(subLevelProgressDomain)}"
+        ],
+        secondText: ["Nivel: ${subLevelProgressDomain.dndSubLevelDomainId}"],
+        subLevel: DnDSubLevelScreen(
+          subLevelDomain: subLevelDomain,
+          subLevelProgressDomain: subLevelProgressDomain,
+        ),
       ),
     );
   }
