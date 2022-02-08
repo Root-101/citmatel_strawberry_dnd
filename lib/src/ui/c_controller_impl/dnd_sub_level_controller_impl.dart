@@ -23,6 +23,8 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   late bool _showTutorial;
 
+  late TutorialCoachMark tutorialCoach;
+
   DnDSubLevelControllerImpl({
     required DnDSubLevelDomain subLevelDomain,
     required DnDSubLevelProgressDomain subLevelProgressDomain,
@@ -102,7 +104,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
         isFirstTime = false;
         if (showTutorial) {
           // Continue the tutorial.
-          StrawberryTutorial.showTutorial(
+          tutorialCoach = StrawberryTutorial.showTutorial(
             context: context,
             targets: [
               StrawberryTutorial.addTarget(
@@ -141,7 +143,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
     remainingLives--;
     if (lives - remainingLives == 1 && showTutorial) {
       // Continue the tutorial.
-      StrawberryTutorial.showTutorial(
+      tutorialCoach = StrawberryTutorial.showTutorial(
         context: context,
         targets: [
           StrawberryTutorial.addTarget(

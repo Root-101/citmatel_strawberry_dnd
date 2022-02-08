@@ -2,6 +2,7 @@ import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:confetti/confetti.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
 
 abstract class DnDSubLevelController extends GetxController {
   static const String TAG = "dnd-sub-level-controller";
@@ -48,4 +49,6 @@ abstract class DnDSubLevelController extends GetxController {
 
   //devuelve el numero del subnivel en los niveles, basicamene el id del subnivel
   int subLevelNumber();
+
+  TutorialCoachMark get tutorialCoach;
 }
