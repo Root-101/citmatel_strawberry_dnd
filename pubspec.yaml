@@ -54,8 +54,10 @@ dev_dependencies:
 
 flutter:
   assets:
+    #Background
+    - packages/citmatel_strawberry_dnd/assets/images/background.png
+
     - packages/citmatel_strawberry_dnd/assets/images/brain_in_blue.jpg
-    - packages/citmatel_strawberry_dnd/assets/images/test.jpg
     - packages/citmatel_strawberry_dnd/assets/icons/frog.png
     - packages/citmatel_strawberry_dnd/assets/icons/bird.png
     - packages/citmatel_strawberry_dnd/assets/icons/deer.png
