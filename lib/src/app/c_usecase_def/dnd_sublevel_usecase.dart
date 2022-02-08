@@ -2,6 +2,12 @@ import 'package:citmatel_strawberry_dnd/src/app/dnd_app_exporter.dart';
 import 'package:clean_core/clean_core.dart';
 
 abstract class DnDSubLevelUseCase extends AbstractUseCase {
+  ///domain almacenado para acceder a la info
+  DnDSubLevelDomain get subLevelDomain;
+
+  ///domain con la info del progreso
+  DnDSubLevelProgressDomain get subLevelProgressDomain;
+
   int get columns;
 
   int get rows;
