@@ -85,10 +85,10 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
     return GetBuilder<DnDSubLevelController>(
       builder: (context) {
         return CommonsSubLevelBuilder.buildScaffold(
-          appBarTitle: _controller.subLevelTheme(),
-          level: _controller.subLevelNumber(),
-          winedStars: _controller.generateProgress(),
-          maxStars: DnDSubLevelController.MAX_STARS,
+          tema: _controller.subLevelTheme(),
+          nivel: _controller.subLevelNumber(),
+          stars: _controller.generateProgress(),
+          maxStar: DnDSubLevelController.MAX_STARS,
           body: SafeArea(
             child: Stack(
               children: [
