@@ -107,9 +107,12 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
                     //tile generico
                     return GetBuilder<DnDLevelController>(builder: (_) {
                       return CommonsSingleSubLevelTile(
+                        level: subLevelDomain.id,
                         //el primario de aqui es el secundario del otro lado
                         colorPrimary:
                             levelDomain.themeBackgroundImage.colorLight,
+                        backgroundColor:
+                            levelDomain.themeBackgroundImage.colorStrong,
                         //estrellas ganadas en el subnivel
                         stars: progressDomain.stars,
                         maxStars: DnDSubLevelController.MAX_STARS,
