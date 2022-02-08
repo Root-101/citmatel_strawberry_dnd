@@ -2,6 +2,7 @@ import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:citmatel_strawberry_tools/tools_exporter.dart';
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animator/utils/pair.dart';
 import 'package:get/get.dart';
 import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
 
@@ -171,6 +172,12 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   void _doLooseLevel() {
     if (remainingLives <= 0) {
       StrawberryFunction.looseLevel(
+        leftButtonFunction: () => Get.off(
+          DnDSubLevelLoading(
+            subLevelDomain: subLevelUseCase.subLevelDomain,
+            subLevelProgressDomain: subLevelUseCase.subLevelProgressDomain,
+          ),
+        ),
         rightButtonFunction: () => Get.back(closeOverlays: true),
         childFirstText: StrawberryAnimatedTextKit.rotateAnimatedText(texts: [
           'Te has quedado sin vidas.',
@@ -187,6 +194,17 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   void _doWinLevel() {
     if (itemsToDrag.isEmpty) {
       StrawberryFunction.winLevel(
+        leftButtonFunction: () {
+          Pair<DnDSubLevelDomain, DnDSubLevelProgressDomain> nextLevel =
+              Get.find<DnDLevelController>()
+                  .nextLevel(subLevelUseCase.subLevelProgressDomain);
+          Get.off(
+            DnDSubLevelLoading(
+              subLevelDomain: nextLevel.a,
+              subLevelProgressDomain: nextLevel.b,
+            ),
+          );
+        },
         rightButtonFunction: () => Get.back(closeOverlays: true),
       );
       _doSaveProgress(generateProgress());
