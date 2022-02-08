@@ -1,4 +1,5 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
+import 'package:citmatel_strawberry_tools/assets/assets_exporter.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -28,5 +29,8 @@ abstract class DnDLevelController extends GetxController {
 
   Widget randomSubLevelOf(DnDLevelDomain level);
 
-   String themeOfGivenLevel(DnDSubLevelProgressDomain progressDomain);
+  String themeOfGivenLevel(DnDSubLevelProgressDomain progressDomain);
+
+  ToolsThemesBackgroundImage themeLooksOfGivenLevel(
+      DnDSubLevelProgressDomain progressDomain);
 }

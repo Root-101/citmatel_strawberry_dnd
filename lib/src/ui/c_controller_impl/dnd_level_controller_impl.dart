@@ -1,4 +1,5 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
+import 'package:citmatel_strawberry_tools/assets/assets_exporter.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tuple/tuple.dart';
@@ -98,4 +99,9 @@ class DnDLevelControllerImpl extends DnDLevelController {
   @override
   String themeOfGivenLevel(DnDSubLevelProgressDomain progressDomain) =>
       levelUseCase.themeOfGivenLevel(progressDomain);
+
+  @override
+  ToolsThemesBackgroundImage themeLooksOfGivenLevel(
+          DnDSubLevelProgressDomain progressDomain) =>
+      levelUseCase.themeLooksOfGivenLevel(progressDomain);
 }
