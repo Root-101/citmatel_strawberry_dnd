@@ -41,6 +41,10 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
           onRandomTap: controller.randomSubLevel,
           //lista de los niveles
           levelsFindAll: controller.findAll(),
+          //nombre del modulo
+          title: "Puzzle",
+          appbarBackgroundColor: Colors.yellowAccent,
+          backgroundColor: Colors.yellowAccent.withOpacity(0.5),
           //background del sliver
           urlSliverBackground: DnDAssets.WALLPAPER,
           winedStars: winedStarsAll,
