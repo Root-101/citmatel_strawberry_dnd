@@ -16,7 +16,9 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
       int maxStarsAll = controller.maxStarsAll();
       return CommonsLevelsThemeScreen<DnDLevelDomain>(
         tutorialTile: CommonsLevelsThemeSingleTile<DnDLevelDomain>(
-          winedStars: DnDLevelTutorial.tutorialSubLevelProgress().stars,
+          winedStars: DnDLevelTutorial.tutorialSubLevelProgress(
+            starsMultiplier: DnDSubLevelController.STARS_MULTIPLIER,
+          ).stars,
           maxStars: DnDSubLevelController.MAX_STARS,
           wonedLevel: controller.wonedLevel(DnDLevelTutorial.tutorial),
 
@@ -33,7 +35,9 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
           //nivel abierto, entrar directo al juego
           openWidget: DnDSubLevelLoading(
             subLevelDomain: DnDLevelTutorial.tutorialSubLevel,
-            subLevelProgressDomain: DnDLevelTutorial.tutorialSubLevelProgress(),
+            subLevelProgressDomain: DnDLevelTutorial.tutorialSubLevelProgress(
+              starsMultiplier: DnDSubLevelController.STARS_MULTIPLIER,
+            ),
           ),
         ),
         //widget que se genera cada vez que se selecciona el aleatorio

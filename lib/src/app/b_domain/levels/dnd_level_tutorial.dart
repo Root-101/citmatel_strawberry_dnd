@@ -95,9 +95,15 @@ class DnDLevelTutorial {
 
   static DnDSubLevelDomain tutorialSubLevel = tutorial.sublevel[0];
 
-  static DnDSubLevelProgressDomain tutorialSubLevelProgress() =>
-      Get.find<DnDSubLevelProgressUseCase>().findByAll(
-        DnDLevelTutorial.tutorial,
-        DnDLevelTutorial.tutorialSubLevel,
-      );
+  static DnDSubLevelProgressDomain tutorialSubLevelProgress({
+    int starsMultiplier = 2,
+  }) {
+    DnDSubLevelProgressDomain progress =
+        Get.find<DnDSubLevelProgressUseCase>().findByAll(
+      DnDLevelTutorial.tutorial,
+      DnDLevelTutorial.tutorialSubLevel,
+    );
+    progress..stars = progress.stars ~/ starsMultiplier;
+    return progress;
+  }
 }

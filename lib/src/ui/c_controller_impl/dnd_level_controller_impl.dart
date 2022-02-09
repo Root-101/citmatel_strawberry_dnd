@@ -28,14 +28,16 @@ class DnDLevelControllerImpl extends DnDLevelController {
     return levelDomain.sublevel.length * DnDSubLevelController.MAX_STARS;
   }
 
+  ///Las devuelve ya divididas por el multiplier
   @override
   int winedStars(DnDLevelDomain levelDomain) {
-    return Get.find<DnDSubLevelProgressUseCase>()
+    int wined = Get.find<DnDSubLevelProgressUseCase>()
         .findByLevelId(levelDomain.id)
         .fold(
           0,
           (previousValue, element) => previousValue + element.stars,
         );
+    return wined ~/ DnDSubLevelController.STARS_MULTIPLIER;
   }
 
   @override
