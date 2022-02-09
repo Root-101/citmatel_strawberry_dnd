@@ -23,7 +23,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   late bool _showTutorial;
 
-  late TutorialCoachMark tutorialCoach;
+  TutorialCoachMark? _tutorialCoachMark;
 
   DnDSubLevelControllerImpl({
     required DnDSubLevelDomain subLevelDomain,
@@ -104,7 +104,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
         isFirstTime = false;
         if (showTutorial) {
           // Continue the tutorial.
-          tutorialCoach = StrawberryTutorial.showTutorial(
+          _tutorialCoachMark = StrawberryTutorial.showTutorial(
             context: context,
             targets: [
               StrawberryTutorial.addTarget(
@@ -143,7 +143,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
     remainingLives--;
     if (lives - remainingLives == 1 && showTutorial) {
       // Continue the tutorial.
-      tutorialCoach = StrawberryTutorial.showTutorial(
+      _tutorialCoachMark = StrawberryTutorial.showTutorial(
         context: context,
         targets: [
           StrawberryTutorial.addTarget(
@@ -246,5 +246,24 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   @override
   void stopTutorial() {
     _showTutorial = false;
+  }
+
+  void initTutorialCoachMark({
+    required BuildContext context,
+    required List<TargetFocus> targets,
+  }) {
+    _tutorialCoachMark = StrawberryTutorial.showTutorial(
+      context: context,
+      targets: targets,
+      onSkip: () {
+        stopTutorial();
+      },
+    );
+  }
+
+  @override
+  void dispose() {
+    _tutorialCoachMark?.finish();
+    super.dispose();
   }
 }
