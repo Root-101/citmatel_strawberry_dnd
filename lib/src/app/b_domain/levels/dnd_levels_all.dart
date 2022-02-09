@@ -4,7 +4,7 @@ class DnDLevelsAll {
   static final List<DnDLevelDomain> levels = [
     DnDLevelTutorial.tutorial,
     DnDLevel1.level1,
-    DnDLevel2.level2,
+    DnDLevelScience.levelCiencias,
     DnDLevel1.level1.clone()..id = 3,
     DnDLevel1.level1.clone()..id = 4,
     DnDLevel1.level1.clone()..id = 5,

@@ -1,6 +1,5 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:citmatel_strawberry_tools/assets/assets_exporter.dart';
-import 'package:flutter/material.dart';
 
 class DnDLevel1 {
   static final sublevel = DnDSubLevelDomain(
@@ -82,12 +81,8 @@ class DnDLevel1 {
   );
   static final DnDLevelDomain level1 = DnDLevelDomain(
     id: 1,
-    theme: "Cualquiera",
-    themeBackgroundImage: ToolsThemesBackgroundImage(
-      urlImage: ToolsThemesAssets.THEME_CULTURA_GENERAL,
-      colorStrong: Color(0xffd4801c),
-      colorLight: Color(0xffe1a41b).withOpacity(0.5),
-    ),
+    theme: "General",
+    themeBackgroundImage: ToolsThemesAssets.THEME_CULTURA_GENERAL_BACKGROUND,
     sublevel: [
       sublevel,
       sublevel.clone()..id = 2,
