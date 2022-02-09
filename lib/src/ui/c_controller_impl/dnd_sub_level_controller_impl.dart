@@ -214,14 +214,18 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   }
 
   int generateProgress() {
-    //TODO corregir a mejor logica
     double progress = (remainingLives / lives) * 100;
-    if (progress >= 80) {
-      return DnDSubLevelController.MAX_STARS;
-    } else if (progress >= 60) {
-      return 2;
-    } else if (progress >= 20) {
-      return 1;
+    if (progress >= 99) {
+      return DnDSubLevelController.STARS_MULTIPLIER *
+          DnDSubLevelController.MAX_STARS; //3 enteras
+    } else if (progress >= 79) {
+      return 2 * DnDSubLevelController.STARS_MULTIPLIER + 1; //2 enteras + media
+    } else if (progress >= 59) {
+      return 2 * DnDSubLevelController.STARS_MULTIPLIER; //2 enteras
+    } else if (progress >= 39) {
+      return 1 * DnDSubLevelController.STARS_MULTIPLIER + 1; //1 entera + media
+    } else if (progress >= 19) {
+      return 1 * DnDSubLevelController.STARS_MULTIPLIER; //1 entera
     } else {
       return 0;
     }
