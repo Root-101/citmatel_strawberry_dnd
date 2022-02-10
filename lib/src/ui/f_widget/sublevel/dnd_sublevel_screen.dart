@@ -91,7 +91,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
             child: Stack(
               children: [
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     _buildListOfHearts(size),
                     _buildDroppedItems(),
