@@ -97,9 +97,9 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
                     _buildDroppedItems(),
                     _controller.shouldShake
                         ? Shake(
-                            child: _buildDraggableItemList(),
+                            child: _buildDraggableItemList(size),
                           )
-                        : _buildDraggableItemList(),
+                        : _buildDraggableItemList(size),
                   ],
                 ),
                 Align(
@@ -260,8 +260,8 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
     );
   }
 
-  _buildDraggableItemList() {
-    double defaultH = MediaQuery.of(Get.context!).size.height / 8;
+  _buildDraggableItemList(Size size) {
+    double defaultH = size.height / 8;
     double defaultW = defaultH;
     int initialPage = max((_controller.itemsToDrag.length / 2).round() - 1, 0);
     return Padding(
