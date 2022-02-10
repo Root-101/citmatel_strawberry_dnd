@@ -91,15 +91,15 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
             child: Stack(
               children: [
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    _buildListOfHearts(),
-                    _buildDroppedItems(),
+                    _buildListOfHearts(size),
+                    _buildDroppedItems(size),
                     _controller.shouldShake
                         ? Shake(
-                            child: _buildDraggableItemList(),
+                            child: _buildDraggableItemList(size),
                           )
-                        : _buildDraggableItemList(),
+                        : _buildDraggableItemList(size),
                   ],
                 ),
                 Align(
@@ -116,11 +116,11 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
     );
   }
 
-  _buildListOfHearts() {
+  _buildListOfHearts(Size size) {
     int countOfColumns = _controller.lives;
     return Padding(
       key: _key1,
-      padding: const EdgeInsets.symmetric(horizontal: 12),
+      padding: EdgeInsets.symmetric(horizontal: size.width / 21),
       child: _animatedGridView(
         countOfColumns,
         List.generate(
@@ -132,7 +132,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
                     child: Icon(
                       FontAwesomeIcons.heartBroken,
                       color: Colors.red.shade900,
-                      size: 50,
+                      size: size.width / 7.5,
                     ),
                   )
                 : _buildAnimations(
@@ -140,7 +140,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
                     countOfColumns,
                     SpinKitPumpingHeart(
                       color: Colors.red.shade900,
-                      size: 55,
+                      size: size.width / 7,
                     ),
                   );
           },
@@ -180,8 +180,8 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
     );
   }
 
-  _buildDroppedItems() {
-    final double padding = 12.0;
+  _buildDroppedItems(Size size) {
+    final double padding = size.width / 21;
     return Padding(
       key: _key3,
       padding: EdgeInsets.all(padding),
@@ -260,8 +260,8 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
     );
   }
 
-  _buildDraggableItemList() {
-    double defaultH = MediaQuery.of(Get.context!).size.height / 8;
+  _buildDraggableItemList(Size size) {
+    double defaultH = size.height / 8;
     double defaultW = defaultH;
     int initialPage = max((_controller.itemsToDrag.length / 2).round() - 1, 0);
     return Padding(
