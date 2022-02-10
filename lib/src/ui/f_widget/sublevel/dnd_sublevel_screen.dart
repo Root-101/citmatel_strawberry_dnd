@@ -93,7 +93,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    _buildListOfHearts(),
+                    _buildListOfHearts(size),
                     _buildDroppedItems(),
                     _controller.shouldShake
                         ? Shake(
@@ -116,7 +116,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
     );
   }
 
-  _buildListOfHearts() {
+  _buildListOfHearts(Size size) {
     int countOfColumns = _controller.lives;
     return Padding(
       key: _key1,
@@ -132,7 +132,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
                     child: Icon(
                       FontAwesomeIcons.heartBroken,
                       color: Colors.red.shade900,
-                      size: 50,
+                      size: size.width / 7.5,
                     ),
                   )
                 : _buildAnimations(
@@ -140,7 +140,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
                     countOfColumns,
                     SpinKitPumpingHeart(
                       color: Colors.red.shade900,
-                      size: 55,
+                      size: size.width / 7,
                     ),
                   );
           },
