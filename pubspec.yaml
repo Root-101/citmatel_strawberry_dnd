@@ -64,4 +64,18 @@ flutter:
     - packages/citmatel_strawberry_dnd/assets/icons/monkey.png
     - packages/citmatel_strawberry_dnd/assets/icons/flower.png
 
+    #Levels
+    #Level 1
+    - packages/citmatel_strawberry_dnd/assets/levels/ciencia/1/bg.png
+    - packages/citmatel_strawberry_dnd/assets/levels/ciencia/1/1.png
+    - packages/citmatel_strawberry_dnd/assets/levels/ciencia/1/2.png
+    - packages/citmatel_strawberry_dnd/assets/levels/ciencia/1/3.png
+    - packages/citmatel_strawberry_dnd/assets/levels/ciencia/1/4.png
+    #Level 2
+    - packages/citmatel_strawberry_dnd/assets/levels/ciencia/2/bg.png
+    - packages/citmatel_strawberry_dnd/assets/levels/ciencia/2/5.png
+    - packages/citmatel_strawberry_dnd/assets/levels/ciencia/2/6.png
+    - packages/citmatel_strawberry_dnd/assets/levels/ciencia/2/7.png
+    - packages/citmatel_strawberry_dnd/assets/levels/ciencia/2/8.png
+
   uses-material-design: true

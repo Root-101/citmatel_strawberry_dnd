@@ -78,9 +78,11 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
     return GetBuilder<DnDSubLevelController>(
       builder: (context) {
         return CommonsSubLevelBuilder.buildScaffold(
+          size: size,
           tema: _controller.subLevelTheme(),
           nivel: _controller.subLevelNumber(),
           stars: _controller.generateProgress(),
@@ -234,8 +236,9 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
       onAccept: (data) =>
           _controller.onAccept(drop, data, context, _key6, _key7),
       builder: (context, acceptedItems, rejectedItems) => DottedBorder(
-        color: Colors.white38,
+        color: Colors.white24,
         dashPattern: const <double>[3, 5],
+        strokeWidth: 0.8,
         child: drop.item == null
             ? Container(
                 key: drop.position.column == 0 && drop.position.row == 1
