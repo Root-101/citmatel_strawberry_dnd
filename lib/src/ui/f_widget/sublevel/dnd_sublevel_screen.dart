@@ -82,7 +82,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
     return GetBuilder<DnDSubLevelController>(
       builder: (context) {
         return CommonsSubLevelBuilder.buildScaffold(
-          size: size,
+          deviceSize: size,
           tema: _controller.subLevelTheme(),
           nivel: _controller.subLevelNumber(),
           stars: _controller.generateProgress(),
