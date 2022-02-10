@@ -181,11 +181,13 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
           ),
         ),
         rightButtonFunction: () => Get.back(closeOverlays: true),
-        childFirstText: StrawberryAnimatedTextKit.rotateAnimatedText(texts: [
+        childFirstText: [
           'Te has quedado sin vidas.',
           'Inténtalo de nuevo.',
           'El que persevera triunfa.',
-        ]),
+        ],
+        stars: generateProgress(),
+        maxStar: DnDSubLevelController.MAX_STARS,
       );
       _doSaveProgress(0);
     }
@@ -208,6 +210,8 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
           );
         },
         rightButtonFunction: () => Get.back(closeOverlays: true),
+        stars: generateProgress(),
+        maxStar: DnDSubLevelController.MAX_STARS,
       );
       _doSaveProgress(generateProgress());
     }
