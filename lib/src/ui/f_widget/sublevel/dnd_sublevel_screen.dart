@@ -94,7 +94,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     _buildListOfHearts(size),
-                    _buildDroppedItems(),
+                    _buildDroppedItems(size),
                     _controller.shouldShake
                         ? Shake(
                             child: _buildDraggableItemList(size),
@@ -120,7 +120,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
     int countOfColumns = _controller.lives;
     return Padding(
       key: _key1,
-      padding: const EdgeInsets.symmetric(horizontal: 12),
+      padding: EdgeInsets.symmetric(horizontal: size.width / 21),
       child: _animatedGridView(
         countOfColumns,
         List.generate(
@@ -180,8 +180,8 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
     );
   }
 
-  _buildDroppedItems() {
-    final double padding = 12.0;
+  _buildDroppedItems(Size size) {
+    final double padding = size.width / 21;
     return Padding(
       key: _key3,
       padding: EdgeInsets.all(padding),
