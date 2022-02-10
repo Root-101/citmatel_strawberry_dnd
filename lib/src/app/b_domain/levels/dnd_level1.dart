@@ -85,14 +85,6 @@ class DnDLevel1 {
     themeBackgroundImage: ToolsThemesAssets.THEME_CULTURA_GENERAL_BACKGROUND,
     sublevel: [
       sublevel,
-      sublevel.clone()..id = 2,
-      sublevel.clone()..id = 3,
-      sublevel.clone()..id = 4,
-      sublevel.clone()..id = 5,
-      sublevel.clone()..id = 6,
-      sublevel.clone()..id = 7,
-      sublevel.clone()..id = 8,
-      sublevel.clone()..id = 9,
     ],
   );
 }

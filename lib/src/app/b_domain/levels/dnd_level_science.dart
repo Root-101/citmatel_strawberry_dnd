@@ -52,7 +52,7 @@ class DnDLevelScience {
               DnDPositionDomain(
                 id: 2,
                 row: 1,
-                column: 2,
+                column: 3,
               ),
               DnDPositionDomain(
                 id: 3,
