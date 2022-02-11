@@ -57,14 +57,14 @@ flutter:
     #Background
     - packages/citmatel_strawberry_dnd/assets/images/background.png
 
-    - packages/citmatel_strawberry_dnd/assets/images/brain_in_blue.jpg
-    - packages/citmatel_strawberry_dnd/assets/icons/frog.png
-    - packages/citmatel_strawberry_dnd/assets/icons/bird.png
-    - packages/citmatel_strawberry_dnd/assets/icons/deer.png
-    - packages/citmatel_strawberry_dnd/assets/icons/monkey.png
-    - packages/citmatel_strawberry_dnd/assets/icons/flower.png
-
     #Levels
+    #TUTORIAL
+    - packages/citmatel_strawberry_dnd/assets/levels/tutorial/bg.png
+    - packages/citmatel_strawberry_dnd/assets/levels/tutorial/1.png
+    - packages/citmatel_strawberry_dnd/assets/levels/tutorial/2.png
+    - packages/citmatel_strawberry_dnd/assets/levels/tutorial/3.png
+
+    #Ciencia
     #Level 1
     - packages/citmatel_strawberry_dnd/assets/levels/ciencia/1/bg.png
     - packages/citmatel_strawberry_dnd/assets/levels/ciencia/1/1.png
