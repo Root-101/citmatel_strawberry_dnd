@@ -5,7 +5,7 @@ class DnDLevelGeneral {
   static final DnDLevelDomain levelGeneral = DnDLevelDomain(
     id: 1,
     theme: ToolsThemesAssets.THEME_GENERAL_NAME,
-    themeBackgroundImage: ToolsThemesAssets.THEME_CULTURA_GENERAL_BACKGROUND,
+    themeBackgroundImage: ToolsThemesAssets.THEME_GENERAL_BACKGROUND,
     sublevel: [],
   );
 }
