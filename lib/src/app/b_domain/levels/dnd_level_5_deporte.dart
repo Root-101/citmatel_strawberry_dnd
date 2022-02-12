@@ -4,7 +4,7 @@ import 'package:citmatel_strawberry_tools/tools_exporter.dart';
 class DnDLevelDeporte {
   static final DnDLevelDomain levelDeporte = DnDLevelDomain(
     id: 5,
-    theme: "Deporte",
+    theme: ToolsThemesAssets.THEME_DEPORTE_NAME,
     themeBackgroundImage: ToolsThemesAssets.THEME_DEPORTE_BACKGROUND,
     sublevel: [],
   );

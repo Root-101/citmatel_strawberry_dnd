@@ -4,7 +4,7 @@ import 'package:citmatel_strawberry_tools/assets/assets_exporter.dart';
 class DnDLevelGeografia {
   static final DnDLevelDomain levelGeografia = DnDLevelDomain(
     id: 6,
-    theme: "Geografía",
+    theme: ToolsThemesAssets.THEME_GEOGRAFIA_NAME,
     themeBackgroundImage: ToolsThemesAssets.THEME_GEOGRAFIA_BACKGROUND,
     sublevel: [],
   );
