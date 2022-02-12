@@ -4,7 +4,7 @@ import 'package:citmatel_strawberry_tools/tools_exporter.dart';
 class DnDLevelScience {
   static final DnDLevelDomain levelCiencias = DnDLevelDomain(
     id: 2,
-    theme: "Ciencias",
+    theme: ToolsThemesAssets.THEME_CIENCIAS_NAME,
     themeBackgroundImage: ToolsThemesAssets.THEME_CIENCIAS_BACKGROUND,
     sublevel: [
       DnDSubLevelDomain(

@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 class DnDLevelTutorial {
   static final DnDLevelDomain tutorial = DnDLevelDomain(
     id: 0,
-    theme: "Tutorial",
+    theme: ToolsThemesAssets.THEME_TUTORIAL_NAME,
     themeBackgroundImage: ToolsThemesAssets.THEME_TUTORIAL_BACKGROUND,
     sublevel: [
       DnDSubLevelDomain(
