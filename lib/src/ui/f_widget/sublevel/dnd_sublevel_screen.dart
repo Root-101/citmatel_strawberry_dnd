@@ -3,12 +3,12 @@ import 'dart:math';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:citmatel_strawberry_tools/tools_exporter.dart';
+import 'package:decorated_icon/decorated_icon.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animator/flutter_animator.dart'
     hide FadeInAnimation, FadeIn;
 import 'package:flutter_fadein/flutter_fadein.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:flutter_staggered_animations/flutter_staggered_animations.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -120,27 +120,59 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
     int countOfColumns = _controller.lives;
     return Padding(
       key: _key1,
-      padding: EdgeInsets.symmetric(horizontal: size.width / 21),
+      padding: EdgeInsets.only(left: size.width / 21),
       child: _animatedGridView(
-        countOfColumns,
-        List.generate(
+        showPadding: true,
+        size: size,
+        cantOfColumns: countOfColumns,
+        children: List.generate(
           countOfColumns,
           (int index) {
             return index < _controller.lives - _controller.remainingLives
                 ? Swing(
                     key: index == 0 ? _key7 : null,
-                    child: Icon(
+                    child: DecoratedIcon(
                       FontAwesomeIcons.heartBroken,
                       color: Colors.red.shade900,
                       size: size.width / 7.5,
+                      shadows: [
+                        BoxShadow(
+                          blurRadius: 12.0,
+                          color: Colors.grey.shade200,
+                        ),
+                        BoxShadow(
+                          blurRadius: 12.0,
+                          color: Colors.grey.shade200,
+                          offset: Offset(0, 3.0),
+                        ),
+                      ],
                     ),
                   )
                 : _buildAnimations(
                     index,
                     countOfColumns,
-                    SpinKitPumpingHeart(
-                      color: Colors.red.shade900,
-                      size: size.width / 7,
+                    HeartBeat(
+                      child: DecoratedIcon(
+                        FontAwesomeIcons.solidHeart,
+                        color: Colors.red.shade900,
+                        size: size.width / 7.5,
+                        shadows: [
+                          BoxShadow(
+                            blurRadius: 12.0,
+                            color: Colors.grey.shade200,
+                          ),
+                          BoxShadow(
+                            blurRadius: 12.0,
+                            color: Colors.grey.shade200,
+                            offset: Offset(0, 3.0),
+                          ),
+                        ],
+                      ),
+                      preferences: AnimationPreferences(
+                        autoPlay: AnimationPlayStates.Loop,
+                        duration: Duration(seconds: 2),
+                        magnitude: 0.5,
+                      ),
                     ),
                   );
           },
@@ -149,12 +181,21 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
     );
   }
 
-  _animatedGridView(int cantOfColumns, List<Widget> children,
-      {double aspectRatio = 1.0}) {
+  _animatedGridView(
+      {required int cantOfColumns,
+      required List<Widget> children,
+      required Size size,
+      bool showPadding = false,
+      double aspectRatio = 1.0}) {
     return AnimationLimiter(
       child: GridView.count(
         childAspectRatio: aspectRatio,
-        //padding: const EdgeInsets.all(8.0),
+        padding: showPadding
+            ? EdgeInsets.symmetric(
+                horizontal: size.width / 21,
+                vertical: size.width / 31,
+              )
+            : EdgeInsets.zero,
         crossAxisCount: cantOfColumns,
         // Amount of columns in the grid
         shrinkWrap: true,
@@ -200,7 +241,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
                   fit: BoxFit.fill,
                 ),
               ),
-              child: _buildDragTargetGridView(),
+              child: _buildDragTargetGridView(size),
             ),
           ),
         ),
@@ -208,13 +249,14 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
     );
   }
 
-  _buildDragTargetGridView() {
+  _buildDragTargetGridView(Size size) {
     int columns = _controller.columns;
 
     List<DropTargetItemDomain> items = _controller.itemsDropped;
     return _animatedGridView(
-      columns,
-      List.generate(
+      size: size,
+      cantOfColumns: columns,
+      children: List.generate(
         items.length,
         (int index) {
           return _buildAnimations(
