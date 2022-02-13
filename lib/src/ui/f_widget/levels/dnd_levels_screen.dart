@@ -44,11 +44,11 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
         onRandomTap: controller.randomSubLevel,
         //lista de los niveles
         levelsFindAll: controller.findAll(),
-        title: "Ahorcado",
-        appbarBackgroundColor: Colors.blueAccent,
-        backgroundColor: Colors.blueAccent.withOpacity(0.5),
+        title: DnDUIModule.MODULE_NAME,
+        appbarBackgroundColor: DnDUIModule.PRIMARY_COLOR,
+        backgroundColor: DnDUIModule.SECONDARY_COLOR,
         //background del sliver
-        urlSliverBackground: DnDAssets.WALLPAPER,
+        urlSliverBackground: DnDUIModule.URL_MODULE_BACKGROUND,
         winedStars: winedStarsAll,
         maxStars: maxStarsAll,
         //builder de cada tile, uno por tema/uno por nivel
