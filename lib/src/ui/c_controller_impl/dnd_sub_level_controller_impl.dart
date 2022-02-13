@@ -77,6 +77,10 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   void onAccept(DropTargetItemDomain drop, DnDSubLevelItemDomain data,
       BuildContext context, GlobalKey key6, GlobalKey key7) {
+    if (remainingLives <= 0 || itemsToDrag.isEmpty) {
+      return;
+    }
+
     bool accepted = data.possiblesPositions.contains(drop.position);
 
     //si lo acepta no vibra, si no lo acepta si vibra
