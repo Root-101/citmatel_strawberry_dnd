@@ -385,9 +385,9 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
         keyTarget: _key4,
         shadowColor: Colors.amber,
         contentAlign: ContentAlign.top,
-        title: 'Mono.',
+        title: 'Objeto.',
         description:
-            'Arrastra el mono hacia la posición que se te indicará a continuación.',
+            'Arrastra el objeto hacia la posición que se te indicará a continuación.',
         shape: ShapeLightFocus.Circle,
         imagePadding: 50,
       ),
@@ -397,10 +397,10 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
         identify: "Target Drop",
         keyTarget: _key5,
         shadowColor: Colors.purple,
-        title: 'Lugar del Mono.',
+        title: 'Lugar del Objeto.',
         description:
-            'Esta es la posición correcta del mono, aqui debes soltarlo.'
-            '\n Algunos elementos tienen varias hubicaciones. Por ejemplo el mono se puede hubicar en varias partes del árbol.',
+            'Esta es la posición correcta del objeto, aqui debes soltarlo.'
+            '\n Algunos elementos tienen varias hubicaciones.',
         shape: ShapeLightFocus.Circle,
         imagePadding: 50,
       ),
