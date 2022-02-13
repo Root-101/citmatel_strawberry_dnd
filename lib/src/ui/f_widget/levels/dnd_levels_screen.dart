@@ -46,7 +46,7 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
         levelsFindAll: controller.findAll(),
         title: DnDUIModule.MODULE_NAME,
         appbarBackgroundColor: DnDUIModule.PRIMARY_COLOR,
-        backgroundColor: DnDUIModule.SECONDARY_COLOR,
+        backgroundColor: DnDUIModule.SECONDARY_COLOR.withOpacity(0.5),
         //background del sliver
         urlSliverBackground: DnDUIModule.URL_MODULE_BACKGROUND,
         winedStars: winedStarsAll,
