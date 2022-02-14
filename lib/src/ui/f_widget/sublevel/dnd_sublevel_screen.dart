@@ -291,7 +291,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
         strokeWidth: 0.8,
         child: drop.item == null
             ? Container(
-                key: drop.position.column == 0 && drop.position.row == 1
+                key: drop.position.column == 2 && drop.position.row == 4
                     ? _key5
                     : null,
               )
