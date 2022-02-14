@@ -46,6 +46,10 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
   GlobalKey _key5 = GlobalKey();
   GlobalKey _key6 = GlobalKey();
   GlobalKey _key7 = GlobalKey();
+  GlobalKey _keyAppBarBack = GlobalKey();
+  GlobalKey _keyAppBarStars = GlobalKey();
+  GlobalKey _keyAppBarLevel = GlobalKey();
+  GlobalKey _keyAppBarTheme = GlobalKey();
 
   @override
   void initState() {
@@ -82,6 +86,10 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
     return GetBuilder<DnDSubLevelController>(
       builder: (context) {
         return CommonsSubLevelBuilder.buildScaffold(
+          backKey: _controller.showTutorial ? _keyAppBarBack : null,
+          levelKey: _controller.showTutorial ? _keyAppBarLevel : null,
+          themeKey: _controller.showTutorial ? _keyAppBarTheme : null,
+          starsKey: _controller.showTutorial ? _keyAppBarStars : null,
           deviceSize: size,
           tema: _controller.subLevelTheme(),
           nivel: _controller.subLevelNumber(),
@@ -384,6 +392,61 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
   void initTargets() {
     targets.add(
       StrawberryTutorial.addTarget(
+        identify: "Target Back Button",
+        keyTarget: _keyAppBarBack,
+        shadowColor: Colors.blue.shade800,
+        title: 'Atrás',
+        description:
+            'Pulse este botón si desea volver a la pantalla de niveles.',
+        showImageOnTop: false,
+        imagePadding: 50,
+        descriptionMaxLines: 2,
+      ),
+    );
+
+    targets.add(
+      StrawberryTutorial.addTarget(
+        identify: "Target Level",
+        keyTarget: _keyAppBarLevel,
+        shadowColor: Colors.red,
+        title: 'Nivel',
+        description: 'Este número indica el nivel en el que se encuentra.',
+        showImageOnTop: false,
+        imagePadding: 50,
+        descriptionMaxLines: 2,
+      ),
+    );
+
+    targets.add(
+      StrawberryTutorial.addTarget(
+        identify: "Target Theme",
+        keyTarget: _keyAppBarTheme,
+        shadowColor: Colors.cyan.shade900,
+        title: 'Tema',
+        description:
+            'Este texto indica el tema del nivel en el que se encuentra.',
+        showImageOnTop: false,
+        imagePadding: 50,
+        descriptionMaxLines: 2,
+      ),
+    );
+
+    targets.add(
+      StrawberryTutorial.addTarget(
+        identify: "Target Stars",
+        keyTarget: _keyAppBarStars,
+        shadowColor: Colors.teal,
+        title: 'Estrellas',
+        description:
+            'Las estrellas indican cuan bien has realizado el nivel.\nPara obtenerlas todas debes completar el nivel sin equivocarte ni una sola vez.',
+        showImageOnTop: false,
+        imagePadding: 50,
+        descriptionMaxLines: 5,
+      ),
+    );
+
+    targets.add(
+      StrawberryTutorial.addTarget(
         identify: "Target Hearts",
         keyTarget: _key1,
         shadowColor: Colors.pink,
@@ -392,6 +455,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
             'Las vidas son la cantidad de intentos que tienes para equivocarte.\n Si las pierdes todas deberás empezar el nivel de nuevo.',
         showImageOnTop: false,
         imagePadding: 50,
+        descriptionMaxLines: 4,
       ),
     );
 
@@ -399,12 +463,13 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
       StrawberryTutorial.addTarget(
         identify: "Target Draggable Items",
         keyTarget: _key2,
-        shadowColor: Colors.red,
+        shadowColor: Colors.indigo,
         contentAlign: ContentAlign.top,
         title: 'Elementos arrastrables.',
         description:
             'Debe arrastrar, cada uno de los elementos de esta lista, hacia la posición correcta, en la imagen de arriba, para poder ganar.',
         imagePadding: 50,
+        descriptionMaxLines: 4,
       ),
     );
 
@@ -418,6 +483,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
         description:
             'Debe arrastrar los elementos de la lista inferior hacia la posición correcta en esta imagen.',
         showImage: false,
+        descriptionMaxLines: 2,
       ),
     );
 
@@ -432,6 +498,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
             'Arrastra el objeto hacia la posición que se te indicará a continuación.',
         shape: ShapeLightFocus.Circle,
         imagePadding: 50,
+        descriptionMaxLines: 2,
       ),
     );
     targets.add(
@@ -445,6 +512,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
             '\n Algunos elementos tienen varias hubicaciones.',
         shape: ShapeLightFocus.Circle,
         imagePadding: 50,
+        descriptionMaxLines: 4,
       ),
     );
   }
