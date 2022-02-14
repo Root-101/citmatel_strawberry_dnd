@@ -112,15 +112,17 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
             context: context,
             targets: [
               StrawberryTutorial.addTarget(
-                  identify: "Target Answer Right",
-                  keyTarget: key6,
-                  shadowColor: Colors.green,
-                  title: 'Respuesta correcta.',
-                  description:
-                      'Felicidades lo has conseguido. Continúa así para ganar el nivel.',
-                  shape: ShapeLightFocus.Circle,
-                  contentAlign: ContentAlign.top,
-                  showImage: false),
+                identify: "Target Answer Right",
+                keyTarget: key6,
+                shadowColor: Colors.green,
+                title: 'Respuesta correcta.',
+                description:
+                    'Felicidades lo has conseguido. Continúa así para ganar el nivel.',
+                shape: ShapeLightFocus.Circle,
+                contentAlign: ContentAlign.top,
+                showImage: false,
+                descriptionMaxLines: 2,
+              ),
             ],
             onSkip: () {
               stopTutorial();
@@ -161,6 +163,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
             shape: ShapeLightFocus.Circle,
             showImageOnTop: false,
             imagePadding: 50,
+            descriptionMaxLines: 6,
           ),
         ],
         onSkip: () {
