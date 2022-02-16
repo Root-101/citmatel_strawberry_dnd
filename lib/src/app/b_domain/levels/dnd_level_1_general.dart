@@ -9,6 +9,7 @@ class DnDLevelGeneral {
     sublevel: [
       DnDSubLevelDomain(
         id: 1,
+        lives: 3,
         urlImage: DnDLevelsAssets.GENERAL_L1_BG,
         rows: 4,
         columns: 6,

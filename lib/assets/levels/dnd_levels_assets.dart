@@ -30,10 +30,10 @@ class DnDLevelsAssets {
   static const String CIENCIA_L1_ITEM_4 = "$CIENCIA_L1/4.png";
 
   //LV2
-  static const String L2 = "$THEME_GENERAL/2";
-  static const String L2_BG = "$L2/bg.png";
-  static const String L2_ITEM_1 = "$L2/5.png";
-  static const String L2_ITEM_2 = "$L2/6.png";
-  static const String L2_ITEM_3 = "$L2/7.png";
-  static const String L2_ITEM_4 = "$L2/8.png";
+  static const String CIENCIA_L2 = "$THEME_CIENCIA/2";
+  static const String CIENCIA_L2_BG = "$CIENCIA_L2/bg.png";
+  static const String CIENCIA_L2_ITEM_1 = "$CIENCIA_L2/5.png";
+  static const String CIENCIA_L2_ITEM_2 = "$CIENCIA_L2/6.png";
+  static const String CIENCIA_L2_ITEM_3 = "$CIENCIA_L2/7.png";
+  static const String CIENCIA_L2_ITEM_4 = "$CIENCIA_L2/8.png";
 }
