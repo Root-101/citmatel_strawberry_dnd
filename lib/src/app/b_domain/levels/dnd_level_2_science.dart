@@ -9,19 +9,19 @@ class DnDLevelScience {
     sublevel: [
       DnDSubLevelDomain(
         id: 1,
-        urlImage: DnDLevelsAssets.L1_BG,
+        urlImage: DnDLevelsAssets.CIENCIA_L1_BG,
         rows: 5,
         columns: 5,
         items: [
           DnDSubLevelItemDomain.singlePosition(
             id: 1,
-            urlImage: DnDLevelsAssets.L1_ITEM_1,
+            urlImage: DnDLevelsAssets.CIENCIA_L1_ITEM_1,
             rowPosition: 3,
             columnPosition: 1,
           ),
           DnDSubLevelItemDomain(
             id: 2,
-            urlImage: DnDLevelsAssets.L1_ITEM_2,
+            urlImage: DnDLevelsAssets.CIENCIA_L1_ITEM_2,
             possiblesPositions: [
               DnDPositionDomain(
                 id: 1,
@@ -42,7 +42,7 @@ class DnDLevelScience {
           ),
           DnDSubLevelItemDomain(
             id: 3,
-            urlImage: DnDLevelsAssets.L1_ITEM_3,
+            urlImage: DnDLevelsAssets.CIENCIA_L1_ITEM_3,
             possiblesPositions: [
               DnDPositionDomain(
                 id: 1,
@@ -63,7 +63,7 @@ class DnDLevelScience {
           ),
           DnDSubLevelItemDomain(
             id: 4,
-            urlImage: DnDLevelsAssets.L1_ITEM_4,
+            urlImage: DnDLevelsAssets.CIENCIA_L1_ITEM_4,
             possiblesPositions: [
               DnDPositionDomain(
                 id: 1,
