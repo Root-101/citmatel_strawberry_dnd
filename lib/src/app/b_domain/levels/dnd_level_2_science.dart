@@ -9,19 +9,19 @@ class DnDLevelScience {
     sublevel: [
       DnDSubLevelDomain(
         id: 1,
-        urlImage: DnDLevelsAssets.L1_BG,
+        urlImage: DnDLevelsAssets.CIENCIA_L1_BG,
         rows: 5,
         columns: 5,
         items: [
           DnDSubLevelItemDomain.singlePosition(
             id: 1,
-            urlImage: DnDLevelsAssets.L1_ITEM_1,
+            urlImage: DnDLevelsAssets.CIENCIA_L1_ITEM_1,
             rowPosition: 3,
             columnPosition: 1,
           ),
           DnDSubLevelItemDomain(
             id: 2,
-            urlImage: DnDLevelsAssets.L1_ITEM_2,
+            urlImage: DnDLevelsAssets.CIENCIA_L1_ITEM_2,
             possiblesPositions: [
               DnDPositionDomain(
                 id: 1,
@@ -42,7 +42,7 @@ class DnDLevelScience {
           ),
           DnDSubLevelItemDomain(
             id: 3,
-            urlImage: DnDLevelsAssets.L1_ITEM_3,
+            urlImage: DnDLevelsAssets.CIENCIA_L1_ITEM_3,
             possiblesPositions: [
               DnDPositionDomain(
                 id: 1,
@@ -63,7 +63,7 @@ class DnDLevelScience {
           ),
           DnDSubLevelItemDomain(
             id: 4,
-            urlImage: DnDLevelsAssets.L1_ITEM_4,
+            urlImage: DnDLevelsAssets.CIENCIA_L1_ITEM_4,
             possiblesPositions: [
               DnDPositionDomain(
                 id: 1,
@@ -86,19 +86,19 @@ class DnDLevelScience {
       ),
       DnDSubLevelDomain(
         id: 2,
-        urlImage: DnDLevelsAssets.L2_BG,
+        urlImage: DnDLevelsAssets.CIENCIA_L2_BG,
         rows: 5,
         columns: 5,
         items: [
           DnDSubLevelItemDomain.singlePosition(
             id: 1,
-            urlImage: DnDLevelsAssets.L2_ITEM_1,
+            urlImage: DnDLevelsAssets.CIENCIA_L2_ITEM_1,
             rowPosition: 3,
             columnPosition: 1,
           ),
           DnDSubLevelItemDomain(
             id: 2,
-            urlImage: DnDLevelsAssets.L2_ITEM_2,
+            urlImage: DnDLevelsAssets.CIENCIA_L2_ITEM_2,
             possiblesPositions: [
               DnDPositionDomain(
                 id: 1,
@@ -119,7 +119,7 @@ class DnDLevelScience {
           ),
           DnDSubLevelItemDomain(
             id: 3,
-            urlImage: DnDLevelsAssets.L2_ITEM_3,
+            urlImage: DnDLevelsAssets.CIENCIA_L2_ITEM_3,
             possiblesPositions: [
               DnDPositionDomain(
                 id: 1,
@@ -140,7 +140,7 @@ class DnDLevelScience {
           ),
           DnDSubLevelItemDomain(
             id: 4,
-            urlImage: DnDLevelsAssets.L2_ITEM_4,
+            urlImage: DnDLevelsAssets.CIENCIA_L2_ITEM_4,
             possiblesPositions: [
               DnDPositionDomain(
                 id: 1,
@@ -158,6 +158,70 @@ class DnDLevelScience {
                 column: 4,
               ),
             ],
+          ),
+        ],
+      ),
+      DnDSubLevelDomain(
+        id: 3,
+        urlImage: DnDLevelsAssets.CIENCIA_L3_BG,
+        rows: 4,
+        columns: 4,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.CIENCIA_L3_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.CIENCIA_L3_ITEM_2,
+            rowPosition: 0,
+            columnPosition: 1,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.CIENCIA_L3_ITEM_3,
+            rowPosition: 0,
+            columnPosition: 2,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.CIENCIA_L3_ITEM_4,
+            rowPosition: 0,
+            columnPosition: 3,
+          ),
+        ],
+      ),
+      DnDSubLevelDomain(
+        id: 4,
+        urlImage: DnDLevelsAssets.CIENCIA_L4_BG,
+        rows: 4,
+        columns: 4,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.CIENCIA_L4_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.CIENCIA_L4_ITEM_2,
+            rowPosition: 0,
+            columnPosition: 1,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.CIENCIA_L4_ITEM_3,
+            rowPosition: 0,
+            columnPosition: 2,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.CIENCIA_L4_ITEM_4,
+            rowPosition: 0,
+            columnPosition: 3,
           ),
         ],
       ),

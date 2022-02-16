@@ -353,7 +353,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
       height: h,
       child: Image.asset(
         image,
-        fit: BoxFit.cover,
+        fit: BoxFit.contain,
       ),
     );
   }
@@ -367,7 +367,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
         colorFilter: ColorFilter.mode(Colors.grey, BlendMode.saturation),
         child: Image.asset(
           image,
-          fit: BoxFit.cover,
+          fit: BoxFit.contain,
         ),
       ),
     );
@@ -382,7 +382,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
         borderRadius: BorderRadius.all(Radius.circular(20)),
         child: Image.asset(
           image,
-          fit: BoxFit.cover,
+          fit: BoxFit.contain,
         ),
       ),
     );
