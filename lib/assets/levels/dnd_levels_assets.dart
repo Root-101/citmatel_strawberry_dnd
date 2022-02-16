@@ -49,4 +49,16 @@ class DnDLevelsAssets {
   static const String CIENCIA_L4_ITEM_2 = "$CIENCIA_L4/2.png";
   static const String CIENCIA_L4_ITEM_3 = "$CIENCIA_L4/3.png";
   static const String CIENCIA_L4_ITEM_4 = "$CIENCIA_L4/4.png";
+
+  ////6 - Geografia////
+  static const String THEME_GEOGRAFIA = "$_assets/6_geografia";
+
+  //LV1
+  static const String GEOGRAFIA_L1 = "$THEME_GEOGRAFIA/1";
+  static const String GEOGRAFIA_L1_BG = "$GEOGRAFIA_L1/bg.png";
+  static const String GEOGRAFIA_L1_ITEM_1 = "$GEOGRAFIA_L1/1.png";
+  static const String GEOGRAFIA_L1_ITEM_2 = "$GEOGRAFIA_L1/2.png";
+  static const String GEOGRAFIA_L1_ITEM_3 = "$GEOGRAFIA_L1/3.png";
+  static const String GEOGRAFIA_L1_ITEM_4 = "$GEOGRAFIA_L1/4.png";
+  static const String GEOGRAFIA_L1_ITEM_5 = "$GEOGRAFIA_L1/5.png";
 }
