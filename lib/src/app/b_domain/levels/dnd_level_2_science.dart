@@ -193,6 +193,38 @@ class DnDLevelScience {
           ),
         ],
       ),
+      DnDSubLevelDomain(
+        id: 4,
+        urlImage: DnDLevelsAssets.CIENCIA_L4_BG,
+        rows: 4,
+        columns: 4,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.CIENCIA_L4_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.CIENCIA_L4_ITEM_2,
+            rowPosition: 0,
+            columnPosition: 1,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.CIENCIA_L4_ITEM_3,
+            rowPosition: 0,
+            columnPosition: 2,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.CIENCIA_L4_ITEM_4,
+            rowPosition: 0,
+            columnPosition: 3,
+          ),
+        ],
+      ),
     ],
   );
 }
