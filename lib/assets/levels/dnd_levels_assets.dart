@@ -2,14 +2,14 @@ class DnDLevelsAssets {
   static const _assets = "packages/citmatel_strawberry_dnd/assets/levels";
 
   ////Tutorial////
-  static const String THEME_TUTORIAL = "$_assets/tutorial";
+  static const String THEME_TUTORIAL = "$_assets/0_tutorial";
   static const String TUTO_BG = "$THEME_TUTORIAL/bg.png";
   static const String TUTO_ITEM_1 = "$THEME_TUTORIAL/1.png";
   static const String TUTO_ITEM_2 = "$THEME_TUTORIAL/2.png";
   static const String TUTO_ITEM_3 = "$THEME_TUTORIAL/3.png";
 
   ////Ciencias////
-  static const String THEME_CIENCIA = "$_assets/ciencia";
+  static const String THEME_CIENCIA = "$_assets/2_ciencia";
 
   //LV1
   static const String L1 = "$THEME_CIENCIA/1";
