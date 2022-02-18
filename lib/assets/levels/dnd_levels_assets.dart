@@ -18,6 +18,13 @@ class DnDLevelsAssets {
   static const String GENERAL_L1_ITEM_2 = "$GENERAL_L1/2.png";
   static const String GENERAL_L1_ITEM_3 = "$GENERAL_L1/3.png";
   static const String GENERAL_L1_ITEM_4 = "$GENERAL_L1/4.png";
+  //LV2
+  static const String GENERAL_L2 = "$THEME_GENERAL/2";
+  static const String GENERAL_L2_BG = "$GENERAL_L2/bg.png";
+  static const String GENERAL_L2_ITEM_1 = "$GENERAL_L2/1.png";
+  static const String GENERAL_L2_ITEM_2 = "$GENERAL_L2/2.png";
+  static const String GENERAL_L2_ITEM_3 = "$GENERAL_L2/3.png";
+  static const String GENERAL_L2_ITEM_4 = "$GENERAL_L2/4.png";
 
   ////2 - Ciencias////
   static const String THEME_CIENCIA = "$_assets/2_ciencia";
