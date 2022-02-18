@@ -18,6 +18,13 @@ class DnDLevelsAssets {
   static const String GENERAL_L1_ITEM_2 = "$GENERAL_L1/2.png";
   static const String GENERAL_L1_ITEM_3 = "$GENERAL_L1/3.png";
   static const String GENERAL_L1_ITEM_4 = "$GENERAL_L1/4.png";
+  //LV2
+  static const String GENERAL_L2 = "$THEME_GENERAL/2";
+  static const String GENERAL_L2_BG = "$GENERAL_L2/bg.png";
+  static const String GENERAL_L2_ITEM_1 = "$GENERAL_L2/1.png";
+  static const String GENERAL_L2_ITEM_2 = "$GENERAL_L2/2.png";
+  static const String GENERAL_L2_ITEM_3 = "$GENERAL_L2/3.png";
+  static const String GENERAL_L2_ITEM_4 = "$GENERAL_L2/4.png";
 
   ////2 - Ciencias////
   static const String THEME_CIENCIA = "$_assets/2_ciencia";
@@ -53,6 +60,38 @@ class DnDLevelsAssets {
   static const String CIENCIA_L4_ITEM_2 = "$CIENCIA_L4/2.png";
   static const String CIENCIA_L4_ITEM_3 = "$CIENCIA_L4/3.png";
   static const String CIENCIA_L4_ITEM_4 = "$CIENCIA_L4/4.png";
+
+  ////5 - Deporte////
+  static const String THEME_DEPORTE = "$_assets/5_deporte";
+
+  //LV1
+  static const String DEPORTE_L1 = "$THEME_DEPORTE/1";
+  static const String DEPORTE_L1_BG = "$DEPORTE_L1/bg.png";
+  static const String DEPORTE_L1_ITEM_1 = "$DEPORTE_L1/1.png";
+  static const String DEPORTE_L1_ITEM_2 = "$DEPORTE_L1/2.png";
+  static const String DEPORTE_L1_ITEM_3 = "$DEPORTE_L1/3.png";
+  //LV2
+  static const String DEPORTE_L2 = "$THEME_DEPORTE/2";
+  static const String DEPORTE_L2_BG = "$DEPORTE_L2/bg.png";
+  static const String DEPORTE_L2_ITEM_1 = "$DEPORTE_L2/1.png";
+  static const String DEPORTE_L2_ITEM_2 = "$DEPORTE_L2/2.png";
+  static const String DEPORTE_L2_ITEM_3 = "$DEPORTE_L2/3.png";
+  static const String DEPORTE_L2_ITEM_4 = "$DEPORTE_L2/4.png";
+  static const String DEPORTE_L2_ITEM_5 = "$DEPORTE_L2/5.png";
+  static const String DEPORTE_L2_ITEM_6 = "$DEPORTE_L2/6.png";
+  static const String DEPORTE_L2_ITEM_7 = "$DEPORTE_L2/7.png";
+  static const String DEPORTE_L2_ITEM_8 = "$DEPORTE_L2/8.png";
+  //LV2
+  static const String DEPORTE_L3 = "$THEME_DEPORTE/3";
+  static const String DEPORTE_L3_BG = "$DEPORTE_L3/bg.png";
+  static const String DEPORTE_L3_ITEM_1 = "$DEPORTE_L3/1.png";
+  static const String DEPORTE_L3_ITEM_2 = "$DEPORTE_L3/2.png";
+  static const String DEPORTE_L3_ITEM_3 = "$DEPORTE_L3/3.png";
+  static const String DEPORTE_L3_ITEM_4 = "$DEPORTE_L3/4.png";
+  static const String DEPORTE_L3_ITEM_5 = "$DEPORTE_L3/5.png";
+  static const String DEPORTE_L3_ITEM_6 = "$DEPORTE_L3/6.png";
+  static const String DEPORTE_L3_ITEM_7 = "$DEPORTE_L3/7.png";
+  static const String DEPORTE_L3_ITEM_8 = "$DEPORTE_L3/8.png";
 
   ////6 - Geografia////
   static const String THEME_GEOGRAFIA = "$_assets/6_geografia";

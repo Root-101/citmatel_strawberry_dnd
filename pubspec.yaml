@@ -72,6 +72,12 @@ flutter:
     - packages/citmatel_strawberry_dnd/assets/levels/1_general/1/2.png
     - packages/citmatel_strawberry_dnd/assets/levels/1_general/1/3.png
     - packages/citmatel_strawberry_dnd/assets/levels/1_general/1/4.png
+    #Level 2
+    - packages/citmatel_strawberry_dnd/assets/levels/1_general/2/bg.png
+    - packages/citmatel_strawberry_dnd/assets/levels/1_general/2/1.png
+    - packages/citmatel_strawberry_dnd/assets/levels/1_general/2/2.png
+    - packages/citmatel_strawberry_dnd/assets/levels/1_general/2/3.png
+    - packages/citmatel_strawberry_dnd/assets/levels/1_general/2/4.png
 
     #2 - Ciencia
     #Level 1
@@ -98,6 +104,33 @@ flutter:
     - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/4/2.png
     - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/4/3.png
     - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/4/4.png
+
+    #5 - deporte
+    #Level 1
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/1/bg.png
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/1/1.png
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/1/2.png
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/1/3.png
+    #Level 2
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/2/bg.png
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/2/1.png
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/2/2.png
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/2/3.png
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/2/4.png
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/2/5.png
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/2/6.png
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/2/7.png
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/2/8.png
+    #Level 3
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/3/bg.png
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/3/1.png
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/3/2.png
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/3/3.png
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/3/4.png
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/3/5.png
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/3/6.png
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/3/7.png
+    - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/3/8.png
 
     #6 - geografia
     #Level 1
