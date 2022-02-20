@@ -86,6 +86,14 @@ flutter:
     - packages/citmatel_strawberry_dnd/assets/levels/1_general/3/4.png
     - packages/citmatel_strawberry_dnd/assets/levels/1_general/3/5.png
     - packages/citmatel_strawberry_dnd/assets/levels/1_general/3/6.png
+    #Level 3
+    - packages/citmatel_strawberry_dnd/assets/levels/1_general/4/bg.png
+    - packages/citmatel_strawberry_dnd/assets/levels/1_general/4/1.png
+    - packages/citmatel_strawberry_dnd/assets/levels/1_general/4/2.png
+    - packages/citmatel_strawberry_dnd/assets/levels/1_general/4/3.png
+    - packages/citmatel_strawberry_dnd/assets/levels/1_general/4/4.png
+    - packages/citmatel_strawberry_dnd/assets/levels/1_general/4/5.png
+    - packages/citmatel_strawberry_dnd/assets/levels/1_general/4/6.png
 
     #2 - Ciencia
     #Level 1
