@@ -132,6 +132,102 @@ class DnDLevelAnimales {
           ),
         ],
       ),
+      DnDSubLevelDomain(
+        id: 4,
+        lives: 5,
+        urlImage: DnDLevelsAssets.ANIMALES_L4_BG,
+        rows: 3,
+        columns: 3,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.ANIMALES_L4_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 1,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.ANIMALES_L4_ITEM_2,
+            rowPosition: 1,
+            columnPosition: 2,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.ANIMALES_L4_ITEM_3,
+            rowPosition: 2,
+            columnPosition: 2,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.ANIMALES_L4_ITEM_4,
+            rowPosition: 2,
+            columnPosition: 1,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 5,
+            urlImage: DnDLevelsAssets.ANIMALES_L4_ITEM_5,
+            rowPosition: 2,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 6,
+            urlImage: DnDLevelsAssets.ANIMALES_L4_ITEM_6,
+            rowPosition: 1,
+            columnPosition: 0,
+          ),
+        ],
+      ),
+      DnDSubLevelDomain(
+        id: 5,
+        lives: 5,
+        urlImage: DnDLevelsAssets.ANIMALES_L5_BG,
+        rows: 3,
+        columns: 3,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.ANIMALES_L5_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.ANIMALES_L5_ITEM_2,
+            rowPosition: 2,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.ANIMALES_L5_ITEM_3,
+            rowPosition: 2,
+            columnPosition: 1,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.ANIMALES_L5_ITEM_4,
+            rowPosition: 2,
+            columnPosition: 2,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 5,
+            urlImage: DnDLevelsAssets.ANIMALES_L5_ITEM_5,
+            rowPosition: 1,
+            columnPosition: 2,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 6,
+            urlImage: DnDLevelsAssets.ANIMALES_L5_ITEM_6,
+            rowPosition: 0,
+            columnPosition: 2,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 7,
+            urlImage: DnDLevelsAssets.ANIMALES_L5_ITEM_7,
+            rowPosition: 0,
+            columnPosition: 1,
+          ),
+        ],
+      ),
     ],
   );
 }
