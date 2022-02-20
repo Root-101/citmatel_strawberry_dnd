@@ -104,6 +104,18 @@ flutter:
     - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/4/2.png
     - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/4/3.png
     - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/4/4.png
+    #Level 5
+    - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/5/bg.png
+    - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/5/1.png
+    - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/5/2.png
+    - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/5/3.png
+    - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/5/4.png
+    #Level 6
+    - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/6/bg.png
+    - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/6/1.png
+    - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/6/2.png
+    - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/6/3.png
+    - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/6/4.png
 
     #5 - deporte
     #Level 1

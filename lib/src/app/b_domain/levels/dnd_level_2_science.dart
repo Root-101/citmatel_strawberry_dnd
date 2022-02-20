@@ -225,6 +225,72 @@ class DnDLevelScience {
           ),
         ],
       ),
+      DnDSubLevelDomain(
+        id: 5,
+        lives: 5,
+        urlImage: DnDLevelsAssets.CIENCIA_L5_BG,
+        rows: 2,
+        columns: 2,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.CIENCIA_L5_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.CIENCIA_L5_ITEM_2,
+            rowPosition: 0,
+            columnPosition: 1,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.CIENCIA_L5_ITEM_3,
+            rowPosition: 1,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.CIENCIA_L5_ITEM_4,
+            rowPosition: 1,
+            columnPosition: 1,
+          ),
+        ],
+      ),
+      DnDSubLevelDomain(
+        id: 6,
+        lives: 5,
+        urlImage: DnDLevelsAssets.CIENCIA_L6_BG,
+        rows: 2,
+        columns: 2,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.CIENCIA_L6_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.CIENCIA_L6_ITEM_2,
+            rowPosition: 0,
+            columnPosition: 1,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.CIENCIA_L6_ITEM_3,
+            rowPosition: 1,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.CIENCIA_L6_ITEM_4,
+            rowPosition: 1,
+            columnPosition: 1,
+          ),
+        ],
+      ),
     ],
   );
 }
