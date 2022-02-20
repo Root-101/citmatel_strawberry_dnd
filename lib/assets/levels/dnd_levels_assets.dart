@@ -53,13 +53,29 @@ class DnDLevelsAssets {
   static const String CIENCIA_L3_ITEM_3 = "$CIENCIA_L3/3.png";
   static const String CIENCIA_L3_ITEM_4 = "$CIENCIA_L3/4.png";
 
-  //LV3
+  //LV4
   static const String CIENCIA_L4 = "$THEME_CIENCIA/4";
   static const String CIENCIA_L4_BG = "$CIENCIA_L4/bg.png";
   static const String CIENCIA_L4_ITEM_1 = "$CIENCIA_L4/1.png";
   static const String CIENCIA_L4_ITEM_2 = "$CIENCIA_L4/2.png";
   static const String CIENCIA_L4_ITEM_3 = "$CIENCIA_L4/3.png";
   static const String CIENCIA_L4_ITEM_4 = "$CIENCIA_L4/4.png";
+
+  //LV5
+  static const String CIENCIA_L5 = "$THEME_CIENCIA/5";
+  static const String CIENCIA_L5_BG = "$CIENCIA_L5/bg.png";
+  static const String CIENCIA_L5_ITEM_1 = "$CIENCIA_L5/1.png";
+  static const String CIENCIA_L5_ITEM_2 = "$CIENCIA_L5/2.png";
+  static const String CIENCIA_L5_ITEM_3 = "$CIENCIA_L5/3.png";
+  static const String CIENCIA_L5_ITEM_4 = "$CIENCIA_L5/4.png";
+
+  //LV5
+  static const String CIENCIA_L6 = "$THEME_CIENCIA/6";
+  static const String CIENCIA_L6_BG = "$CIENCIA_L6/bg.png";
+  static const String CIENCIA_L6_ITEM_1 = "$CIENCIA_L6/1.png";
+  static const String CIENCIA_L6_ITEM_2 = "$CIENCIA_L6/2.png";
+  static const String CIENCIA_L6_ITEM_3 = "$CIENCIA_L6/3.png";
+  static const String CIENCIA_L6_ITEM_4 = "$CIENCIA_L6/4.png";
 
   ////5 - Deporte////
   static const String THEME_DEPORTE = "$_assets/5_deporte";
@@ -114,4 +130,49 @@ class DnDLevelsAssets {
   static const String GEOGRAFIA_L2_ITEM_3 = "$GEOGRAFIA_L2/3.png";
   static const String GEOGRAFIA_L2_ITEM_4 = "$GEOGRAFIA_L2/4.png";
   static const String GEOGRAFIA_L2_ITEM_5 = "$GEOGRAFIA_L2/5.png";
+
+  ////9 - Amimales////
+  static const String THEME_ANIMALES = "$_assets/9_animales";
+
+  //LV1
+  static const String ANIMALES_L1 = "$THEME_ANIMALES/1";
+  static const String ANIMALES_L1_BG = "$ANIMALES_L1/bg.png";
+  static const String ANIMALES_L1_ITEM_1 = "$ANIMALES_L1/1.png";
+  static const String ANIMALES_L1_ITEM_2 = "$ANIMALES_L1/2.png";
+  static const String ANIMALES_L1_ITEM_3 = "$ANIMALES_L1/3.png";
+  static const String ANIMALES_L1_ITEM_4 = "$ANIMALES_L1/4.png";
+  //LV2
+  static const String ANIMALES_L2 = "$THEME_ANIMALES/2";
+  static const String ANIMALES_L2_BG = "$ANIMALES_L2/bg.png";
+  static const String ANIMALES_L2_ITEM_1 = "$ANIMALES_L2/1.png";
+  static const String ANIMALES_L2_ITEM_2 = "$ANIMALES_L2/2.png";
+  static const String ANIMALES_L2_ITEM_3 = "$ANIMALES_L2/3.png";
+  static const String ANIMALES_L2_ITEM_4 = "$ANIMALES_L2/4.png";
+  //LV3
+  static const String ANIMALES_L3 = "$THEME_ANIMALES/3";
+  static const String ANIMALES_L3_BG = "$ANIMALES_L3/bg.png";
+  static const String ANIMALES_L3_ITEM_1 = "$ANIMALES_L3/1.png";
+  static const String ANIMALES_L3_ITEM_2 = "$ANIMALES_L3/2.png";
+  static const String ANIMALES_L3_ITEM_3 = "$ANIMALES_L3/3.png";
+  static const String ANIMALES_L3_ITEM_4 = "$ANIMALES_L3/4.png";
+  static const String ANIMALES_L3_ITEM_5 = "$ANIMALES_L3/5.png";
+  //LV4
+  static const String ANIMALES_L4 = "$THEME_ANIMALES/4";
+  static const String ANIMALES_L4_BG = "$ANIMALES_L4/bg.png";
+  static const String ANIMALES_L4_ITEM_1 = "$ANIMALES_L4/1.png";
+  static const String ANIMALES_L4_ITEM_2 = "$ANIMALES_L4/2.png";
+  static const String ANIMALES_L4_ITEM_3 = "$ANIMALES_L4/3.png";
+  static const String ANIMALES_L4_ITEM_4 = "$ANIMALES_L4/4.png";
+  static const String ANIMALES_L4_ITEM_5 = "$ANIMALES_L4/5.png";
+  static const String ANIMALES_L4_ITEM_6 = "$ANIMALES_L4/6.png";
+  //LV4
+  static const String ANIMALES_L5 = "$THEME_ANIMALES/5";
+  static const String ANIMALES_L5_BG = "$ANIMALES_L5/bg.png";
+  static const String ANIMALES_L5_ITEM_1 = "$ANIMALES_L5/1.png";
+  static const String ANIMALES_L5_ITEM_2 = "$ANIMALES_L5/2.png";
+  static const String ANIMALES_L5_ITEM_3 = "$ANIMALES_L5/3.png";
+  static const String ANIMALES_L5_ITEM_4 = "$ANIMALES_L5/4.png";
+  static const String ANIMALES_L5_ITEM_5 = "$ANIMALES_L5/5.png";
+  static const String ANIMALES_L5_ITEM_6 = "$ANIMALES_L5/6.png";
+  static const String ANIMALES_L5_ITEM_7 = "$ANIMALES_L5/7.png";
 }
