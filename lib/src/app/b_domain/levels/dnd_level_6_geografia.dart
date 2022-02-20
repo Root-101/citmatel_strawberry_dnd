@@ -143,6 +143,50 @@ class DnDLevelGeografia {
           ),
         ],
       ),
+      DnDSubLevelDomain(
+        id: 3,
+        urlImage: DnDLevelsAssets.GEOGRAFIA_L3_BG,
+        rows: 4,
+        columns: 3,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L3_ITEM_1,
+            rowPosition: 1,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L3_ITEM_2,
+            rowPosition: 2,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L3_ITEM_3,
+            rowPosition: 3,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L3_ITEM_4,
+            rowPosition: 1,
+            columnPosition: 2,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 5,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L3_ITEM_5,
+            rowPosition: 2,
+            columnPosition: 2,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 6,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L3_ITEM_6,
+            rowPosition: 3,
+            columnPosition: 2,
+          ),
+        ],
+      ),
     ],
   );
 }
