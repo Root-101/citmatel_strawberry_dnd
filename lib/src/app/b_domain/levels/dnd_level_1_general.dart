@@ -163,6 +163,45 @@ class DnDLevelGeneral {
           ),
         ],
       ),
+      DnDSubLevelDomain(
+        id: 5,
+        lives: 5,
+        urlImage: DnDLevelsAssets.GENERAL_L5_BG,
+        rows: 3,
+        columns: 3,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.GENERAL_L5_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 1,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.GENERAL_L5_ITEM_2,
+            rowPosition: 0,
+            columnPosition: 2,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.GENERAL_L5_ITEM_3,
+            rowPosition: 2,
+            columnPosition: 2,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.GENERAL_L5_ITEM_4,
+            rowPosition: 2,
+            columnPosition: 1,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 5,
+            urlImage: DnDLevelsAssets.GENERAL_L5_ITEM_5,
+            rowPosition: 2,
+            columnPosition: 0,
+          ),
+        ],
+      ),
     ],
   );
 }

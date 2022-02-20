@@ -34,7 +34,7 @@ class DnDLevelsAssets {
   static const String GENERAL_L3_ITEM_4 = "$GENERAL_L3/4.png";
   static const String GENERAL_L3_ITEM_5 = "$GENERAL_L3/5.png";
   static const String GENERAL_L3_ITEM_6 = "$GENERAL_L3/6.png";
-  //LV3
+  //LV4
   static const String GENERAL_L4 = "$THEME_GENERAL/4";
   static const String GENERAL_L4_BG = "$GENERAL_L4/bg.png";
   static const String GENERAL_L4_ITEM_1 = "$GENERAL_L4/1.png";
@@ -43,6 +43,14 @@ class DnDLevelsAssets {
   static const String GENERAL_L4_ITEM_4 = "$GENERAL_L4/4.png";
   static const String GENERAL_L4_ITEM_5 = "$GENERAL_L4/5.png";
   static const String GENERAL_L4_ITEM_6 = "$GENERAL_L4/6.png";
+  //LV5
+  static const String GENERAL_L5 = "$THEME_GENERAL/5";
+  static const String GENERAL_L5_BG = "$GENERAL_L5/bg.png";
+  static const String GENERAL_L5_ITEM_1 = "$GENERAL_L5/1.png";
+  static const String GENERAL_L5_ITEM_2 = "$GENERAL_L5/2.png";
+  static const String GENERAL_L5_ITEM_3 = "$GENERAL_L5/3.png";
+  static const String GENERAL_L5_ITEM_4 = "$GENERAL_L5/4.png";
+  static const String GENERAL_L5_ITEM_5 = "$GENERAL_L5/5.png";
 
   ////2 - Ciencias////
   static const String THEME_CIENCIA = "$_assets/2_ciencia";
