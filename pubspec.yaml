@@ -196,5 +196,11 @@ flutter:
     - packages/citmatel_strawberry_dnd/assets/levels/9_animales/5/5.png
     - packages/citmatel_strawberry_dnd/assets/levels/9_animales/5/6.png
     - packages/citmatel_strawberry_dnd/assets/levels/9_animales/5/7.png
+    #Level 6
+    - packages/citmatel_strawberry_dnd/assets/levels/9_animales/6/bg.png
+    - packages/citmatel_strawberry_dnd/assets/levels/9_animales/6/1.png
+    - packages/citmatel_strawberry_dnd/assets/levels/9_animales/6/2.png
+    - packages/citmatel_strawberry_dnd/assets/levels/9_animales/6/3.png
+    - packages/citmatel_strawberry_dnd/assets/levels/9_animales/6/4.png
 
   uses-material-design: true
