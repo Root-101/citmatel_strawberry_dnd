@@ -121,6 +121,13 @@ class DnDLevelsAssets {
   static const String MITOLOGIA_L1_ITEM_2 = "$MITOLOGIA_L1/2.png";
   static const String MITOLOGIA_L1_ITEM_3 = "$MITOLOGIA_L1/3.png";
   static const String MITOLOGIA_L1_ITEM_4 = "$MITOLOGIA_L1/4.png";
+  //LV2
+  static const String MITOLOGIA_L2 = "$THEME_MITOLOGIA/2";
+  static const String MITOLOGIA_L2_BG = "$MITOLOGIA_L2/bg.png";
+  static const String MITOLOGIA_L2_ITEM_1 = "$MITOLOGIA_L2/1.png";
+  static const String MITOLOGIA_L2_ITEM_2 = "$MITOLOGIA_L2/2.png";
+  static const String MITOLOGIA_L2_ITEM_3 = "$MITOLOGIA_L2/3.png";
+  static const String MITOLOGIA_L2_ITEM_4 = "$MITOLOGIA_L2/4.png";
 
   ////5 - Deporte////
   static const String THEME_DEPORTE = "$_assets/5_deporte";

@@ -40,6 +40,39 @@ class DnDLevelMitologia {
           ),
         ],
       ),
+      DnDSubLevelDomain(
+        id: 2,
+        lives: 5,
+        urlImage: DnDLevelsAssets.MITOLOGIA_L2_BG,
+        rows: 2,
+        columns: 2,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.MITOLOGIA_L2_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.MITOLOGIA_L2_ITEM_2,
+            rowPosition: 0,
+            columnPosition: 1,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.MITOLOGIA_L2_ITEM_3,
+            rowPosition: 1,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.MITOLOGIA_L2_ITEM_4,
+            rowPosition: 1,
+            columnPosition: 1,
+          ),
+        ],
+      ),
     ],
   );
 }
