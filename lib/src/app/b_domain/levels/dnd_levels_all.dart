@@ -9,8 +9,6 @@ class DnDLevelsAll {
     DnDLevelMitologia.levelMitologia,
     DnDLevelDeporte.levelDeporte,
     DnDLevelGeografia.levelGeografia,
-    DnDLevelHistoria.levelHistoria,
-    DnDLevelArte.levelArte,
     DnDLevelAnimales.levelAnimales,
   ];
 }
