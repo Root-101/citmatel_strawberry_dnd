@@ -111,6 +111,17 @@ class DnDLevelsAssets {
   static const String CIENCIA_L6_ITEM_3 = "$CIENCIA_L6/3.png";
   static const String CIENCIA_L6_ITEM_4 = "$CIENCIA_L6/4.png";
 
+  ////4 - Mitología////
+  static const String THEME_MITOLOGIA = "$_assets/4_mitologia";
+
+  //LV1
+  static const String MITOLOGIA_L1 = "$THEME_MITOLOGIA/1";
+  static const String MITOLOGIA_L1_BG = "$MITOLOGIA_L1/bg.png";
+  static const String MITOLOGIA_L1_ITEM_1 = "$MITOLOGIA_L1/1.png";
+  static const String MITOLOGIA_L1_ITEM_2 = "$MITOLOGIA_L1/2.png";
+  static const String MITOLOGIA_L1_ITEM_3 = "$MITOLOGIA_L1/3.png";
+  static const String MITOLOGIA_L1_ITEM_4 = "$MITOLOGIA_L1/4.png";
+
   ////5 - Deporte////
   static const String THEME_DEPORTE = "$_assets/5_deporte";
 
