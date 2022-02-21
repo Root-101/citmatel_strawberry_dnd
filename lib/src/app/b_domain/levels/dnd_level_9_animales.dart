@@ -229,8 +229,8 @@ class DnDLevelAnimales {
         ],
       ),
       DnDSubLevelDomain(
-        id: 1,
-        lives: 6,
+        id: 6,
+        lives: 5,
         urlImage: DnDLevelsAssets.ANIMALES_L6_BG,
         rows: 2,
         columns: 2,
