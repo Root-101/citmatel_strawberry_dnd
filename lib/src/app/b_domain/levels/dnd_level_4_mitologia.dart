@@ -73,6 +73,72 @@ class DnDLevelMitologia {
           ),
         ],
       ),
+      DnDSubLevelDomain(
+        id: 3,
+        lives: 5,
+        urlImage: DnDLevelsAssets.MITOLOGIA_L3_BG,
+        rows: 2,
+        columns: 2,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.MITOLOGIA_L3_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.MITOLOGIA_L3_ITEM_2,
+            rowPosition: 0,
+            columnPosition: 1,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.MITOLOGIA_L3_ITEM_3,
+            rowPosition: 1,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.MITOLOGIA_L3_ITEM_4,
+            rowPosition: 1,
+            columnPosition: 1,
+          ),
+        ],
+      ),
+      DnDSubLevelDomain(
+        id: 4,
+        lives: 5,
+        urlImage: DnDLevelsAssets.MITOLOGIA_L4_BG,
+        rows: 2,
+        columns: 2,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.MITOLOGIA_L4_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.MITOLOGIA_L4_ITEM_2,
+            rowPosition: 0,
+            columnPosition: 1,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.MITOLOGIA_L4_ITEM_3,
+            rowPosition: 1,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.MITOLOGIA_L4_ITEM_4,
+            rowPosition: 1,
+            columnPosition: 1,
+          ),
+        ],
+      ),
     ],
   );
 }

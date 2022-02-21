@@ -160,6 +160,19 @@ flutter:
     - packages/citmatel_strawberry_dnd/assets/levels/4_mitologia/2/2.png
     - packages/citmatel_strawberry_dnd/assets/levels/4_mitologia/2/3.png
     - packages/citmatel_strawberry_dnd/assets/levels/4_mitologia/2/4.png
+    #Level 3
+    - packages/citmatel_strawberry_dnd/assets/levels/4_mitologia/3/bg.png
+    - packages/citmatel_strawberry_dnd/assets/levels/4_mitologia/3/1.png
+    - packages/citmatel_strawberry_dnd/assets/levels/4_mitologia/3/2.png
+    - packages/citmatel_strawberry_dnd/assets/levels/4_mitologia/3/3.png
+    - packages/citmatel_strawberry_dnd/assets/levels/4_mitologia/3/4.png
+    #Level 4
+    - packages/citmatel_strawberry_dnd/assets/levels/4_mitologia/4/bg.png
+    - packages/citmatel_strawberry_dnd/assets/levels/4_mitologia/4/1.png
+    - packages/citmatel_strawberry_dnd/assets/levels/4_mitologia/4/2.png
+    - packages/citmatel_strawberry_dnd/assets/levels/4_mitologia/4/3.png
+    - packages/citmatel_strawberry_dnd/assets/levels/4_mitologia/4/4.png
+
 
     #5 - deporte
     #Level 1
