@@ -286,7 +286,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
       onAccept: (data) =>
           _controller.onAccept(drop, data, context, _key6, _key7),
       builder: (context, acceptedItems, rejectedItems) => DottedBorder(
-        color: Colors.white24,
+        color: Colors.black26,
         dashPattern: const <double>[3, 5],
         strokeWidth: 0.8,
         child: drop.item == null

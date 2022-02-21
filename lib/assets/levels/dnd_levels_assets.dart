@@ -25,6 +25,40 @@ class DnDLevelsAssets {
   static const String GENERAL_L2_ITEM_2 = "$GENERAL_L2/2.png";
   static const String GENERAL_L2_ITEM_3 = "$GENERAL_L2/3.png";
   static const String GENERAL_L2_ITEM_4 = "$GENERAL_L2/4.png";
+  //LV3
+  static const String GENERAL_L3 = "$THEME_GENERAL/3";
+  static const String GENERAL_L3_BG = "$GENERAL_L3/bg.png";
+  static const String GENERAL_L3_ITEM_1 = "$GENERAL_L3/1.png";
+  static const String GENERAL_L3_ITEM_2 = "$GENERAL_L3/2.png";
+  static const String GENERAL_L3_ITEM_3 = "$GENERAL_L3/3.png";
+  static const String GENERAL_L3_ITEM_4 = "$GENERAL_L3/4.png";
+  static const String GENERAL_L3_ITEM_5 = "$GENERAL_L3/5.png";
+  static const String GENERAL_L3_ITEM_6 = "$GENERAL_L3/6.png";
+  //LV4
+  static const String GENERAL_L4 = "$THEME_GENERAL/4";
+  static const String GENERAL_L4_BG = "$GENERAL_L4/bg.png";
+  static const String GENERAL_L4_ITEM_1 = "$GENERAL_L4/1.png";
+  static const String GENERAL_L4_ITEM_2 = "$GENERAL_L4/2.png";
+  static const String GENERAL_L4_ITEM_3 = "$GENERAL_L4/3.png";
+  static const String GENERAL_L4_ITEM_4 = "$GENERAL_L4/4.png";
+  static const String GENERAL_L4_ITEM_5 = "$GENERAL_L4/5.png";
+  static const String GENERAL_L4_ITEM_6 = "$GENERAL_L4/6.png";
+  //LV5
+  static const String GENERAL_L5 = "$THEME_GENERAL/5";
+  static const String GENERAL_L5_BG = "$GENERAL_L5/bg.png";
+  static const String GENERAL_L5_ITEM_1 = "$GENERAL_L5/1.png";
+  static const String GENERAL_L5_ITEM_2 = "$GENERAL_L5/2.png";
+  static const String GENERAL_L5_ITEM_3 = "$GENERAL_L5/3.png";
+  static const String GENERAL_L5_ITEM_4 = "$GENERAL_L5/4.png";
+  static const String GENERAL_L5_ITEM_5 = "$GENERAL_L5/5.png";
+  //LV6
+  static const String GENERAL_L6 = "$THEME_GENERAL/6";
+  static const String GENERAL_L6_BG = "$GENERAL_L6/bg.png";
+  static const String GENERAL_L6_ITEM_1 = "$GENERAL_L6/1.png";
+  static const String GENERAL_L6_ITEM_2 = "$GENERAL_L6/2.png";
+  static const String GENERAL_L6_ITEM_3 = "$GENERAL_L6/3.png";
+  static const String GENERAL_L6_ITEM_4 = "$GENERAL_L6/4.png";
+  static const String GENERAL_L6_ITEM_5 = "$GENERAL_L6/5.png";
 
   ////2 - Ciencias////
   static const String THEME_CIENCIA = "$_assets/2_ciencia";
@@ -97,7 +131,7 @@ class DnDLevelsAssets {
   static const String DEPORTE_L2_ITEM_6 = "$DEPORTE_L2/6.png";
   static const String DEPORTE_L2_ITEM_7 = "$DEPORTE_L2/7.png";
   static const String DEPORTE_L2_ITEM_8 = "$DEPORTE_L2/8.png";
-  //LV2
+  //LV3
   static const String DEPORTE_L3 = "$THEME_DEPORTE/3";
   static const String DEPORTE_L3_BG = "$DEPORTE_L3/bg.png";
   static const String DEPORTE_L3_ITEM_1 = "$DEPORTE_L3/1.png";
@@ -108,6 +142,24 @@ class DnDLevelsAssets {
   static const String DEPORTE_L3_ITEM_6 = "$DEPORTE_L3/6.png";
   static const String DEPORTE_L3_ITEM_7 = "$DEPORTE_L3/7.png";
   static const String DEPORTE_L3_ITEM_8 = "$DEPORTE_L3/8.png";
+  //LV4
+  static const String DEPORTE_L4 = "$THEME_DEPORTE/4";
+  static const String DEPORTE_L4_BG = "$DEPORTE_L4/bg.png";
+  static const String DEPORTE_L4_ITEM_1 = "$DEPORTE_L4/1.png";
+  static const String DEPORTE_L4_ITEM_2 = "$DEPORTE_L4/2.png";
+  static const String DEPORTE_L4_ITEM_3 = "$DEPORTE_L4/3.png";
+  static const String DEPORTE_L4_ITEM_4 = "$DEPORTE_L4/4.png";
+  static const String DEPORTE_L4_ITEM_5 = "$DEPORTE_L4/5.png";
+  static const String DEPORTE_L4_ITEM_6 = "$DEPORTE_L4/6.png";
+  //LV5
+  static const String DEPORTE_L5 = "$THEME_DEPORTE/5";
+  static const String DEPORTE_L5_BG = "$DEPORTE_L5/bg.png";
+  static const String DEPORTE_L5_ITEM_1 = "$DEPORTE_L5/1.png";
+  static const String DEPORTE_L5_ITEM_2 = "$DEPORTE_L5/2.png";
+  static const String DEPORTE_L5_ITEM_3 = "$DEPORTE_L5/3.png";
+  static const String DEPORTE_L5_ITEM_4 = "$DEPORTE_L5/4.png";
+  static const String DEPORTE_L5_ITEM_5 = "$DEPORTE_L5/5.png";
+  static const String DEPORTE_L5_ITEM_6 = "$DEPORTE_L5/6.png";
 
   ////6 - Geografia////
   static const String THEME_GEOGRAFIA = "$_assets/6_geografia";
@@ -120,7 +172,6 @@ class DnDLevelsAssets {
   static const String GEOGRAFIA_L1_ITEM_3 = "$GEOGRAFIA_L1/3.png";
   static const String GEOGRAFIA_L1_ITEM_4 = "$GEOGRAFIA_L1/4.png";
   static const String GEOGRAFIA_L1_ITEM_5 = "$GEOGRAFIA_L1/5.png";
-
   //LV2
   static const String GEOGRAFIA_L2 = "$THEME_GEOGRAFIA/2";
   static const String GEOGRAFIA_L2_BG =
@@ -130,6 +181,42 @@ class DnDLevelsAssets {
   static const String GEOGRAFIA_L2_ITEM_3 = "$GEOGRAFIA_L2/3.png";
   static const String GEOGRAFIA_L2_ITEM_4 = "$GEOGRAFIA_L2/4.png";
   static const String GEOGRAFIA_L2_ITEM_5 = "$GEOGRAFIA_L2/5.png";
+  //LV3
+  static const String GEOGRAFIA_L3 = "$THEME_GEOGRAFIA/3";
+  static const String GEOGRAFIA_L3_BG = "$GEOGRAFIA_L3/bg.png";
+  static const String GEOGRAFIA_L3_ITEM_1 = "$GEOGRAFIA_L3/1.png";
+  static const String GEOGRAFIA_L3_ITEM_2 = "$GEOGRAFIA_L3/2.png";
+  static const String GEOGRAFIA_L3_ITEM_3 = "$GEOGRAFIA_L3/3.png";
+  static const String GEOGRAFIA_L3_ITEM_4 = "$GEOGRAFIA_L3/4.png";
+  static const String GEOGRAFIA_L3_ITEM_5 = "$GEOGRAFIA_L3/5.png";
+  static const String GEOGRAFIA_L3_ITEM_6 = "$GEOGRAFIA_L3/6.png";
+  //LV4
+  static const String GEOGRAFIA_L4 = "$THEME_GEOGRAFIA/4";
+  static const String GEOGRAFIA_L4_BG = "$GEOGRAFIA_L4/bg.png";
+  static const String GEOGRAFIA_L4_ITEM_1 = "$GEOGRAFIA_L4/1.png";
+  static const String GEOGRAFIA_L4_ITEM_2 = "$GEOGRAFIA_L4/2.png";
+  static const String GEOGRAFIA_L4_ITEM_3 = "$GEOGRAFIA_L4/3.png";
+  static const String GEOGRAFIA_L4_ITEM_4 = "$GEOGRAFIA_L4/4.png";
+  static const String GEOGRAFIA_L4_ITEM_5 = "$GEOGRAFIA_L4/5.png";
+  static const String GEOGRAFIA_L4_ITEM_6 = "$GEOGRAFIA_L4/6.png";
+  //LV5
+  static const String GEOGRAFIA_L5 = "$THEME_GEOGRAFIA/5";
+  static const String GEOGRAFIA_L5_BG = "$GEOGRAFIA_L5/bg.png";
+  static const String GEOGRAFIA_L5_ITEM_1 = "$GEOGRAFIA_L5/1.png";
+  static const String GEOGRAFIA_L5_ITEM_2 = "$GEOGRAFIA_L5/2.png";
+  static const String GEOGRAFIA_L5_ITEM_3 = "$GEOGRAFIA_L5/3.png";
+  static const String GEOGRAFIA_L5_ITEM_4 = "$GEOGRAFIA_L5/4.png";
+  static const String GEOGRAFIA_L5_ITEM_5 = "$GEOGRAFIA_L5/5.png";
+  static const String GEOGRAFIA_L5_ITEM_6 = "$GEOGRAFIA_L5/6.png";
+  //LV6
+  static const String GEOGRAFIA_L6 = "$THEME_GEOGRAFIA/6";
+  static const String GEOGRAFIA_L6_BG = "$GEOGRAFIA_L6/bg.png";
+  static const String GEOGRAFIA_L6_ITEM_1 = "$GEOGRAFIA_L6/1.png";
+  static const String GEOGRAFIA_L6_ITEM_2 = "$GEOGRAFIA_L6/2.png";
+  static const String GEOGRAFIA_L6_ITEM_3 = "$GEOGRAFIA_L6/3.png";
+  static const String GEOGRAFIA_L6_ITEM_4 = "$GEOGRAFIA_L6/4.png";
+  static const String GEOGRAFIA_L6_ITEM_5 = "$GEOGRAFIA_L6/5.png";
+  static const String GEOGRAFIA_L6_ITEM_6 = "$GEOGRAFIA_L6/6.png";
 
   ////9 - Amimales////
   static const String THEME_ANIMALES = "$_assets/9_animales";
@@ -165,7 +252,7 @@ class DnDLevelsAssets {
   static const String ANIMALES_L4_ITEM_4 = "$ANIMALES_L4/4.png";
   static const String ANIMALES_L4_ITEM_5 = "$ANIMALES_L4/5.png";
   static const String ANIMALES_L4_ITEM_6 = "$ANIMALES_L4/6.png";
-  //LV4
+  //LV5
   static const String ANIMALES_L5 = "$THEME_ANIMALES/5";
   static const String ANIMALES_L5_BG = "$ANIMALES_L5/bg.png";
   static const String ANIMALES_L5_ITEM_1 = "$ANIMALES_L5/1.png";
@@ -175,4 +262,11 @@ class DnDLevelsAssets {
   static const String ANIMALES_L5_ITEM_5 = "$ANIMALES_L5/5.png";
   static const String ANIMALES_L5_ITEM_6 = "$ANIMALES_L5/6.png";
   static const String ANIMALES_L5_ITEM_7 = "$ANIMALES_L5/7.png";
+  //LV6
+  static const String ANIMALES_L6 = "$THEME_ANIMALES/6";
+  static const String ANIMALES_L6_BG = "$ANIMALES_L6/bg.png";
+  static const String ANIMALES_L6_ITEM_1 = "$ANIMALES_L6/1.png";
+  static const String ANIMALES_L6_ITEM_2 = "$ANIMALES_L6/2.png";
+  static const String ANIMALES_L6_ITEM_3 = "$ANIMALES_L6/3.png";
+  static const String ANIMALES_L6_ITEM_4 = "$ANIMALES_L6/4.png";
 }

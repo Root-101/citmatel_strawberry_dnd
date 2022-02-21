@@ -228,6 +228,96 @@ class DnDLevelDeporte {
           ),
         ],
       ),
+      DnDSubLevelDomain(
+        id: 4,
+        lives: 5,
+        urlImage: DnDLevelsAssets.DEPORTE_L4_BG,
+        rows: 3,
+        columns: 2,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.DEPORTE_L4_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.DEPORTE_L4_ITEM_2,
+            rowPosition: 0,
+            columnPosition: 1,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.DEPORTE_L4_ITEM_3,
+            rowPosition: 1,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.DEPORTE_L4_ITEM_4,
+            rowPosition: 1,
+            columnPosition: 1,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 5,
+            urlImage: DnDLevelsAssets.DEPORTE_L4_ITEM_5,
+            rowPosition: 2,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 6,
+            urlImage: DnDLevelsAssets.DEPORTE_L4_ITEM_6,
+            rowPosition: 2,
+            columnPosition: 1,
+          ),
+        ],
+      ),
+      DnDSubLevelDomain(
+        id: 5,
+        lives: 5,
+        urlImage: DnDLevelsAssets.DEPORTE_L5_BG,
+        rows: 3,
+        columns: 2,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.DEPORTE_L5_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.DEPORTE_L5_ITEM_2,
+            rowPosition: 0,
+            columnPosition: 1,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.DEPORTE_L5_ITEM_3,
+            rowPosition: 1,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.DEPORTE_L5_ITEM_4,
+            rowPosition: 1,
+            columnPosition: 1,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 5,
+            urlImage: DnDLevelsAssets.DEPORTE_L5_ITEM_5,
+            rowPosition: 2,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 6,
+            urlImage: DnDLevelsAssets.DEPORTE_L5_ITEM_6,
+            rowPosition: 2,
+            columnPosition: 1,
+          ),
+        ],
+      ),
     ],
   );
 }
