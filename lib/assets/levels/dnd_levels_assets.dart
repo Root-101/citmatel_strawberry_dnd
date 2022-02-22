@@ -135,6 +135,13 @@ class DnDLevelsAssets {
   static const String TECNOLOGIA_L3_ITEM_2 = "$TECNOLOGIA_L3/2.png";
   static const String TECNOLOGIA_L3_ITEM_3 = "$TECNOLOGIA_L3/3.png";
   static const String TECNOLOGIA_L3_ITEM_4 = "$TECNOLOGIA_L3/4.png";
+  //LV4
+  static const String TECNOLOGIA_L4 = "$THEME_TECNOLOGIA/4";
+  static const String TECNOLOGIA_L4_BG = "$TECNOLOGIA_L4/bg.png";
+  static const String TECNOLOGIA_L4_ITEM_1 = "$TECNOLOGIA_L4/1.png";
+  static const String TECNOLOGIA_L4_ITEM_2 = "$TECNOLOGIA_L4/2.png";
+  static const String TECNOLOGIA_L4_ITEM_3 = "$TECNOLOGIA_L4/3.png";
+  static const String TECNOLOGIA_L4_ITEM_4 = "$TECNOLOGIA_L4/4.png";
 
   ////4 - Mitología////
   static const String THEME_MITOLOGIA = "$_assets/4_mitologia";
