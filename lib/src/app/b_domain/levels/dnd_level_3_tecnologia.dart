@@ -103,6 +103,39 @@ class DnDLevelTecnologia {
           ),
         ],
       ),
+      DnDSubLevelDomain(
+        id: 3,
+        lives: 5,
+        urlImage: DnDLevelsAssets.TECNOLOGIA_L3_BG,
+        rows: 5,
+        columns: 3,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.TECNOLOGIA_L3_ITEM_1,
+            rowPosition: 1,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.TECNOLOGIA_L3_ITEM_2,
+            rowPosition: 2,
+            columnPosition: 2,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.TECNOLOGIA_L3_ITEM_3,
+            rowPosition: 3,
+            columnPosition: 0,
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.TECNOLOGIA_L3_ITEM_4,
+            rowPosition: 4,
+            columnPosition: 2,
+          ),
+        ],
+      ),
     ],
   );
 }
