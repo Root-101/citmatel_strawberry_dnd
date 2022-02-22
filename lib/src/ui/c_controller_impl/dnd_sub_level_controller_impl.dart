@@ -25,9 +25,12 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   TutorialCoachMark? _tutorialCoachMark;
 
+  late bool mute;
+
   DnDSubLevelControllerImpl({
     required DnDSubLevelDomain subLevelDomain,
     required DnDSubLevelProgressDomain subLevelProgressDomain,
+    required this.mute,
   }) : subLevelUseCase = DnDSubLevelUseCaseImpl(
           subLevelDomain: subLevelDomain,
           subLevelProgressDomain: subLevelProgressDomain,
@@ -87,7 +90,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
     shouldShake = !accepted;
     if (accepted) {
       //si es correcto reproduce audio y hace conffeti
-      StrawberryAudio.playAudioCorrect();
+      StrawberryAudio.playAudioCorrect(mute);
       _makeConffeti();
 
       //busca la posicion del grid donde se soltó el item
@@ -135,7 +138,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
     } else {
       //si está mal vibra, reproduce audio de error y rompe un corazon
       StrawberryVibration.vibrate();
-      StrawberryAudio.playAudioWrong();
+      StrawberryAudio.playAudioWrong(mute);
       _breakHeart(context, key7);
     }
     update();
@@ -181,8 +184,10 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   void _doLooseLevel() {
     if (remainingLives <= 0) {
       StrawberryFunction.looseLevel(
+        mute: mute,
         leftButtonFunction: () => Get.off(
           DnDSubLevelLoading(
+            mute: mute,
             subLevelDomain: subLevelUseCase.subLevelDomain,
             subLevelProgressDomain: subLevelUseCase.subLevelProgressDomain,
           ),
@@ -205,12 +210,14 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   void _doWinLevel() {
     if (itemsToDrag.isEmpty) {
       StrawberryFunction.winLevel(
+        mute: mute,
         leftButtonFunction: () {
           Pair<DnDSubLevelDomain, DnDSubLevelProgressDomain> nextLevel =
               Get.find<DnDLevelController>()
                   .nextLevel(subLevelUseCase.subLevelProgressDomain);
           Get.off(
             DnDSubLevelLoading(
+              mute: mute,
               subLevelDomain: nextLevel.a,
               subLevelProgressDomain: nextLevel.b,
             ),

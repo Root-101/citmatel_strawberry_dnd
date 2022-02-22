@@ -5,8 +5,9 @@ import 'package:get/get.dart';
 
 class DnDLevelsScreen extends GetView<DnDLevelController> {
   static const ROUTE_NAME = "/dnd-levels-screen";
+  final bool mute;
 
-  DnDLevelsScreen({Key? key}) : super(key: key);
+  DnDLevelsScreen({Key? key, required this.mute}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +35,7 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
               levelDomain.themeBackgroundImage.urlImage,
           //nivel abierto, entrar directo al juego
           openWidget: DnDSubLevelLoading(
+            mute: mute,
             subLevelDomain: DnDLevelTutorial.tutorialSubLevel,
             subLevelProgressDomain: DnDLevelTutorial.tutorialSubLevelProgress(
               starsMultiplier: DnDSubLevelController.STARS_MULTIPLIER,
@@ -125,6 +127,7 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
                     contPlayedTimes: progressDomain.contPlayedTimes,
                     //nivel abierto, juego como tal
                     openWidget: DnDSubLevelLoading(
+                      mute: mute,
                       subLevelDomain: subLevelDomain,
                       subLevelProgressDomain: progressDomain,
                     ),

@@ -26,9 +26,9 @@ abstract class DnDLevelController extends GetxController {
   //check if all sublevels are completed with at most 1 stars
   bool wonedLevel(DnDLevelDomain levelDomain);
 
-  Widget randomSubLevel();
+  Widget randomSubLevel(bool mute);
 
-  Widget randomSubLevelOf(DnDLevelDomain level);
+  Widget randomSubLevelOf(DnDLevelDomain level, bool mute);
 
   String themeOfGivenLevel(DnDSubLevelProgressDomain progressDomain);
 
