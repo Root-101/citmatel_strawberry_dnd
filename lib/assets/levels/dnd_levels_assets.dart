@@ -70,7 +70,6 @@ class DnDLevelsAssets {
   static const String CIENCIA_L1_ITEM_2 = "$CIENCIA_L1/2.png";
   static const String CIENCIA_L1_ITEM_3 = "$CIENCIA_L1/3.png";
   static const String CIENCIA_L1_ITEM_4 = "$CIENCIA_L1/4.png";
-
   //LV2
   static const String CIENCIA_L2 = "$THEME_CIENCIA/2";
   static const String CIENCIA_L2_BG = "$CIENCIA_L2/bg.png";
@@ -78,7 +77,6 @@ class DnDLevelsAssets {
   static const String CIENCIA_L2_ITEM_2 = "$CIENCIA_L2/6.png";
   static const String CIENCIA_L2_ITEM_3 = "$CIENCIA_L2/7.png";
   static const String CIENCIA_L2_ITEM_4 = "$CIENCIA_L2/8.png";
-
   //LV3
   static const String CIENCIA_L3 = "$THEME_CIENCIA/3";
   static const String CIENCIA_L3_BG = "$CIENCIA_L3/bg.png";
@@ -86,7 +84,6 @@ class DnDLevelsAssets {
   static const String CIENCIA_L3_ITEM_2 = "$CIENCIA_L3/2.png";
   static const String CIENCIA_L3_ITEM_3 = "$CIENCIA_L3/3.png";
   static const String CIENCIA_L3_ITEM_4 = "$CIENCIA_L3/4.png";
-
   //LV4
   static const String CIENCIA_L4 = "$THEME_CIENCIA/4";
   static const String CIENCIA_L4_BG = "$CIENCIA_L4/bg.png";
@@ -94,7 +91,6 @@ class DnDLevelsAssets {
   static const String CIENCIA_L4_ITEM_2 = "$CIENCIA_L4/2.png";
   static const String CIENCIA_L4_ITEM_3 = "$CIENCIA_L4/3.png";
   static const String CIENCIA_L4_ITEM_4 = "$CIENCIA_L4/4.png";
-
   //LV5
   static const String CIENCIA_L5 = "$THEME_CIENCIA/5";
   static const String CIENCIA_L5_BG = "$CIENCIA_L5/bg.png";
@@ -102,14 +98,36 @@ class DnDLevelsAssets {
   static const String CIENCIA_L5_ITEM_2 = "$CIENCIA_L5/2.png";
   static const String CIENCIA_L5_ITEM_3 = "$CIENCIA_L5/3.png";
   static const String CIENCIA_L5_ITEM_4 = "$CIENCIA_L5/4.png";
-
-  //LV5
+  //LV6
   static const String CIENCIA_L6 = "$THEME_CIENCIA/6";
   static const String CIENCIA_L6_BG = "$CIENCIA_L6/bg.png";
   static const String CIENCIA_L6_ITEM_1 = "$CIENCIA_L6/1.png";
   static const String CIENCIA_L6_ITEM_2 = "$CIENCIA_L6/2.png";
   static const String CIENCIA_L6_ITEM_3 = "$CIENCIA_L6/3.png";
   static const String CIENCIA_L6_ITEM_4 = "$CIENCIA_L6/4.png";
+
+  ////3 - Tecnologia////
+  static const String THEME_TECNOLOGIA = "$_assets/3_tecnologia";
+
+  //LV1
+  static const String TECNOLOGIA_L1 = "$THEME_TECNOLOGIA/1";
+  static const String TECNOLOGIA_L1_BG = "$TECNOLOGIA_L1/bg.png";
+  static const String TECNOLOGIA_L1_ITEM_1 = "$TECNOLOGIA_L1/1.png";
+  static const String TECNOLOGIA_L1_ITEM_2 = "$TECNOLOGIA_L1/2.png";
+  static const String TECNOLOGIA_L1_ITEM_3 = "$TECNOLOGIA_L1/3.png";
+  static const String TECNOLOGIA_L1_ITEM_4 = "$TECNOLOGIA_L1/4.png";
+  static const String TECNOLOGIA_L1_ITEM_5 = "$TECNOLOGIA_L1/5.png";
+  static const String TECNOLOGIA_L1_ITEM_6 = "$TECNOLOGIA_L1/6.png";
+  //LV2
+  static const String TECNOLOGIA_L2 = "$THEME_TECNOLOGIA/2";
+  static const String TECNOLOGIA_L2_BG = "$TECNOLOGIA_L2/bg.png";
+  static const String TECNOLOGIA_L2_ITEM_1 = "$TECNOLOGIA_L2/1.png";
+  static const String TECNOLOGIA_L2_ITEM_2 = "$TECNOLOGIA_L2/2.png";
+  static const String TECNOLOGIA_L2_ITEM_3 = "$TECNOLOGIA_L2/3.png";
+  static const String TECNOLOGIA_L2_ITEM_4 = "$TECNOLOGIA_L2/4.png";
+  static const String TECNOLOGIA_L2_ITEM_5 = "$TECNOLOGIA_L2/5.png";
+  static const String TECNOLOGIA_L2_ITEM_6 = "$TECNOLOGIA_L2/6.png";
+  static const String TECNOLOGIA_L2_ITEM_7 = "$TECNOLOGIA_L2/7.png";
 
   ////4 - Mitología////
   static const String THEME_MITOLOGIA = "$_assets/4_mitologia";
