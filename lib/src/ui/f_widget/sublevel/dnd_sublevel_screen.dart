@@ -21,9 +21,11 @@ class DnDSubLevelScreen extends StatefulWidget {
   DnDSubLevelScreen({
     required DnDSubLevelDomain subLevelDomain,
     required DnDSubLevelProgressDomain subLevelProgressDomain,
+    required bool mute,
   }) : super() {
     Get.put<DnDSubLevelController>(
       DnDSubLevelControllerImpl(
+        mute: mute,
         subLevelDomain: subLevelDomain,
         subLevelProgressDomain: subLevelProgressDomain,
       ),
