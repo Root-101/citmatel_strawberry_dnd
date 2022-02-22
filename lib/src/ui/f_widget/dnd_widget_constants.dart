@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-//// HangMan Single Level Screen Constants///////
+//// DnD Single Level Screen Constants///////
 //TODO: estandarizar nombre de constantes
 const dndLevelPrimaryColor = Colors.lightBlue;
 const dndLevelSecundaryColor = Colors.lightBlue;

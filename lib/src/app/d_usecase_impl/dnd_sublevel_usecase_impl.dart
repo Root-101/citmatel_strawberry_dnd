@@ -37,10 +37,10 @@ class DnDSubLevelUseCaseImpl extends DnDSubLevelUseCase {
   int get rows => subLevelDomain.rows;
 
   @override
-  String get urlImage => subLevelDomain.urlImage;
+  int get stars => subLevelProgressDomain.stars;
 
   @override
-  int get stars => subLevelProgressDomain.stars;
+  String get imageUrl => subLevelDomain.urlImage;
 
   void saveProgress(int stars) {
     //me quedo siempre con la mejor cantidad de estrellas
@@ -56,5 +56,23 @@ class DnDSubLevelUseCaseImpl extends DnDSubLevelUseCase {
 
   void _executeProgressUpdate() {
     Get.find<DnDSubLevelProgressUseCase>().edit(subLevelProgressDomain);
+  }
+
+  @override
+  bool showTutorial() {
+    return subLevelProgressDomain.dndLevelDomainId ==
+            Get.find<DnDLevelUseCase>().findAll()[0].id &&
+        subLevelProgressDomain.dndSubLevelDomainId ==
+            Get.find<DnDLevelUseCase>().findAll()[0].sublevel[0].id;
+  }
+
+  String subLevelTheme() {
+    return Get.find<DnDLevelUseCase>()
+        .findAll()[subLevelProgressDomain.dndLevelDomainId]
+        .theme;
+  }
+
+  int subLevelNumber() {
+    return subLevelDomain.id;
   }
 }
