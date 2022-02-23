@@ -34,6 +34,7 @@ dependencies:
   confetti: ^0.6.0
   tutorial_coach_mark: ^1.2.1
   decorated_icon: ^1.2.1
+  fluttertoast: ^8.0.8
 
   #Tools
   citmatel_strawberry_tools:
