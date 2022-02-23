@@ -3,6 +3,7 @@ import 'package:citmatel_strawberry_tools/tools_exporter.dart';
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animator/utils/pair.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
 
@@ -26,6 +27,8 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   TutorialCoachMark? _tutorialCoachMark;
 
   late bool mute;
+
+  late FToast notification;
 
   DnDSubLevelControllerImpl({
     required DnDSubLevelDomain subLevelDomain,
@@ -92,7 +95,11 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
       //si es correcto reproduce audio y hace conffeti
       StrawberryAudio.playAudioCorrect(mute);
       _makeConffeti();
-
+      if (data.hint.isNotEmpty) {
+        // TODO add the check for when the notifications are cancelled.
+        _initNotifications(context);
+        _showNotifications(data.hint);
+      }
       //busca la posicion del grid donde se soltó el item
       int posDropped = itemsDropped.indexWhere(
         (element) => element.position == drop.position,
@@ -283,5 +290,54 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   void dispose() {
     _tutorialCoachMark?.finish();
     super.dispose();
+  }
+
+  void _initNotifications(BuildContext context) {
+    notification = FToast();
+    notification.removeQueuedCustomToasts();
+    notification.init(context);
+  }
+
+  _showNotifications(String text) {
+    Widget toast = Container(
+      padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(25.0),
+        color: Colors.green.shade800,
+      ),
+      child: GestureDetector(
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              Icons.info_outline_rounded,
+              color: Colors.white,
+            ),
+            SizedBox(
+              width: 12.0,
+            ),
+            Expanded(
+              child: Text(
+                text,
+                style: Get.theme.textTheme.bodyText2!.copyWith(
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
+        ),
+        onTap: () {
+          notification.removeCustomToast();
+        },
+        onTapCancel: () {
+          notification.removeCustomToast();
+        },
+      ),
+    );
+    notification.showToast(
+      child: toast,
+      gravity: ToastGravity.TOP,
+      toastDuration: Duration(seconds: 4),
+    );
   }
 }
