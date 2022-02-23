@@ -18,6 +18,7 @@ class DnDLevelScience {
             urlImage: DnDLevelsAssets.CIENCIA_L1_ITEM_1,
             rowPosition: 3,
             columnPosition: 1,
+            hint: "Primer Planeta del Sistema Solar:\nMercurio",
           ),
           DnDSubLevelItemDomain(
             id: 2,
@@ -39,6 +40,7 @@ class DnDLevelScience {
                 column: 2,
               ),
             ],
+            hint: "Segundo Planeta del Sistema Solar:\nVenus",
           ),
           DnDSubLevelItemDomain(
             id: 3,
@@ -60,6 +62,7 @@ class DnDLevelScience {
                 column: 3,
               ),
             ],
+            hint: "Tercer Planeta del Sistema Solar:\nTierra",
           ),
           DnDSubLevelItemDomain(
             id: 4,
@@ -81,6 +84,7 @@ class DnDLevelScience {
                 column: 4,
               ),
             ],
+            hint: "Cuarto Planeta del Sistema Solar:\nMarte",
           ),
         ],
       ),
@@ -95,6 +99,7 @@ class DnDLevelScience {
             urlImage: DnDLevelsAssets.CIENCIA_L2_ITEM_1,
             rowPosition: 3,
             columnPosition: 1,
+            hint: "Quinto Planeta del Sistema Solar:\nJúpiter",
           ),
           DnDSubLevelItemDomain(
             id: 2,
@@ -116,6 +121,7 @@ class DnDLevelScience {
                 column: 2,
               ),
             ],
+            hint: "Sexto Planeta del Sistema Solar:\nSaturno",
           ),
           DnDSubLevelItemDomain(
             id: 3,
@@ -137,6 +143,7 @@ class DnDLevelScience {
                 column: 3,
               ),
             ],
+            hint: "Séptimo Planeta del Sistema Solar:\nUrano",
           ),
           DnDSubLevelItemDomain(
             id: 4,
@@ -158,6 +165,7 @@ class DnDLevelScience {
                 column: 4,
               ),
             ],
+            hint: "Octavo Planeta del Sistema Solar:\nNeptuno",
           ),
         ],
       ),
@@ -172,24 +180,28 @@ class DnDLevelScience {
             urlImage: DnDLevelsAssets.CIENCIA_L3_ITEM_1,
             rowPosition: 0,
             columnPosition: 0,
+            hint: "Charles Darwin aportó \"La Teoría de la Evolución\".",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
             urlImage: DnDLevelsAssets.CIENCIA_L3_ITEM_2,
             rowPosition: 0,
             columnPosition: 1,
+            hint: "Nikola Tesla descubrió la \"Corriente Alterna\".",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
             urlImage: DnDLevelsAssets.CIENCIA_L3_ITEM_3,
             rowPosition: 0,
             columnPosition: 2,
+            hint: "Mujer Random aportó \"Algo de Química\".",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 4,
             urlImage: DnDLevelsAssets.CIENCIA_L3_ITEM_4,
             rowPosition: 0,
             columnPosition: 3,
+            hint: "Albert Einstein aportó \"La Teoría de la relatividad\".",
           ),
         ],
       ),
@@ -204,24 +216,31 @@ class DnDLevelScience {
             urlImage: DnDLevelsAssets.CIENCIA_L4_ITEM_1,
             rowPosition: 0,
             columnPosition: 0,
+            hint: "Pitágoras aportó \"El Teorema de la Hipotenusa.\".",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
             urlImage: DnDLevelsAssets.CIENCIA_L4_ITEM_2,
             rowPosition: 0,
             columnPosition: 1,
+            hint:
+                "Nicolás Copérnico aportó \"La Teoría Heliocéntrica o Heliocentrismo\".",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
             urlImage: DnDLevelsAssets.CIENCIA_L4_ITEM_3,
             rowPosition: 0,
             columnPosition: 2,
+            hint:
+                "Marie Curie descubrió los elementos radiactivos: \"Polonio y Radio\".",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 4,
             urlImage: DnDLevelsAssets.CIENCIA_L4_ITEM_4,
             rowPosition: 0,
             columnPosition: 3,
+            hint:
+                "Isaac Newton estableció las bases de la mecánica clásica a través de sus tres leyes del movimiento y su ley de la gravitación universal.",
           ),
         ],
       ),
@@ -237,24 +256,32 @@ class DnDLevelScience {
             urlImage: DnDLevelsAssets.CIENCIA_L5_ITEM_1,
             rowPosition: 0,
             columnPosition: 0,
+            hint:
+                "La Química es la ciencia que estudia la composición de la materia y los cambios que en ella ocurren.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
             urlImage: DnDLevelsAssets.CIENCIA_L5_ITEM_2,
             rowPosition: 0,
             columnPosition: 1,
+            hint:
+                "La Astronomía comprende el estudio del universo, las teorías cosmológicas y los diversos cuerpos celestes.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
             urlImage: DnDLevelsAssets.CIENCIA_L5_ITEM_3,
             rowPosition: 1,
             columnPosition: 0,
+            hint:
+                "La biología estudia todo lo relacionado con la vida, lo orgánico y los procesos biológicos de los seres vivos",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 4,
             urlImage: DnDLevelsAssets.CIENCIA_L5_ITEM_4,
             rowPosition: 1,
             columnPosition: 1,
+            hint:
+                "La ciencia se encarga de estudiar e investigar los fenómenos sociales, naturales y artificiales a través de la observación, experimentación y medición.",
           ),
         ],
       ),
@@ -270,6 +297,8 @@ class DnDLevelScience {
             urlImage: DnDLevelsAssets.CIENCIA_L6_ITEM_1,
             rowPosition: 0,
             columnPosition: 0,
+            hint:
+                "La investigación es el trabajo creativo y sistemático realizado para aumentar el acervo de conocimientos.​",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
@@ -288,6 +317,8 @@ class DnDLevelScience {
             urlImage: DnDLevelsAssets.CIENCIA_L6_ITEM_4,
             rowPosition: 1,
             columnPosition: 1,
+            hint:
+                "La economía estudia la forma de administrar los recursos disponibles para satisfacer las necesidades humanas",
           ),
         ],
       ),
