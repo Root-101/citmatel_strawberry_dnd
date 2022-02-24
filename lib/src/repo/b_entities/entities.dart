@@ -1,4 +1,3 @@
-import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:clean_core/clean_core.dart';
 import 'package:objectbox/objectbox.dart';
 
