@@ -95,8 +95,8 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
       //si es correcto reproduce audio y hace conffeti
       StrawberryAudio.playAudioCorrect(mute);
       _makeConffeti();
-      if (data.hint.isNotEmpty) {
-        // TODO add the check for when the notifications are cancelled.
+      if (data.hint.isNotEmpty &&
+          Get.find<DnDShowPopupController>().isShowing()) {
         _initNotifications(context);
         _showNotifications(data.hint);
       }
