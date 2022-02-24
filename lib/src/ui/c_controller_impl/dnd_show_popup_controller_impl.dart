@@ -1,17 +1,17 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 
-class BrainMuteControllerImpl extends DnDShowPopupController {
-  DnDShowPopupUseCase muteUseCase;
+class DnDShowPopupControllerImpl extends DnDShowPopupController {
+  DnDShowPopupUseCase showPopupUseCase;
 
-  BrainMuteControllerImpl({required this.muteUseCase});
+  DnDShowPopupControllerImpl({required this.showPopupUseCase});
 
   bool changeValue() {
-    bool changed = muteUseCase.changeValue();
+    bool changed = showPopupUseCase.changeValue();
     update();
 
     return changed;
   }
 
   @override
-  bool isShowing() => muteUseCase.read();
+  bool isShowing() => showPopupUseCase.read();
 }

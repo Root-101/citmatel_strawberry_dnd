@@ -1,12 +1,12 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:clean_repo_objectbox/clean_objectbox_exporter.dart';
 
-class DnDShowPopuoUseCaseImpl extends SingleKeyValueUseCaseImpl<String, bool>
+class DnDShowPopupUseCaseImpl extends SingleKeyValueUseCaseImpl<String, bool>
     implements DnDShowPopupUseCase {
   static const String KEY = "DND_SHOW_POPUP_KEY";
   static const bool DEFAULT_VALUE = true;
 
-  DnDShowPopuoUseCaseImpl()
+  DnDShowPopupUseCaseImpl()
       : super(
           key: KEY,
           defaultValue: DEFAULT_VALUE,
