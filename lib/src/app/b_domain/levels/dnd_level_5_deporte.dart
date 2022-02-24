@@ -95,136 +95,44 @@ class DnDLevelDeporte {
         id: 3,
         lives: 5,
         urlImage: DnDLevelsAssets.DEPORTE_L3_BG,
-        rows: 4,
-        columns: 4,
+        rows: 3,
+        columns: 3,
         items: [
-          DnDSubLevelItemDomain(
+          DnDSubLevelItemDomain.singlePosition(
             id: 1,
             urlImage: DnDLevelsAssets.DEPORTE_L3_ITEM_1,
-            possiblesPositions: [
-              DnDPositionDomain(
-                id: 1,
-                row: 0,
-                column: 0,
-              ),
-              DnDPositionDomain(
-                id: 2,
-                row: 3,
-                column: 0,
-              ),
-            ],
+            rowPosition: 0,
+            columnPosition: 0,
           ),
-          DnDSubLevelItemDomain(
+          DnDSubLevelItemDomain.singlePosition(
             id: 2,
             urlImage: DnDLevelsAssets.DEPORTE_L3_ITEM_2,
-            possiblesPositions: [
-              DnDPositionDomain(
-                id: 1,
-                row: 0,
-                column: 3,
-              ),
-              DnDPositionDomain(
-                id: 2,
-                row: 2,
-                column: 0,
-              ),
-            ],
+            rowPosition: 0,
+            columnPosition: 1,
           ),
-          DnDSubLevelItemDomain(
+          DnDSubLevelItemDomain.singlePosition(
             id: 3,
             urlImage: DnDLevelsAssets.DEPORTE_L3_ITEM_3,
-            possiblesPositions: [
-              DnDPositionDomain(
-                id: 1,
-                row: 1,
-                column: 0,
-              ),
-              DnDPositionDomain(
-                id: 2,
-                row: 3,
-                column: 3,
-              ),
-            ],
+            rowPosition: 0,
+            columnPosition: 2,
           ),
-          DnDSubLevelItemDomain(
+          DnDSubLevelItemDomain.singlePosition(
             id: 4,
             urlImage: DnDLevelsAssets.DEPORTE_L3_ITEM_4,
-            possiblesPositions: [
-              DnDPositionDomain(
-                id: 1,
-                row: 1,
-                column: 3,
-              ),
-              DnDPositionDomain(
-                id: 2,
-                row: 2,
-                column: 3,
-              ),
-            ],
+            rowPosition: 2,
+            columnPosition: 0,
           ),
-          DnDSubLevelItemDomain(
+          DnDSubLevelItemDomain.singlePosition(
             id: 5,
             urlImage: DnDLevelsAssets.DEPORTE_L3_ITEM_5,
-            possiblesPositions: [
-              DnDPositionDomain(
-                id: 1,
-                row: 0,
-                column: 3,
-              ),
-              DnDPositionDomain(
-                id: 2,
-                row: 2,
-                column: 0,
-              ),
-            ],
+            rowPosition: 2,
+            columnPosition: 1,
           ),
-          DnDSubLevelItemDomain(
+          DnDSubLevelItemDomain.singlePosition(
             id: 6,
             urlImage: DnDLevelsAssets.DEPORTE_L3_ITEM_6,
-            possiblesPositions: [
-              DnDPositionDomain(
-                id: 1,
-                row: 1,
-                column: 3,
-              ),
-              DnDPositionDomain(
-                id: 2,
-                row: 2,
-                column: 3,
-              ),
-            ],
-          ),
-          DnDSubLevelItemDomain(
-            id: 7,
-            urlImage: DnDLevelsAssets.DEPORTE_L3_ITEM_7,
-            possiblesPositions: [
-              DnDPositionDomain(
-                id: 1,
-                row: 0,
-                column: 0,
-              ),
-              DnDPositionDomain(
-                id: 2,
-                row: 3,
-                column: 0,
-              ),
-            ],
-          ),
-          DnDSubLevelItemDomain(
-            id: 8,
-            urlImage: DnDLevelsAssets.DEPORTE_L3_ITEM_8,
-            possiblesPositions: [
-              DnDPositionDomain(
-                id: 1,
-                row: 1,
-                column: 0,
-              ),
-              DnDPositionDomain(
-                id: 2,
-                row: 3,
-                column: 3,
-              ),
-            ],
+            rowPosition: 2,
+            columnPosition: 2,
           ),
         ],
       ),
@@ -393,6 +301,143 @@ class DnDLevelDeporte {
             urlImage: DnDLevelsAssets.DEPORTE_L7_ITEM_6,
             rowPosition: 2,
             columnPosition: 2,
+          ),
+        ],
+      ),
+      DnDSubLevelDomain(
+        id: 8,
+        lives: 5,
+        urlImage: DnDLevelsAssets.DEPORTE_L8_BG,
+        rows: 4,
+        columns: 4,
+        items: [
+          DnDSubLevelItemDomain(
+            id: 1,
+            urlImage: DnDLevelsAssets.DEPORTE_L8_ITEM_1,
+            possiblesPositions: [
+              DnDPositionDomain(
+                id: 1,
+                row: 0,
+                column: 0,
+              ),
+              DnDPositionDomain(
+                id: 2,
+                row: 3,
+                column: 0,
+              ),
+            ],
+          ),
+          DnDSubLevelItemDomain(
+            id: 2,
+            urlImage: DnDLevelsAssets.DEPORTE_L8_ITEM_2,
+            possiblesPositions: [
+              DnDPositionDomain(
+                id: 1,
+                row: 0,
+                column: 3,
+              ),
+              DnDPositionDomain(
+                id: 2,
+                row: 2,
+                column: 0,
+              ),
+            ],
+          ),
+          DnDSubLevelItemDomain(
+            id: 3,
+            urlImage: DnDLevelsAssets.DEPORTE_L8_ITEM_3,
+            possiblesPositions: [
+              DnDPositionDomain(
+                id: 1,
+                row: 1,
+                column: 0,
+              ),
+              DnDPositionDomain(
+                id: 2,
+                row: 3,
+                column: 3,
+              ),
+            ],
+          ),
+          DnDSubLevelItemDomain(
+            id: 4,
+            urlImage: DnDLevelsAssets.DEPORTE_L8_ITEM_4,
+            possiblesPositions: [
+              DnDPositionDomain(
+                id: 1,
+                row: 1,
+                column: 3,
+              ),
+              DnDPositionDomain(
+                id: 2,
+                row: 2,
+                column: 3,
+              ),
+            ],
+          ),
+          DnDSubLevelItemDomain(
+            id: 5,
+            urlImage: DnDLevelsAssets.DEPORTE_L8_ITEM_5,
+            possiblesPositions: [
+              DnDPositionDomain(
+                id: 1,
+                row: 0,
+                column: 3,
+              ),
+              DnDPositionDomain(
+                id: 2,
+                row: 2,
+                column: 0,
+              ),
+            ],
+          ),
+          DnDSubLevelItemDomain(
+            id: 6,
+            urlImage: DnDLevelsAssets.DEPORTE_L8_ITEM_6,
+            possiblesPositions: [
+              DnDPositionDomain(
+                id: 1,
+                row: 1,
+                column: 3,
+              ),
+              DnDPositionDomain(
+                id: 2,
+                row: 2,
+                column: 3,
+              ),
+            ],
+          ),
+          DnDSubLevelItemDomain(
+            id: 7,
+            urlImage: DnDLevelsAssets.DEPORTE_L8_ITEM_7,
+            possiblesPositions: [
+              DnDPositionDomain(
+                id: 1,
+                row: 0,
+                column: 0,
+              ),
+              DnDPositionDomain(
+                id: 2,
+                row: 3,
+                column: 0,
+              ),
+            ],
+          ),
+          DnDSubLevelItemDomain(
+            id: 8,
+            urlImage: DnDLevelsAssets.DEPORTE_L8_ITEM_8,
+            possiblesPositions: [
+              DnDPositionDomain(
+                id: 1,
+                row: 1,
+                column: 0,
+              ),
+              DnDPositionDomain(
+                id: 2,
+                row: 3,
+                column: 3,
+              ),
+            ],
           ),
         ],
       ),
