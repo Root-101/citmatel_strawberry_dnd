@@ -13,5 +13,11 @@ class DnDUIModule {
     await DnDCoreModule.init();
 
     Get.put<DnDLevelController>(DnDLevelControllerImpl());
+
+    Get.put<DnDShowPopupController>(
+      DnDShowPopupControllerImpl(
+        showPopupUseCase: Get.find(),
+      ),
+    );
   }
 }
