@@ -18,7 +18,7 @@ class DnDLevelScience {
             urlImage: DnDLevelsAssets.CIENCIA_L1_ITEM_1,
             rowPosition: 3,
             columnPosition: 1,
-            hint: "Primer Planeta del Sistema Solar:\nMercurio",
+            hint: "Primer Planeta del Sistema Solar: Mercurio",
           ),
           DnDSubLevelItemDomain(
             id: 2,
@@ -40,7 +40,7 @@ class DnDLevelScience {
                 column: 2,
               ),
             ],
-            hint: "Segundo Planeta del Sistema Solar:\nVenus",
+            hint: "Segundo Planeta del Sistema Solar: Venus",
           ),
           DnDSubLevelItemDomain(
             id: 3,
@@ -62,7 +62,7 @@ class DnDLevelScience {
                 column: 3,
               ),
             ],
-            hint: "Tercer Planeta del Sistema Solar:\nTierra",
+            hint: "Tercer Planeta del Sistema Solar: Tierra",
           ),
           DnDSubLevelItemDomain(
             id: 4,
@@ -84,7 +84,7 @@ class DnDLevelScience {
                 column: 4,
               ),
             ],
-            hint: "Cuarto Planeta del Sistema Solar:\nMarte",
+            hint: "Cuarto Planeta del Sistema Solar: Marte",
           ),
         ],
       ),
@@ -99,7 +99,7 @@ class DnDLevelScience {
             urlImage: DnDLevelsAssets.CIENCIA_L2_ITEM_1,
             rowPosition: 3,
             columnPosition: 1,
-            hint: "Quinto Planeta del Sistema Solar:\nJúpiter",
+            hint: "Quinto Planeta del Sistema Solar: Júpiter",
           ),
           DnDSubLevelItemDomain(
             id: 2,
@@ -121,7 +121,7 @@ class DnDLevelScience {
                 column: 2,
               ),
             ],
-            hint: "Sexto Planeta del Sistema Solar:\nSaturno",
+            hint: "Sexto Planeta del Sistema Solar: Saturno",
           ),
           DnDSubLevelItemDomain(
             id: 3,
@@ -143,7 +143,7 @@ class DnDLevelScience {
                 column: 3,
               ),
             ],
-            hint: "Séptimo Planeta del Sistema Solar:\nUrano",
+            hint: "Séptimo Planeta del Sistema Solar: Urano",
           ),
           DnDSubLevelItemDomain(
             id: 4,
@@ -165,7 +165,7 @@ class DnDLevelScience {
                 column: 4,
               ),
             ],
-            hint: "Octavo Planeta del Sistema Solar:\nNeptuno",
+            hint: "Octavo Planeta del Sistema Solar: Neptuno",
           ),
         ],
       ),
@@ -194,7 +194,8 @@ class DnDLevelScience {
             urlImage: DnDLevelsAssets.CIENCIA_L3_ITEM_3,
             rowPosition: 0,
             columnPosition: 2,
-            hint: "Mujer Random aportó \"Algo de Química\".",
+            hint:
+                "Rosalind Franklin contribuyó a la comprensión de las estructuras del ADN, los virus, el carbón y el grafito.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 4,
@@ -223,8 +224,7 @@ class DnDLevelScience {
             urlImage: DnDLevelsAssets.CIENCIA_L4_ITEM_2,
             rowPosition: 0,
             columnPosition: 1,
-            hint:
-                "Nicolás Copérnico aportó \"La Teoría Heliocéntrica o Heliocentrismo\".",
+            hint: "Galileo Galilei entre otros aportes, inventó el telescopio.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
