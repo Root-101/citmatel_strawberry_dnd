@@ -20,7 +20,7 @@ class DnDLevelDeporte {
             rowPosition: 1,
             columnPosition: 2,
             hint:
-                "La medalla de bronze se obtiene al terminar en tercer lugar.",
+                "La medalla de bronce se obtiene al terminar en tercer lugar.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
@@ -58,7 +58,7 @@ class DnDLevelDeporte {
             urlImage: DnDLevelsAssets.DEPORTE_L2_ITEM_2,
             rowPosition: 0,
             columnPosition: 3,
-            hint: "Francia venció y avanzó a la siguente ronda.",
+            hint: "Francia venció y avanzó a la siguiente ronda.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
@@ -72,7 +72,7 @@ class DnDLevelDeporte {
             urlImage: DnDLevelsAssets.DEPORTE_L2_ITEM_4,
             rowPosition: 1,
             columnPosition: 3,
-            hint: "Bélgica venció y avanzó a la siguente ronda.",
+            hint: "Bélgica venció y avanzó a la siguiente ronda.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 5,
@@ -86,7 +86,7 @@ class DnDLevelDeporte {
             urlImage: DnDLevelsAssets.DEPORTE_L2_ITEM_6,
             rowPosition: 2,
             columnPosition: 3,
-            hint: "Croacia venció y avanzó a la siguente ronda.",
+            hint: "Croacia venció y avanzó a la siguiente ronda.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 7,
@@ -100,7 +100,7 @@ class DnDLevelDeporte {
             urlImage: DnDLevelsAssets.DEPORTE_L2_ITEM_8,
             rowPosition: 3,
             columnPosition: 3,
-            hint: "Inglaterra venció y avanzó a la siguente ronda.",
+            hint: "Inglaterra venció y avanzó a la siguiente ronda.",
           ),
         ],
       ),
@@ -192,7 +192,7 @@ class DnDLevelDeporte {
             rowPosition: 1,
             columnPosition: 1,
             hint:
-                "En el basquet se usa una pelota que tiene que ser colada por un aro para anotar puntos.",
+                "En el básquet se usa una pelota que tiene que ser colada por un aro para anotar puntos.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 5,
@@ -200,7 +200,7 @@ class DnDLevelDeporte {
             rowPosition: 2,
             columnPosition: 0,
             hint:
-                "El polo acuático utiliza una pelota muy similar a la de voleybol.",
+                "El polo acuático utiliza una pelota muy similar a la de voleibol.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 6,
@@ -208,7 +208,7 @@ class DnDLevelDeporte {
             rowPosition: 2,
             columnPosition: 1,
             hint:
-                "El beisbol utiliza una pelota casi masiza, con nucleo de goma, relleno de hilo y exterior de cuero para la textura.",
+                "El beisbol utiliza una pelota casi maciza, con núcleo de goma, relleno de hilo y exterior de cuero para la textura.",
           ),
         ],
       ),
@@ -225,7 +225,7 @@ class DnDLevelDeporte {
             rowPosition: 0,
             columnPosition: 0,
             hint:
-                "El voleybol utiliza una pelota inflable que se lanzan de un lado a otro de la net, y al tocar el suelo: !!!PUNTO!!!.",
+                "El voleibol utiliza una pelota inflable que se lanzan de un lado a otro de la net, y al tocar el suelo: !!!PUNTO!!!",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
@@ -458,7 +458,7 @@ class DnDLevelDeporte {
             id: 6,
             urlImage: DnDLevelsAssets.DEPORTE_L8_ITEM_6,
             hint:
-                "Inglaterra perdió pero se fue con la mejor actuación de los últimos años.",
+                "Inglaterra perdió, pero se fue con la mejor actuación de los últimos años.",
             possiblesPositions: [
               DnDPositionDomain(
                 id: 1,
@@ -494,7 +494,7 @@ class DnDLevelDeporte {
             id: 8,
             urlImage: DnDLevelsAssets.DEPORTE_L8_ITEM_8,
             hint:
-                "Croacia perdió la final y se quedó como subcampeón, aún así fue la mejor actuación en su historia.",
+                "Croacia perdió la final y se quedó como subcampeón, aun así, fue la mejor actuación en su historia.",
             possiblesPositions: [
               DnDPositionDomain(
                 id: 1,

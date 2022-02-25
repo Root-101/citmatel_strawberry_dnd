@@ -26,7 +26,7 @@ class DnDLevelGeografia {
             rowPosition: 0,
             columnPosition: 1,
             hint:
-                "El monumeto José Martí tiene casi 142 metros de altura y 78,50 metros de diámetro.",
+                "El monumento José Martí tiene casi 142 metros de altura y 78,50 metros de diámetro.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
@@ -71,7 +71,7 @@ class DnDLevelGeografia {
             rowPosition: 4,
             columnPosition: 4,
             hint:
-                "La Torre de Pisa es la torre campanario de la catedral de Pisa, en Tuscana.",
+                "La Torre de Pisa es la torre campanario de la catedral de Pisa, en Toscana.",
           ),
           DnDSubLevelItemDomain(
             id: 2,
@@ -212,7 +212,7 @@ class DnDLevelGeografia {
             urlImage: DnDLevelsAssets.GEOGRAFIA_L4_ITEM_3,
             rowPosition: 3,
             columnPosition: 0,
-            hint: "Bolívia.",
+            hint: "Bolivia.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 4,
@@ -255,7 +255,7 @@ class DnDLevelGeografia {
             urlImage: DnDLevelsAssets.GEOGRAFIA_L5_ITEM_2,
             rowPosition: 2,
             columnPosition: 0,
-            hint: "Mauritanía.",
+            hint: "Mauritania.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
@@ -276,7 +276,7 @@ class DnDLevelGeografia {
             urlImage: DnDLevelsAssets.GEOGRAFIA_L5_ITEM_5,
             rowPosition: 2,
             columnPosition: 2,
-            hint: "Tanzanía.",
+            hint: "Tanzania.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 6,
@@ -298,7 +298,7 @@ class DnDLevelGeografia {
             urlImage: DnDLevelsAssets.GEOGRAFIA_L6_ITEM_1,
             rowPosition: 1,
             columnPosition: 0,
-            hint: "Algeria.",
+            hint: "Argelia.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
@@ -326,7 +326,7 @@ class DnDLevelGeografia {
             urlImage: DnDLevelsAssets.GEOGRAFIA_L6_ITEM_5,
             rowPosition: 2,
             columnPosition: 2,
-            hint: "Kenya.",
+            hint: "Kenia.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 6,
@@ -355,7 +355,7 @@ class DnDLevelGeografia {
             id: 2,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L7_ITEM_2,
             hint:
-                "La Torre Eifdel fue concebida en 1884, edificada entre 1887 y 1889 e inaugurada en 1889 en París,",
+                "La Torre Eiffel fue concebida en 1884, edificada entre 1887 y 1889 e inaugurada en 1889 en París,",
             possiblesPositions: [
               DnDPositionDomain(
                 id: 1,

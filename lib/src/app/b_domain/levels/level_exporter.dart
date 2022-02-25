@@ -1,4 +1,5 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
+import 'package:clean_repo_objectbox/clean_objectbox_exporter.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -25,6 +26,7 @@ void printTheme(DnDLevelDomain theme) {
     print('  Items: ${level.items.length}\n');
     level.items.forEach((item) {
       print('   Item #: ${item.id}');
+      print('   Pista: ${item.hint}');
       print('   Posiciones: ${item.possiblesPositions.length}');
       item.possiblesPositions.forEach((position) {
         print(
@@ -35,6 +37,7 @@ void printTheme(DnDLevelDomain theme) {
 }
 
 Future initialize() async {
+  await KeyValueCoreModule.init();
   await DnDUIModule.init();
 }
 

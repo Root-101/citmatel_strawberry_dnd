@@ -97,7 +97,7 @@ class DnDLevelAnimales {
             urlImage: DnDLevelsAssets.ANIMALES_L3_ITEM_1,
             rowPosition: 2,
             columnPosition: 1,
-            hint: "El pasto es ingerido por los animales hervíboros.",
+            hint: "El pasto es ingerido por los animales herbívoros.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
@@ -105,7 +105,7 @@ class DnDLevelAnimales {
             rowPosition: 1,
             columnPosition: 1,
             hint:
-                "El buitre es una animal carroñero, se come los restos de otros animales muertos.",
+                "El buitre es un animal carroñero, se come los restos de otros animales muertos.",
           ),
           DnDSubLevelItemDomain(
             id: 3,
@@ -165,7 +165,7 @@ class DnDLevelAnimales {
             urlImage: DnDLevelsAssets.ANIMALES_L4_ITEM_1,
             rowPosition: 0,
             columnPosition: 1,
-            hint: "El oso polar balnco es el único superdepredador del Ártico.",
+            hint: "El oso polar blanco es el único superdepredador del Ártico.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
@@ -181,7 +181,7 @@ class DnDLevelAnimales {
             rowPosition: 2,
             columnPosition: 2,
             hint:
-                "El bacalao ártico es de los pocos animales que sobrevive en aguas por debajo de 0 grados celsius.",
+                "El bacalao ártico es de los pocos animales que sobrevive en aguas por debajo de 0 grados Celsius.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 4,
@@ -238,7 +238,7 @@ class DnDLevelAnimales {
             rowPosition: 2,
             columnPosition: 1,
             hint:
-                "Los saltamontes son insectos herbívoros, algunos plagas para la agricultura.",
+                "Los saltamontes son insectos herbívoros, algunas plagas para la agricultura.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 4,
@@ -261,7 +261,7 @@ class DnDLevelAnimales {
             rowPosition: 0,
             columnPosition: 2,
             hint:
-                "El águila es un ave de presa que acecha a su victima desde las alturas.",
+                "El águila es un ave de presa que acecha a su víctima desde las alturas.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 7,
@@ -285,7 +285,7 @@ class DnDLevelAnimales {
             rowPosition: 0,
             columnPosition: 0,
             hint:
-                "Las mofetas son omnívoras,  y comeninsectos, huevos, frutas entre otros.",
+                "Las mofetas son omnívoras, y comeni nsectos, huevos, frutas entre otros.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,

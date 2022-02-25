@@ -20,7 +20,7 @@ class DnDLevelTecnologia {
             rowPosition: 0,
             columnPosition: 1,
             hint:
-                "Teléfono creado en 1920. Necesitaba una caja de madera puesta en uan pared con todos los componentes necearios para su funcionamiento.",
+                "Teléfono creado en 1920. Necesitaba una caja de madera puesta en una pared con todos los componentes necesarios para su funcionamiento.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
@@ -28,7 +28,7 @@ class DnDLevelTecnologia {
             rowPosition: 0,
             columnPosition: 2,
             hint:
-                "Teléfono creado en 1934. Contiene dentro de si todos los elementos necesarios.(adios caja de madera!!!)",
+                "Teléfono creado en 1934. Contiene dentro de si todos los elementos necesarios. (¡¡¡adiós caja de madera!!!)",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
@@ -169,7 +169,7 @@ class DnDLevelTecnologia {
               rowPosition: 2,
               columnPosition: 2,
               hint:
-                  'Computadoras con acceso a Wi-Fi, tarjetas inalámbricas y antenas preinstaladas, puertos USB, cámaras y  monitores LCD.'),
+                  'Computadoras con acceso a Wi-Fi, tarjetas inalámbricas y antenas preinstaladas, puertos USB, cámaras y monitores LCD.'),
           DnDSubLevelItemDomain.singlePosition(
               id: 3,
               urlImage: DnDLevelsAssets.TECNOLOGIA_L4_ITEM_3,

@@ -253,7 +253,7 @@ flutter:
     - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/3/4.png
     - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/3/5.png
     - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/3/6.png
-    - #Level 4
+    #Level 4
     - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/4/bg.png
     - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/4/1.png
     - packages/citmatel_strawberry_dnd/assets/levels/5_deporte/4/2.png
