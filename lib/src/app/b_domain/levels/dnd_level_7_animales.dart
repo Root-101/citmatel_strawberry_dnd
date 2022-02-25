@@ -221,42 +221,54 @@ class DnDLevelAnimales {
             urlImage: DnDLevelsAssets.ANIMALES_L5_ITEM_1,
             rowPosition: 0,
             columnPosition: 0,
+            hint:
+                "El sol da la energía necesaria para que las plantas realicen la fotosíntesis.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
             urlImage: DnDLevelsAssets.ANIMALES_L5_ITEM_2,
             rowPosition: 2,
             columnPosition: 0,
+            hint:
+                "Las plantas se alimentan de la luz solar y los recursos naturales de la tierra.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
             urlImage: DnDLevelsAssets.ANIMALES_L5_ITEM_3,
             rowPosition: 2,
             columnPosition: 1,
+            hint:
+                "Los saltamontes son insectos herbívoros, algunos plagas para la agricultura.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 4,
             urlImage: DnDLevelsAssets.ANIMALES_L5_ITEM_4,
             rowPosition: 2,
             columnPosition: 2,
+            hint: "La rana se alimenta de pequeños animales y así sobrevive.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 5,
             urlImage: DnDLevelsAssets.ANIMALES_L5_ITEM_5,
             rowPosition: 1,
             columnPosition: 2,
+            hint:
+                "La serpiente mata a su presa con veneno o constricción (apretándolas).",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 6,
             urlImage: DnDLevelsAssets.ANIMALES_L5_ITEM_6,
             rowPosition: 0,
             columnPosition: 2,
+            hint:
+                "El águila es un ave de presa que acecha a su victima desde las alturas.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 7,
             urlImage: DnDLevelsAssets.ANIMALES_L5_ITEM_7,
             rowPosition: 0,
             columnPosition: 1,
+            hint: "Los gusanos se comen los restos de los animales muertos.",
           ),
         ],
       ),
@@ -272,24 +284,30 @@ class DnDLevelAnimales {
             urlImage: DnDLevelsAssets.ANIMALES_L6_ITEM_1,
             rowPosition: 0,
             columnPosition: 0,
+            hint:
+                "Las mofetas son omnívoras,  y comeninsectos, huevos, frutas entre otros.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
             urlImage: DnDLevelsAssets.ANIMALES_L6_ITEM_2,
             rowPosition: 0,
             columnPosition: 1,
+            hint:
+                "Los castores se alimentan de la corteza, ramillas y hojas de los árboles que talan.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
             urlImage: DnDLevelsAssets.ANIMALES_L6_ITEM_3,
             rowPosition: 1,
             columnPosition: 0,
+            hint: "La gacela es una de las principales presas para la pantera.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 4,
             urlImage: DnDLevelsAssets.ANIMALES_L6_ITEM_4,
             rowPosition: 1,
             columnPosition: 1,
+            hint: "Los peces son el alimento preferido de las focas.",
           ),
         ],
       ),
