@@ -26,14 +26,13 @@ class DnDLevelGeografia {
             rowPosition: 0,
             columnPosition: 1,
             hint:
-            "El monumeto José Martí tiene casi 142 metros de altura y 78,50 metros de diámetro.",
+                "El monumeto José Martí tiene casi 142 metros de altura y 78,50 metros de diámetro.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L1_ITEM_3,
             rowPosition: 0,
             columnPosition: 2,
-            hint:
             hint: "Holguín es conocida como la ciudad de los parques.",
           ),
           DnDSubLevelItemDomain.singlePosition(
@@ -55,7 +54,8 @@ class DnDLevelGeografia {
             urlImage: DnDLevelsAssets.GEOGRAFIA_L1_ITEM_6,
             rowPosition: 2,
             columnPosition: 2,
-            hint: "La figura del mayor general Antonio Maceo tiene 16 m de altura y una colección de 23 \'machetes\' como símbolo del espíritu independiente de Cuba.",
+            hint:
+                "La figura del mayor general Antonio Maceo tiene 16 m de altura.",
           ),
         ],
       ),
@@ -70,12 +70,14 @@ class DnDLevelGeografia {
             urlImage: DnDLevelsAssets.GEOGRAFIA_L2_ITEM_1,
             rowPosition: 4,
             columnPosition: 4,
-            hint: "La Torre de Pisa es la torre campanario de la catedral de Pisa, situada en la plaza del Duomo de Pisa en Tuscana.",
+            hint:
+                "La Torre de Pisa es la torre campanario de la catedral de Pisa, en Tuscana.",
           ),
           DnDSubLevelItemDomain(
             id: 2,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L2_ITEM_2,
-            hint: "El Arco de Triunfo fue construido entre 1806 y 1836 por orden de Napoleón Bonaparte para conmemorar la victoria en la batalla de Austerlitz.",
+            hint:
+                "El Arco de Triunfo fue construido para conmemorar la victoria en la batalla de Austerlitz.",
             possiblesPositions: [
               DnDPositionDomain(
                 id: 1,
@@ -92,7 +94,8 @@ class DnDLevelGeografia {
           DnDSubLevelItemDomain(
             id: 3,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L2_ITEM_3,
-            hint: "El Puente de la Torre es un puente basculante y colgante de Londres que cruza el río Támesis.",
+            hint:
+                "El Puente de la Torre es un puente basculante y colgante de Londres que cruza el río Támesis.",
             possiblesPositions: [
               DnDPositionDomain(
                 id: 1,
@@ -109,7 +112,8 @@ class DnDLevelGeografia {
           DnDSubLevelItemDomain(
             id: 4,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L2_ITEM_4,
-            hint: "El Castillo de Neuschwanstein es un impresionante palacio neorrománico del siglo XIX, es considerado uno de los castillos más bonitos de alemania.",
+            hint:
+                "El Castillo de Neuschwanstein es un palacio neorrománico del siglo XIX.",
             possiblesPositions: [
               DnDPositionDomain(
                 id: 1,
@@ -128,7 +132,8 @@ class DnDLevelGeografia {
             urlImage: DnDLevelsAssets.GEOGRAFIA_L2_ITEM_5,
             rowPosition: 4,
             columnPosition: 1,
-            hint: "La corrida de toros es seguramente una de las costumbres populares españolas más conocidas aunque al mismo tiempo más controvertidas.",
+            hint:
+                "La corrida de toros es seguramente una de las costumbres populares españolas más conocidas.",
           ),
         ],
       ),
@@ -143,42 +148,42 @@ class DnDLevelGeografia {
             urlImage: DnDLevelsAssets.GEOGRAFIA_L3_ITEM_1,
             rowPosition: 1,
             columnPosition: 0,
-            hint: "Nicaragua",
+            hint: "Nicaragua.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L3_ITEM_2,
             rowPosition: 2,
             columnPosition: 0,
-            hint: "Perú",
+            hint: "Perú.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L3_ITEM_3,
             rowPosition: 3,
             columnPosition: 0,
-            hint: "Chile",
+            hint: "Chile.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 4,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L3_ITEM_4,
             rowPosition: 1,
             columnPosition: 2,
-            hint: "Guana",
+            hint: "Guana.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 5,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L3_ITEM_5,
             rowPosition: 2,
             columnPosition: 2,
-            hint: "Brasil",
+            hint: "Brasil.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 6,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L3_ITEM_6,
             rowPosition: 3,
             columnPosition: 2,
-            hint: "Uruguay",
+            hint: "Uruguay.",
           ),
         ],
       ),
@@ -193,21 +198,21 @@ class DnDLevelGeografia {
             urlImage: DnDLevelsAssets.GEOGRAFIA_L4_ITEM_1,
             rowPosition: 1,
             columnPosition: 0,
-            hint: "Guatemala",
+            hint: "Guatemala.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L4_ITEM_2,
             rowPosition: 2,
             columnPosition: 0,
-            hint: "Panamá",
+            hint: "Panamá.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L4_ITEM_3,
             rowPosition: 3,
             columnPosition: 0,
-            hint: "Bolívia",
+            hint: "Bolívia.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 4,
@@ -221,14 +226,14 @@ class DnDLevelGeografia {
             urlImage: DnDLevelsAssets.GEOGRAFIA_L4_ITEM_5,
             rowPosition: 2,
             columnPosition: 2,
-            hint: "Venezuela",
+            hint: "Venezuela.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 6,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L4_ITEM_6,
             rowPosition: 3,
             columnPosition: 2,
-            hint: "Argentina",
+            hint: "Argentina.",
           ),
         ],
       ),
@@ -243,36 +248,42 @@ class DnDLevelGeografia {
             urlImage: DnDLevelsAssets.GEOGRAFIA_L5_ITEM_1,
             rowPosition: 1,
             columnPosition: 0,
+            hint: "Marruecos.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L5_ITEM_2,
             rowPosition: 2,
             columnPosition: 0,
+            hint: "Mauritanía.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L5_ITEM_3,
             rowPosition: 3,
             columnPosition: 0,
+            hint: "Nigeria.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 4,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L5_ITEM_4,
             rowPosition: 1,
             columnPosition: 2,
+            hint: "Somalia.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 5,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L5_ITEM_5,
             rowPosition: 2,
             columnPosition: 2,
+            hint: "Tanzanía.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 6,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L5_ITEM_6,
             rowPosition: 3,
             columnPosition: 2,
+            hint: "Mozambique.",
           ),
         ],
       ),
@@ -287,36 +298,42 @@ class DnDLevelGeografia {
             urlImage: DnDLevelsAssets.GEOGRAFIA_L6_ITEM_1,
             rowPosition: 1,
             columnPosition: 0,
+            hint: "Algeria.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L6_ITEM_2,
             rowPosition: 2,
             columnPosition: 0,
+            hint: "Malí.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L6_ITEM_3,
             rowPosition: 3,
             columnPosition: 0,
+            hint: "Angola.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 4,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L6_ITEM_4,
             rowPosition: 1,
             columnPosition: 2,
+            hint: "Sudán.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 5,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L6_ITEM_5,
             rowPosition: 2,
             columnPosition: 2,
+            hint: "Kenya.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 6,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L6_ITEM_6,
             rowPosition: 3,
             columnPosition: 2,
+            hint: "Madagascar.",
           ),
         ],
       ),
@@ -331,10 +348,14 @@ class DnDLevelGeografia {
             urlImage: DnDLevelsAssets.GEOGRAFIA_L7_ITEM_1,
             rowPosition: 4,
             columnPosition: 4,
+            hint:
+                "El Coliseo de Roma fue inaugurado por e; emperador Tito en el año 80.",
           ),
           DnDSubLevelItemDomain(
             id: 2,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L7_ITEM_2,
+            hint:
+                "La Torre Eifdel fue concebida en 1884, edificada entre 1887 y 1889 e inaugurada en 1889 en París,",
             possiblesPositions: [
               DnDPositionDomain(
                 id: 1,
@@ -351,6 +372,8 @@ class DnDLevelGeografia {
           DnDSubLevelItemDomain(
             id: 3,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L7_ITEM_3,
+            hint:
+                "El Big Ben es el reloj de cuatro caras más grande del mundo.",
             possiblesPositions: [
               DnDPositionDomain(
                 id: 1,
@@ -367,6 +390,8 @@ class DnDLevelGeografia {
           DnDSubLevelItemDomain(
             id: 4,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L7_ITEM_4,
+            hint:
+                "El edificio del Reichstag terminó de construirse en 1894 siguiendo un estilo neorrenacentista.",
             possiblesPositions: [
               DnDPositionDomain(
                 id: 1,
@@ -385,6 +410,8 @@ class DnDLevelGeografia {
             urlImage: DnDLevelsAssets.GEOGRAFIA_L7_ITEM_5,
             rowPosition: 4,
             columnPosition: 1,
+            hint:
+                "La Catedral de Santiago de Compostela es de las más grandes de España.",
           ),
         ],
       ),
