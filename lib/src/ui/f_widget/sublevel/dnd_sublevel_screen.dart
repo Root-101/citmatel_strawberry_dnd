@@ -23,6 +23,9 @@ class DnDSubLevelScreen extends StatefulWidget {
     required DnDSubLevelProgressDomain subLevelProgressDomain,
     required bool mute,
   }) : super() {
+    //clear the controller before start
+    Get.delete<DnDSubLevelController>();
+    //set up the new controller
     Get.put<DnDSubLevelController>(
       DnDSubLevelControllerImpl(
         mute: mute,
