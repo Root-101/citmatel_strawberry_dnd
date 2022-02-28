@@ -248,40 +248,36 @@ class DnDLevelScience {
         id: 5,
         lives: 5,
         urlImage: DnDLevelsAssets.CIENCIA_L5_BG,
-        rows: 2,
-        columns: 2,
+        rows: 3,
+        columns: 3,
         items: [
           DnDSubLevelItemDomain.singlePosition(
             id: 1,
             urlImage: DnDLevelsAssets.CIENCIA_L5_ITEM_1,
             rowPosition: 0,
-            columnPosition: 0,
-            hint:
-                "La Química es la ciencia que estudia la composición de la materia y los cambios que en ella ocurren.",
+            columnPosition: 1,
+            hint: "Primera etapa: Puesta de Huevos.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
             urlImage: DnDLevelsAssets.CIENCIA_L5_ITEM_2,
-            rowPosition: 0,
-            columnPosition: 1,
-            hint:
-                "La Astronomía comprende el estudio del universo, las teorías cosmológicas y los diversos cuerpos celestes.",
+            rowPosition: 1,
+            columnPosition: 2,
+            hint: "Segunda etapa: Renacuajo.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
             urlImage: DnDLevelsAssets.CIENCIA_L5_ITEM_3,
-            rowPosition: 1,
-            columnPosition: 0,
-            hint:
-                "La biología estudia todo lo relacionado con la vida, lo orgánico y los procesos biológicos de los seres vivos",
+            rowPosition: 2,
+            columnPosition: 1,
+            hint: "Tercera etapa: Renacuajo con patas.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 4,
             urlImage: DnDLevelsAssets.CIENCIA_L5_ITEM_4,
             rowPosition: 1,
-            columnPosition: 1,
-            hint:
-                "La ciencia se encarga de estudiar e investigar los fenómenos sociales, naturales y artificiales a través de la observación, experimentación y medición.",
+            columnPosition: 0,
+            hint: "Cuarta Etapa: Rana Adulta.",
           ),
         ],
       ),
@@ -289,8 +285,8 @@ class DnDLevelScience {
         id: 6,
         lives: 5,
         urlImage: DnDLevelsAssets.CIENCIA_L6_BG,
-        rows: 2,
-        columns: 2,
+        rows: 3,
+        columns: 3,
         items: [
           DnDSubLevelItemDomain.singlePosition(
             id: 1,
@@ -298,27 +294,44 @@ class DnDLevelScience {
             rowPosition: 0,
             columnPosition: 0,
             hint:
-                "La investigación es el trabajo creativo y sistemático realizado para aumentar el acervo de conocimientos.​",
+                "Ardipithecus: De los primeros ancestros de los humanos después de los chimpancés.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
             urlImage: DnDLevelsAssets.CIENCIA_L6_ITEM_2,
             rowPosition: 0,
             columnPosition: 1,
+            hint: 'Australopithecus: Primeros primates en caminar erguidos.',
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
             urlImage: DnDLevelsAssets.CIENCIA_L6_ITEM_3,
-            rowPosition: 1,
-            columnPosition: 0,
+            rowPosition: 0,
+            columnPosition: 2,
+            hint:
+                'Homo habilis: Primer homínido que se coloca en mismo género que los humanos.',
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 4,
             urlImage: DnDLevelsAssets.CIENCIA_L6_ITEM_4,
-            rowPosition: 1,
+            rowPosition: 2,
+            columnPosition: 0,
+            hint: "Homo erectus: Primera especie en salir de África.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 5,
+            urlImage: DnDLevelsAssets.CIENCIA_L6_ITEM_5,
+            rowPosition: 2,
             columnPosition: 1,
             hint:
-                "La economía estudia la forma de administrar los recursos disponibles para satisfacer las necesidades humanas",
+                "Homo neanderthalensis. El famoso “hombre de Neandertal” que habitó Europa.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 6,
+            urlImage: DnDLevelsAssets.CIENCIA_L6_ITEM_6,
+            rowPosition: 2,
+            columnPosition: 2,
+            hint: "Homo sapiens: Es el ser humano como lo conocemos. NOSOTROS.",
           ),
         ],
       ),
