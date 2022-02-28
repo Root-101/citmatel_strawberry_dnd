@@ -248,8 +248,8 @@ class DnDLevelScience {
         id: 5,
         lives: 5,
         urlImage: DnDLevelsAssets.CIENCIA_L5_BG,
-        rows: 2,
-        columns: 2,
+        rows: 3,
+        columns: 3,
         items: [
           DnDSubLevelItemDomain.singlePosition(
             id: 1,
@@ -275,8 +275,8 @@ class DnDLevelScience {
           DnDSubLevelItemDomain.singlePosition(
             id: 4,
             urlImage: DnDLevelsAssets.CIENCIA_L5_ITEM_4,
-            rowPosition: 2,
-            columnPosition: 1,
+            rowPosition: 1,
+            columnPosition: 0,
             hint: "Cuarta Etapa: Rana Adulta.",
           ),
         ],
@@ -285,8 +285,8 @@ class DnDLevelScience {
         id: 6,
         lives: 5,
         urlImage: DnDLevelsAssets.CIENCIA_L6_BG,
-        rows: 2,
-        columns: 2,
+        rows: 3,
+        columns: 3,
         items: [
           DnDSubLevelItemDomain.singlePosition(
             id: 1,
