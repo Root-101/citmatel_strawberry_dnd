@@ -255,33 +255,29 @@ class DnDLevelScience {
             id: 1,
             urlImage: DnDLevelsAssets.CIENCIA_L5_ITEM_1,
             rowPosition: 0,
-            columnPosition: 0,
-            hint:
-                "La Química es la ciencia que estudia la composición de la materia y los cambios que en ella ocurren.",
+            columnPosition: 1,
+            hint: "Primera etapa: Puesta de Huevos.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
             urlImage: DnDLevelsAssets.CIENCIA_L5_ITEM_2,
-            rowPosition: 0,
-            columnPosition: 1,
-            hint:
-                "La Astronomía comprende el estudio del universo, las teorías cosmológicas y los diversos cuerpos celestes.",
+            rowPosition: 1,
+            columnPosition: 2,
+            hint: "Segunda etapa: Renacuajo.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
             urlImage: DnDLevelsAssets.CIENCIA_L5_ITEM_3,
-            rowPosition: 1,
-            columnPosition: 0,
-            hint:
-                "La biología estudia todo lo relacionado con la vida, lo orgánico y los procesos biológicos de los seres vivos",
+            rowPosition: 2,
+            columnPosition: 1,
+            hint: "Tercera etapa: Renacuajo con patas.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 4,
             urlImage: DnDLevelsAssets.CIENCIA_L5_ITEM_4,
-            rowPosition: 1,
+            rowPosition: 2,
             columnPosition: 1,
-            hint:
-                "La ciencia se encarga de estudiar e investigar los fenómenos sociales, naturales y artificiales a través de la observación, experimentación y medición.",
+            hint: "Cuarta Etapa: Rana Adulta.",
           ),
         ],
       ),
