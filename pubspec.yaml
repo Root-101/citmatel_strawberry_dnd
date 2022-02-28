@@ -148,6 +148,9 @@ flutter:
     - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/6/2.png
     - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/6/3.png
     - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/6/4.png
+    - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/6/5.png
+    - packages/citmatel_strawberry_dnd/assets/levels/2_ciencia/6/6.png
+
     #2 - Ciencia
     #Level 1
     - packages/citmatel_strawberry_dnd/assets/levels/3_tecnologia/1/bg.png
@@ -190,8 +193,6 @@ flutter:
     - packages/citmatel_strawberry_dnd/assets/levels/3_tecnologia/6/2.png
     - packages/citmatel_strawberry_dnd/assets/levels/3_tecnologia/6/3.png
     - packages/citmatel_strawberry_dnd/assets/levels/3_tecnologia/6/4.png
-    - packages/citmatel_strawberry_dnd/assets/levels/3_tecnologia/6/5.png
-    - packages/citmatel_strawberry_dnd/assets/levels/3_tecnologia/6/6.png
 
     #4 - mitologia
     #Level 1
