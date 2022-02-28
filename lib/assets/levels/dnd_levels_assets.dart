@@ -105,6 +105,8 @@ class DnDLevelsAssets {
   static const String CIENCIA_L6_ITEM_2 = "$CIENCIA_L6/2.png";
   static const String CIENCIA_L6_ITEM_3 = "$CIENCIA_L6/3.png";
   static const String CIENCIA_L6_ITEM_4 = "$CIENCIA_L6/4.png";
+  static const String CIENCIA_L6_ITEM_5 = "$CIENCIA_L6/5.png";
+  static const String CIENCIA_L6_ITEM_6 = "$CIENCIA_L6/6.png";
 
   ////3 - Tecnologia////
   static const String THEME_TECNOLOGIA = "$_assets/3_tecnologia";
