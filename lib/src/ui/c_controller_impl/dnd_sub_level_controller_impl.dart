@@ -288,6 +288,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   @override
   void dispose() {
+    StrawberryFunction.dispose();
     _tutorialCoachMark?.finish();
     super.dispose();
   }
