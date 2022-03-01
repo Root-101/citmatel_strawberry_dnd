@@ -235,7 +235,10 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
   }
 
   _buildDroppedItems(Size size) {
-    final double padding = size.width / 21;
+    final double padding = 10; //size.width / 22;
+    double possibleSize1 = size.width;
+    double possibleSize2 = size.height / 2;
+    double finalSize = min(possibleSize1, possibleSize2);
     return Padding(
       key: _key3,
       padding: EdgeInsets.all(padding),
@@ -246,8 +249,8 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
             duration: Duration(milliseconds: 4000),
             curve: Curves.easeInOutCirc,
             child: Container(
-              width: MediaQuery.of(Get.context!).size.width - 2 * padding,
-              height: MediaQuery.of(Get.context!).size.width - 2 * padding,
+              width: finalSize - 2 * padding,
+              height: finalSize - 2 * padding,
               decoration: BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage(_controller.imageUrl),
@@ -316,7 +319,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
   }
 
   _buildDraggableItemList(Size size) {
-    double defaultH = size.height / 8;
+    double defaultH = size.height / 6;
     double defaultW = defaultH;
     int initialPage = max((_controller.itemsToDrag.length / 2).round() - 1, 0);
     return Padding(
