@@ -6,10 +6,12 @@ import 'package:get/get.dart';
 class DnDSubLevelLoading extends GetView<DnDLevelController> {
   final DnDSubLevelDomain subLevelDomain;
   final DnDSubLevelProgressDomain subLevelProgressDomain;
+  final bool mute;
 
   DnDSubLevelLoading({
     required this.subLevelDomain,
     required this.subLevelProgressDomain,
+    required this.mute,
     Key? key,
   }) : super(key: key);
 
@@ -29,6 +31,7 @@ class DnDSubLevelLoading extends GetView<DnDLevelController> {
         ],
         secondText: ["Nivel: ${subLevelProgressDomain.dndSubLevelDomainId}"],
         subLevel: DnDSubLevelScreen(
+          mute: mute,
           subLevelDomain: subLevelDomain,
           subLevelProgressDomain: subLevelProgressDomain,
         ),

@@ -1,6 +1,5 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 void main() {
   //flutter run -t lib/src/app/b_domain/levels/level_exporter.dart
@@ -8,12 +7,10 @@ void main() {
   runApp(MyApp());
 
   //print All
-  initialize().then((value) {
-    print('Foto de fondo de TODOS los niveles: \'bg.png\'');
-    print('La posición más arriba a la izquierda es la 1,1 (Fila, Columna)');
-    Get.find<DnDLevelUseCase>().findAll().forEach((theme) {
-      printTheme(theme);
-    });
+  print('Foto de fondo de TODOS los niveles: \'bg.png\'');
+  print('La posición más arriba a la izquierda es la 1,1 (Fila, Columna)');
+  DnDLevelsAll.levels.forEach((theme) {
+    printTheme(theme);
   });
 }
 
@@ -25,6 +22,7 @@ void printTheme(DnDLevelDomain theme) {
     print('  Items: ${level.items.length}\n');
     level.items.forEach((item) {
       print('   Item #: ${item.id}');
+      print('   Pista: ${item.hint}');
       print('   Posiciones: ${item.possiblesPositions.length}');
       item.possiblesPositions.forEach((position) {
         print(
@@ -32,10 +30,6 @@ void printTheme(DnDLevelDomain theme) {
       });
     });
   });
-}
-
-Future initialize() async {
-  await DnDUIModule.init();
 }
 
 class MyApp extends StatelessWidget {

@@ -4,7 +4,7 @@
 
 import 'dart:typed_data';
 
-import 'package:objectbox/flatbuffers/flat_buffers.dart' as fb;
+import 'package:flat_buffers/flat_buffers.dart' as fb;
 import 'package:objectbox/internal.dart'; // generated code can access "internal" functionality
 import 'package:objectbox/objectbox.dart';
 import 'package:objectbox_flutter_libs/objectbox_flutter_libs.dart';
@@ -15,33 +15,33 @@ export 'package:objectbox/objectbox.dart'; // so that callers only have to impor
 
 final _entities = <ModelEntity>[
   ModelEntity(
-      id: const IdUid(1, 1581552399816619571),
+      id: const IdUid(1, 1219383026597146462),
       name: 'DnDSubLevelProgressEntity',
-      lastPropertyId: const IdUid(5, 1082563762284836564),
+      lastPropertyId: const IdUid(5, 4734647327001059446),
       flags: 0,
       properties: <ModelProperty>[
         ModelProperty(
-            id: const IdUid(1, 5792303986787254365),
+            id: const IdUid(1, 861792443472214073),
             name: 'id',
             type: 6,
             flags: 1),
         ModelProperty(
-            id: const IdUid(2, 5646734147605479094),
+            id: const IdUid(2, 547328756912805290),
             name: 'dndSubLevelDomainId',
             type: 6,
             flags: 0),
         ModelProperty(
-            id: const IdUid(3, 1904988861449175904),
+            id: const IdUid(3, 6158378576784531486),
             name: 'dndLevelDomainId',
             type: 6,
             flags: 0),
         ModelProperty(
-            id: const IdUid(4, 8813595764462886628),
+            id: const IdUid(4, 3859994412617185412),
             name: 'contPlayedTimes',
             type: 6,
             flags: 0),
         ModelProperty(
-            id: const IdUid(5, 1082563762284836564),
+            id: const IdUid(5, 4734647327001059446),
             name: 'stars',
             type: 6,
             flags: 0)
@@ -70,7 +70,7 @@ Future<Store> openStore(
 ModelDefinition getObjectBoxModel() {
   final model = ModelInfo(
       entities: _entities,
-      lastEntityId: const IdUid(1, 1581552399816619571),
+      lastEntityId: const IdUid(1, 1219383026597146462),
       lastIndexId: const IdUid(0, 0),
       lastRelationId: const IdUid(0, 0),
       lastSequenceId: const IdUid(0, 0),

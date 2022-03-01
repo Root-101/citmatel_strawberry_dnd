@@ -1,4 +1,5 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
+import 'package:clean_repo_objectbox/clean_objectbox_exporter.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -27,7 +28,9 @@ class MyApp extends StatelessWidget {
               /*DnDSubLevelScreen(
                   subLevelDomain: DnDLevel1.level1.sublevel[0]),*/
               //entrada a el grid de seleccion de niveles
-              DnDLevelsScreen(),
+              DnDLevelsScreen(
+            mute: false,
+          ),
           transition: Transition.rightToLeft,
         ),
       ],
@@ -63,6 +66,7 @@ class Init {
   static final instance = Init._();
 
   Future initialize() async {
+    await KeyValueCoreModule.init();
     await DnDUIModule.init();
   }
 }

@@ -3,6 +3,7 @@ import 'package:citmatel_strawberry_tools/tools_exporter.dart';
 import 'package:confetti/confetti.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animator/utils/pair.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:get/get.dart';
 import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
 
@@ -25,9 +26,14 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   TutorialCoachMark? _tutorialCoachMark;
 
+  late bool mute;
+
+  late FToast notification;
+
   DnDSubLevelControllerImpl({
     required DnDSubLevelDomain subLevelDomain,
     required DnDSubLevelProgressDomain subLevelProgressDomain,
+    required this.mute,
   }) : subLevelUseCase = DnDSubLevelUseCaseImpl(
           subLevelDomain: subLevelDomain,
           subLevelProgressDomain: subLevelProgressDomain,
@@ -87,9 +93,13 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
     shouldShake = !accepted;
     if (accepted) {
       //si es correcto reproduce audio y hace conffeti
-      StrawberryAudio.playAudioCorrect();
+      StrawberryAudio.playAudioCorrect(mute);
       _makeConffeti();
-
+      if (data.hint.isNotEmpty &&
+          Get.find<DnDShowPopupController>().isShowing()) {
+        _initNotifications(context);
+        _showNotifications(data.hint);
+      }
       //busca la posicion del grid donde se soltó el item
       int posDropped = itemsDropped.indexWhere(
         (element) => element.position == drop.position,
@@ -135,7 +145,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
     } else {
       //si está mal vibra, reproduce audio de error y rompe un corazon
       StrawberryVibration.vibrate();
-      StrawberryAudio.playAudioWrong();
+      StrawberryAudio.playAudioWrong(mute);
       _breakHeart(context, key7);
     }
     update();
@@ -181,8 +191,10 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   void _doLooseLevel() {
     if (remainingLives <= 0) {
       StrawberryFunction.looseLevel(
+        mute: mute,
         leftButtonFunction: () => Get.off(
           DnDSubLevelLoading(
+            mute: mute,
             subLevelDomain: subLevelUseCase.subLevelDomain,
             subLevelProgressDomain: subLevelUseCase.subLevelProgressDomain,
           ),
@@ -205,12 +217,14 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
   void _doWinLevel() {
     if (itemsToDrag.isEmpty) {
       StrawberryFunction.winLevel(
+        mute: mute,
         leftButtonFunction: () {
           Pair<DnDSubLevelDomain, DnDSubLevelProgressDomain> nextLevel =
               Get.find<DnDLevelController>()
                   .nextLevel(subLevelUseCase.subLevelProgressDomain);
           Get.off(
             DnDSubLevelLoading(
+              mute: mute,
               subLevelDomain: nextLevel.a,
               subLevelProgressDomain: nextLevel.b,
             ),
@@ -274,7 +288,57 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
 
   @override
   void dispose() {
+    StrawberryFunction.dispose();
     _tutorialCoachMark?.finish();
     super.dispose();
+  }
+
+  void _initNotifications(BuildContext context) {
+    notification = FToast();
+    notification.removeQueuedCustomToasts();
+    notification.init(context);
+  }
+
+  _showNotifications(String text) {
+    Widget toast = Container(
+      padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(25.0),
+        color: Colors.green.shade800,
+      ),
+      child: GestureDetector(
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
+              Icons.info_outline_rounded,
+              color: Colors.white,
+            ),
+            SizedBox(
+              width: 12.0,
+            ),
+            Expanded(
+              child: Text(
+                text,
+                style: Get.theme.textTheme.bodyText2!.copyWith(
+                  color: Colors.white,
+                ),
+              ),
+            ),
+          ],
+        ),
+        onTap: () {
+          notification.removeCustomToast();
+        },
+        onTapCancel: () {
+          notification.removeCustomToast();
+        },
+      ),
+    );
+    notification.showToast(
+      child: toast,
+      gravity: ToastGravity.TOP,
+      toastDuration: Duration(seconds: 4),
+    );
   }
 }

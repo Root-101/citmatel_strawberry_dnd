@@ -13,6 +13,8 @@ class DnDCoreModule {
     Get.put<DnDSubLevelProgressUseCase>(
       DnDSubLevelProgressUseCaseImpl(DnDRepoModule.subLevelProgressRepo),
     );
+
+    Get.put<DnDShowPopupUseCase>(DnDShowPopupUseCaseImpl());
   }
 
   static void dispose() {
