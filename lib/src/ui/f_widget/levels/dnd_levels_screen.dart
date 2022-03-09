@@ -44,6 +44,7 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
         ),
         //widget que se genera cada vez que se selecciona el aleatorio
         onRandomTap: controller.randomSubLevel,
+        mute: mute,
         //lista de los niveles
         levelsFindAll: controller.findAll(),
         title: DnDUIModule.MODULE_NAME,
@@ -89,6 +90,7 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
                 levelDomain: levelDomain,
                 //funcion para generar un nivel random cada vez, recive por defecto el levelDomain
                 onRandomOfTap: controller.randomSubLevelOf,
+                mute: mute,
                 //titulo del tema
                 themeTitle: levelDomain.theme,
                 //foto del tema, para mostrar en el sliver
