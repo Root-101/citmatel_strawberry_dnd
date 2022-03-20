@@ -467,6 +467,56 @@ class DnDLevelGeografia {
           ),
         ],
       ),
+      DnDSubLevelDomain(
+        id: 9,
+        urlImage: DnDLevelsAssets.GEOGRAFIA_L9_BG,
+        rows: 3,
+        columns: 3,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L9_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 0,
+            hint: "Herradura es un pueblo costero de Artemisa.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L9_ITEM_2,
+            rowPosition: 0,
+            columnPosition: 1,
+            hint: "Placetas se encuenta en la provincia Villa Clara.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L9_ITEM_3,
+            rowPosition: 0,
+            columnPosition: 2,
+            hint: "Esmeralda es un pueblo de Camagüey.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L9_ITEM_4,
+            rowPosition: 2,
+            columnPosition: 0,
+            hint: "Viñales es un polo turístico de Pinar del Río.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 5,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L9_ITEM_5,
+            rowPosition: 2,
+            columnPosition: 1,
+            hint: "Por Playas Las Coloradas desembarcó el yate Granma.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 6,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L9_ITEM_6,
+            rowPosition: 2,
+            columnPosition: 2,
+            hint: "Limonar es un pueblo de Guantánamo.",
+          ),
+        ],
+      ),
     ],
   );
 }
