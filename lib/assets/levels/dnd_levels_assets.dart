@@ -368,7 +368,14 @@ class DnDLevelsAssets {
   static const String GEOGRAFIA_L10_ITEM_4 = "$GEOGRAFIA_L10/4.png";
   static const String GEOGRAFIA_L10_ITEM_5 = "$GEOGRAFIA_L10/5.png";
   static const String GEOGRAFIA_L10_ITEM_6 = "$GEOGRAFIA_L10/6.png";
-
+  //LV11
+  static const String GEOGRAFIA_L11 = "$THEME_GEOGRAFIA/11";
+  static const String GEOGRAFIA_L11_BG = "$GEOGRAFIA_L11/bg.png";
+  static const String GEOGRAFIA_L11_ITEM_1 = "$GEOGRAFIA_L11/1.png";
+  static const String GEOGRAFIA_L11_ITEM_2 = "$GEOGRAFIA_L11/2.png";
+  static const String GEOGRAFIA_L11_ITEM_3 = "$GEOGRAFIA_L11/3.png";
+  static const String GEOGRAFIA_L11_ITEM_4 = "$GEOGRAFIA_L11/4.png";
+  static const String GEOGRAFIA_L11_ITEM_5 = "$GEOGRAFIA_L11/5.png";
   ////9 - Amimales////
   static const String THEME_ANIMALES = "$_assets/9_animales";
 

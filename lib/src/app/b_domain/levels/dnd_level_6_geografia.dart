@@ -567,6 +567,50 @@ class DnDLevelGeografia {
           ),
         ],
       ),
+      DnDSubLevelDomain(
+        id: 11,
+        urlImage: DnDLevelsAssets.GEOGRAFIA_L11_BG,
+        rows: 3,
+        columns: 3,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L11_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 0,
+            hint: "Cayo Fragoso se encuentra al norte de Villa Clara.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L11_ITEM_2,
+            rowPosition: 0,
+            columnPosition: 1,
+            hint: "Cayo Santa maría se encuentra al norte de Ciego de Ávila.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L11_ITEM_3,
+            rowPosition: 0,
+            columnPosition: 2,
+            hint: "Cayo Guillermo se encuentra al norte de Camagüey.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L11_ITEM_4,
+            rowPosition: 2,
+            columnPosition: 0,
+            hint: "Cayo Largo se encuentra al sur de Matanzas.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 5,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L11_ITEM_5,
+            rowPosition: 2,
+            columnPosition: 2,
+            hint:
+                "Los Cayos Jardines de la Reina se encuentran al sur de la gran parte del centro de la Isla.",
+          ),
+        ],
+      ),
     ],
   );
 }
