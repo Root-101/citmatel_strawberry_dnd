@@ -517,6 +517,56 @@ class DnDLevelGeografia {
           ),
         ],
       ),
+      DnDSubLevelDomain(
+        id: 10,
+        urlImage: DnDLevelsAssets.GEOGRAFIA_L10_BG,
+        rows: 3,
+        columns: 3,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L10_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 0,
+            hint: "Matahambre pertenece a Pinar del Río.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L10_ITEM_2,
+            rowPosition: 0,
+            columnPosition: 1,
+            hint: "Yaguajay pertenece a Sancti Spíritus.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L10_ITEM_3,
+            rowPosition: 0,
+            columnPosition: 2,
+            hint: "Moa es un municipio de Holguín.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L10_ITEM_4,
+            rowPosition: 2,
+            columnPosition: 0,
+            hint: "La Ciénaga de zapata pertenece a Matanzas.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 5,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L10_ITEM_5,
+            rowPosition: 2,
+            columnPosition: 1,
+            hint: "Baraguá es un municipio de Ciego de Ávila.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 6,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L10_ITEM_6,
+            rowPosition: 2,
+            columnPosition: 2,
+            hint: "Maisí es el municipio mas oriental de Cuba, en Guantánamo.",
+          ),
+        ],
+      ),
     ],
   );
 }
