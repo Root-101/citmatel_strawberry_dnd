@@ -415,6 +415,58 @@ class DnDLevelGeografia {
           ),
         ],
       ),
+      DnDSubLevelDomain(
+        id: 8,
+        urlImage: DnDLevelsAssets.GEOGRAFIA_L8_BG,
+        rows: 3,
+        columns: 3,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L8_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 0,
+            hint: "La Palma es una localidad de Pinar del Río.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L8_ITEM_2,
+            rowPosition: 0,
+            columnPosition: 1,
+            hint:
+                "La Coca es una localidad hubicada entre La Habana y Mayabeque.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L8_ITEM_3,
+            rowPosition: 0,
+            columnPosition: 2,
+            hint: "Río Salado es una localidad de Las Tunas.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L8_ITEM_4,
+            rowPosition: 2,
+            columnPosition: 0,
+            hint:
+                "Lajas es una localidad hubicada entre Cienfuegos y Sancti Spíritus.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 5,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L8_ITEM_5,
+            rowPosition: 2,
+            columnPosition: 1,
+            hint: "Tubaquey se encuentra en Camagüey.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 6,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L8_ITEM_6,
+            rowPosition: 2,
+            columnPosition: 2,
+            hint: "Turquino pertenece a la provincia Santiago de Cuba.",
+          ),
+        ],
+      ),
     ],
   );
 }
