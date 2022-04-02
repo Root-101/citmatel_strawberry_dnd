@@ -30,7 +30,7 @@ packages:
     source: hosted
     version: "4.2.1"
   animations:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: animations
       url: "https://pub.dartlang.org"
@@ -233,7 +233,7 @@ packages:
     source: hosted
     version: "3.0.1"
   cupertino_icons:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: cupertino_icons
       url: "https://pub.dartlang.org"
@@ -253,6 +253,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.1"
+  dependency_validator:
+    dependency: "direct dev"
+    description:
+      name: dependency_validator
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.2"
   dotted_border:
     dependency: "direct main"
     description:
@@ -315,7 +322,7 @@ packages:
     source: hosted
     version: "2.0.0"
   flutter_spinkit:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: flutter_spinkit
       url: "https://pub.dartlang.org"
@@ -328,13 +335,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.0"
-  flutter_svg:
-    dependency: "direct main"
-    description:
-      name: flutter_svg
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.0.3"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -492,13 +492,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.2"
-  page_view_indicators:
-    dependency: "direct main"
-    description:
-      name: page_view_indicators
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.0.0"
   path:
     dependency: transitive
     description:
@@ -521,7 +514,7 @@ packages:
     source: hosted
     version: "1.0.0"
   path_provider:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: path_provider
       url: "https://pub.dartlang.org"
@@ -569,20 +562,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.5"
-  petitparser:
-    dependency: transitive
-    description:
-      name: petitparser
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "4.4.0"
-  photo_view:
-    dependency: "direct main"
-    description:
-      name: photo_view
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.13.0"
   platform:
     dependency: transitive
     description:
@@ -807,13 +786,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.0+1"
-  xml:
-    dependency: transitive
-    description:
-      name: xml
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "5.3.1"
   yaml:
     dependency: transitive
     description:

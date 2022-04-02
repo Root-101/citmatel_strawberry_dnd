@@ -19,16 +19,10 @@ dependencies:
   tuple: ^2.0.0
 
   # Visual & Animations
-  animations: ^2.0.2
-  page_view_indicators: ^2.0.0
-  flutter_svg: ^1.0.3
   flutter_staggered_animations: ^1.0.0
-  photo_view: ^0.13.0
   flutter_fadein: ^2.0.0
   font_awesome_flutter: ^10.1.0
-  flutter_spinkit: ^5.1.0
   flutter_animator: ^3.2.1
-  cupertino_icons: ^1.0.4
   dotted_border: ^2.0.0+2
   carousel_slider: ^4.0.0
   confetti: ^0.6.0
@@ -44,12 +38,14 @@ dependencies:
   objectbox: ^1.4.0
   objectbox_flutter_libs: ^1.4.0
   flat_buffers: ^2.0.5
-  path_provider: ^2.0.3
   clean_repo_objectbox: ^0.2.1-SNAPSHOT.20220223
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  #flutter pub run dependency_validator
+  dependency_validator: ^3.1.2
 
   #DB code generation
   build_runner: ^2.1.7
