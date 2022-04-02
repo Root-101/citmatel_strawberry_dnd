@@ -584,30 +584,101 @@ class DnDLevelGeografia {
             id: 2,
             urlImage: DnDLevelsAssets.GEOGRAFIA_L11_ITEM_2,
             rowPosition: 0,
-            columnPosition: 1,
-            hint: "Cayo Santa maría se encuentra al norte de Ciego de Ávila.",
-          ),
-          DnDSubLevelItemDomain.singlePosition(
-            id: 3,
-            urlImage: DnDLevelsAssets.GEOGRAFIA_L11_ITEM_3,
-            rowPosition: 0,
             columnPosition: 2,
             hint: "Cayo Guillermo se encuentra al norte de Camagüey.",
           ),
           DnDSubLevelItemDomain.singlePosition(
-            id: 4,
-            urlImage: DnDLevelsAssets.GEOGRAFIA_L11_ITEM_4,
+            id: 3,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L11_ITEM_3,
             rowPosition: 2,
             columnPosition: 0,
             hint: "Cayo Largo se encuentra al sur de Matanzas.",
           ),
           DnDSubLevelItemDomain.singlePosition(
-            id: 5,
-            urlImage: DnDLevelsAssets.GEOGRAFIA_L11_ITEM_5,
+            id: 4,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L11_ITEM_4,
             rowPosition: 2,
             columnPosition: 2,
             hint:
-                "Los Cayos Jardines de la Reina se encuentran al sur de la gran parte del centro de la Isla.",
+                "Los Cayos: Jardines del Rey se encuentran al sur de la gran parte del centro de la Isla.",
+          ),
+        ],
+      ),
+      DnDSubLevelDomain(
+        id: 12,
+        urlImage: DnDLevelsAssets.GEOGRAFIA_L12_BG,
+        rows: 3,
+        columns: 3,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L12_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 0,
+            hint:
+                "La Cueva La Barca se encuentra en la Península de Guanahacabibes, Pinar del Río.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L12_ITEM_2,
+            rowPosition: 0,
+            columnPosition: 2,
+            hint:
+                "La Cueva del Indio se encuentra en la Sierra de Cubitas, Camagüey.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L12_ITEM_3,
+            rowPosition: 2,
+            columnPosition: 0,
+            hint:
+                "La Cueva del Agua se encuentra en la Sierra de Casas, Isla de la Juventud.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L12_ITEM_4,
+            rowPosition: 2,
+            columnPosition: 2,
+            hint: "La Cueva Cativar se encuentra en Guamá, Santiago de Cuba.",
+          ),
+        ],
+      ),
+      DnDSubLevelDomain(
+        id: 13,
+        urlImage: DnDLevelsAssets.GEOGRAFIA_L13_BG,
+        rows: 3,
+        columns: 3,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L13_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 0,
+            hint:
+                "El río Almendares tiene 45 Km de longitud y desemboca en el Estrecho de la Florida.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L13_ITEM_2,
+            rowPosition: 0,
+            columnPosition: 2,
+            hint:
+                "El Río Sagua la Grande tiene una longitud de 163 Km, está ubicado en Villa Clara.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L13_ITEM_3,
+            rowPosition: 2,
+            columnPosition: 0,
+            hint: "El Río Yayabo pertenece a la Provincia de Sancti Spíritus.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L13_ITEM_4,
+            rowPosition: 2,
+            columnPosition: 2,
+            hint:
+                "El Río Cauto desemboca al Mar cariba, cuenta con 343 Km de lngitud..",
           ),
         ],
       ),
