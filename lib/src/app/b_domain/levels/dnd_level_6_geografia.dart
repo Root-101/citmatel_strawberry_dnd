@@ -582,25 +582,64 @@ class DnDLevelGeografia {
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
-            urlImage: DnDLevelsAssets.GEOGRAFIA_L11_ITEM_3,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L11_ITEM_2,
             rowPosition: 0,
             columnPosition: 2,
             hint: "Cayo Guillermo se encuentra al norte de Camagüey.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
-            urlImage: DnDLevelsAssets.GEOGRAFIA_L11_ITEM_4,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L11_ITEM_3,
             rowPosition: 2,
             columnPosition: 0,
             hint: "Cayo Largo se encuentra al sur de Matanzas.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 4,
-            urlImage: DnDLevelsAssets.GEOGRAFIA_L11_ITEM_5,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L11_ITEM_4,
             rowPosition: 2,
             columnPosition: 2,
             hint:
                 "Los Cayos: Jardines del Rey se encuentran al sur de la gran parte del centro de la Isla.",
+          ),
+        ],
+      ),
+      DnDSubLevelDomain(
+        id: 12,
+        urlImage: DnDLevelsAssets.GEOGRAFIA_L12_BG,
+        rows: 3,
+        columns: 3,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L12_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 0,
+            hint:
+                "La Cueva La Barca se encuentra en la Península de Guanahacabibes, Pinar del Río.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L12_ITEM_2,
+            rowPosition: 0,
+            columnPosition: 2,
+            hint:
+                "La Cueva del Indio se encuentra en la Sierra de Cubitas, Camagüey.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L12_ITEM_3,
+            rowPosition: 2,
+            columnPosition: 0,
+            hint:
+                "La Cueva del Agua se encuentra en la Sierra de Casas, Isla de la Juventud.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L12_ITEM_4,
+            rowPosition: 2,
+            columnPosition: 2,
+            hint: "La Cueva Cativar se encuentra en Guamá, Santiago de Cuba.",
           ),
         ],
       ),

@@ -378,7 +378,12 @@ flutter:
     - packages/citmatel_strawberry_dnd/assets/levels/6_geografia/11/2.png
     - packages/citmatel_strawberry_dnd/assets/levels/6_geografia/11/3.png
     - packages/citmatel_strawberry_dnd/assets/levels/6_geografia/11/4.png
-
+    #Level 12
+    - packages/citmatel_strawberry_dnd/assets/levels/6_geografia/12/bg.png
+    - packages/citmatel_strawberry_dnd/assets/levels/6_geografia/12/1.png
+    - packages/citmatel_strawberry_dnd/assets/levels/6_geografia/12/2.png
+    - packages/citmatel_strawberry_dnd/assets/levels/6_geografia/12/3.png
+    - packages/citmatel_strawberry_dnd/assets/levels/6_geografia/12/4.png
     #9 - animales
     #Level 1
     - packages/citmatel_strawberry_dnd/assets/levels/9_animales/1/bg.png
