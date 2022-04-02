@@ -643,6 +643,45 @@ class DnDLevelGeografia {
           ),
         ],
       ),
+      DnDSubLevelDomain(
+        id: 13,
+        urlImage: DnDLevelsAssets.GEOGRAFIA_L13_BG,
+        rows: 3,
+        columns: 3,
+        items: [
+          DnDSubLevelItemDomain.singlePosition(
+            id: 1,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L13_ITEM_1,
+            rowPosition: 0,
+            columnPosition: 0,
+            hint:
+                "El río Almendares tiene 45 Km de longitud y desemboca en el Estrecho de la Florida.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 2,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L13_ITEM_2,
+            rowPosition: 0,
+            columnPosition: 2,
+            hint:
+                "El Río Sagua la Grande tiene una longitud de 163 Km, está ubicado en Villa Clara.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 3,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L13_ITEM_3,
+            rowPosition: 2,
+            columnPosition: 0,
+            hint: "El Río Yayabo pertenece a la Provincia de Sancti Spíritus.",
+          ),
+          DnDSubLevelItemDomain.singlePosition(
+            id: 4,
+            urlImage: DnDLevelsAssets.GEOGRAFIA_L13_ITEM_4,
+            rowPosition: 2,
+            columnPosition: 2,
+            hint:
+                "El Río Cauto desemboca al Mar cariba, cuenta con 343 Km de lngitud..",
+          ),
+        ],
+      ),
     ],
   );
 }
