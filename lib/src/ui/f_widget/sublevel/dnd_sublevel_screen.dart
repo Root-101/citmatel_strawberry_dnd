@@ -522,6 +522,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
         shape: ShapeLightFocus.Circle,
         imagePadding: 50,
         descriptionMaxLines: 4,
+        showImage: false,
       ),
     );
   }
