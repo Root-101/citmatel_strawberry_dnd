@@ -225,7 +225,7 @@ class DnDLevelTecnologia {
             rowPosition: 0,
             columnPosition: 0,
             hint:
-                'Yandex es el segundo motor de busquedas más usado en el mundo.',
+                'Yandex es el segundo motor de busqueda más usado en el mundo.',
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
@@ -240,7 +240,7 @@ class DnDLevelTecnologia {
             urlImage: DnDLevelsAssets.TECNOLOGIA_L6_ITEM_3,
             rowPosition: 1,
             columnPosition: 0,
-            hint: 'Azure es el servicio de nuve de Microsoft.',
+            hint: 'Azure es el servicio de nube de Microsoft.',
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 4,

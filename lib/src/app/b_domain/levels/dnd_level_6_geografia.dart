@@ -434,7 +434,7 @@ class DnDLevelGeografia {
             rowPosition: 0,
             columnPosition: 1,
             hint:
-                "La Coca es una localidad hubicada entre La Habana y Mayabeque.",
+                "La Coca es una localidad ubicada entre La Habana y Mayabeque.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
@@ -449,7 +449,7 @@ class DnDLevelGeografia {
             rowPosition: 2,
             columnPosition: 0,
             hint:
-                "Lajas es una localidad hubicada entre Cienfuegos y Sancti Spíritus.",
+                "Lajas es una localidad ubicada entre Cienfuegos y Sancti Spíritus.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 5,
@@ -485,7 +485,7 @@ class DnDLevelGeografia {
             urlImage: DnDLevelsAssets.GEOGRAFIA_L9_ITEM_2,
             rowPosition: 0,
             columnPosition: 1,
-            hint: "Placetas se encuenta en la provincia Villa Clara.",
+            hint: "Placetas se encuentra en la provincia Villa Clara.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 3,
@@ -563,7 +563,7 @@ class DnDLevelGeografia {
             urlImage: DnDLevelsAssets.GEOGRAFIA_L10_ITEM_6,
             rowPosition: 2,
             columnPosition: 2,
-            hint: "Maisí es el municipio mas oriental de Cuba, en Guantánamo.",
+            hint: "Maisí es el municipio más oriental de Cuba, en Guantánamo.",
           ),
         ],
       ),
@@ -678,7 +678,7 @@ class DnDLevelGeografia {
             rowPosition: 2,
             columnPosition: 2,
             hint:
-                "El Río Cauto desemboca al Mar cariba, cuenta con 343 Km de lngitud..",
+                "El Río Cauto desemboca al Mar cariba, cuenta con 343 Km de longitud.",
           ),
         ],
       ),

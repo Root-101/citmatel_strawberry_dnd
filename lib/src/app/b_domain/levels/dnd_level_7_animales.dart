@@ -285,7 +285,7 @@ class DnDLevelAnimales {
             rowPosition: 0,
             columnPosition: 0,
             hint:
-                "Las mofetas son omnívoras, y comeni nsectos, huevos, frutas entre otros.",
+                "Las mofetas son omnívoras, y comen insectos, huevos, frutas entre otros.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 2,
