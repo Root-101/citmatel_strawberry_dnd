@@ -638,7 +638,7 @@ packages:
     source: sdk
     version: "0.0.99"
   sliver_fab:
-    dependency: transitive
+    dependency: "direct main"
     description:
       path: "."
       ref: HEAD
