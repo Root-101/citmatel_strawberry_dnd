@@ -511,18 +511,18 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
       ),
     );
     targets.add(
-      StrawberryTutorial.addMultipleTarget(
+      StrawberryTutorial.addTarget(
         identify: "Target Drop",
         keyTarget: _key5,
         shadowColor: Colors.purple,
         title: 'Lugar del Objeto.',
         description:
             'Esta es la posición correcta del objeto, aqui debes soltarlo.'
-            '\n Algunos elementos tienen varias hubicaciones.',
+            '\n Algunos elementos tienen varias ubicaciones.',
         shape: ShapeLightFocus.Circle,
-        imagePadding: 50,
         descriptionMaxLines: 4,
         showImage: false,
+        contentAlign: ContentAlign.top,
       ),
     );
   }
