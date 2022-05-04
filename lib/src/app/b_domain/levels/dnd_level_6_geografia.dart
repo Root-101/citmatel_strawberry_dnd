@@ -169,7 +169,7 @@ class DnDLevelGeografia {
             urlImage: DnDLevelsAssets.GEOGRAFIA_L3_ITEM_4,
             rowPosition: 1,
             columnPosition: 2,
-            hint: "Guana.",
+            hint: "Surinam.",
           ),
           DnDSubLevelItemDomain.singlePosition(
             id: 5,
