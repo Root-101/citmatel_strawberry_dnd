@@ -29,6 +29,9 @@ dependencies:
   tutorial_coach_mark: ^1.2.1
   decorated_icon: ^1.2.1
   fluttertoast: ^8.0.8
+  sliver_fab:
+    git:
+      url: https://github.com/JesusHdezWaterloo/sliver_fab
 
   #Tools
   citmatel_strawberry_tools:
