@@ -1,11 +1,16 @@
 import 'package:citmatel_strawberry_dnd/dnd_exporter.dart';
 import 'package:citmatel_strawberry_tools/assets/assets_exporter.dart';
+import 'package:flutter/material.dart';
 
 class DnDLevelGeografia {
   static final DnDLevelDomain levelGeografia = DnDLevelDomain(
     id: 1,
-    theme: ToolsThemesAssets.THEME_GEOGRAFIA_NAME,
-    themeBackgroundImage: ToolsThemesAssets.THEME_GEOGRAFIA_BACKGROUND,
+    theme: "Geografía",
+    themeBackgroundImage: ToolsThemesBackgroundImage(
+      urlImage: "",
+      colorStrong: const Color(0xff4e6f4d),
+      colorLight: const Color(0xff896683).withOpacity(0.5),
+    ),
     sublevel: [
       DnDSubLevelDomain(
         id: 1,
