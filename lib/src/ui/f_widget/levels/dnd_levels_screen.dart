@@ -31,8 +31,9 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
 
       //scaffold para el fondo blanco
       return Scaffold(
-        backgroundColor: Colors.greenAccent,
+        backgroundColor: Colors.white,
         body: Container(
+          color: DnDUIModule.SECONDARY_COLOR.withOpacity(0.5),
           child: SliverFab(
             floatingWidget: StrawberryWidgets.circularButtonWithIcon(
               size: deviceSize.width / 9,
