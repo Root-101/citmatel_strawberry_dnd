@@ -121,9 +121,8 @@ class DnDLevelsScreen extends GetView<DnDLevelController> {
                               level: subLevelDomain.id,
                               //el primario de aqui es el secundario del otro lado
                               colorPrimary:
-                                  geografia.themeBackgroundImage.colorLight,
-                              backgroundColor:
-                                  geografia.themeBackgroundImage.colorStrong,
+                                  const Color(0xff896683).withOpacity(0.5),
+                              backgroundColor: const Color(0xff4e6f4d),
                               //estrellas ganadas en el subnivel
                               stars: progressDomain.stars,
                               maxStars: DnDSubLevelController.MAX_STARS,
