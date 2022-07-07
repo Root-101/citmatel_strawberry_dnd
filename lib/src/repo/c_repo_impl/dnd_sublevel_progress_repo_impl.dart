@@ -3,7 +3,8 @@ import 'package:clean_core/clean_core.dart';
 
 class DnDSubLevelProgressRepoImpl extends DefaultCRUDRepo<
     DnDSubLevelProgressDomain,
-    DnDSubLevelProgressEntity> implements DnDSubLevelProgressRepo {
+    DnDSubLevelProgressEntity,
+    DnDSubLevelProgressRepoExternal> implements DnDSubLevelProgressRepo {
   DnDSubLevelProgressRepoExternal _externalRepo;
 
   DnDSubLevelProgressRepoImpl(DnDSubLevelProgressRepoExternal repoExternal)
@@ -33,7 +34,7 @@ class DnDSubLevelProgressRepoImpl extends DefaultCRUDRepo<
   }
 }
 
-class DnDSubLevelProgressConverter extends DefaultGeneralConverter<
+class DnDSubLevelProgressConverter extends GeneralConverter<
     DnDSubLevelProgressDomain, DnDSubLevelProgressEntity> {
   static final DnDSubLevelProgressConverter converter =
       DnDSubLevelProgressConverter._();

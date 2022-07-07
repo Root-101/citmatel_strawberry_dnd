@@ -41,7 +41,9 @@ dependencies:
   objectbox: ^1.4.0
   objectbox_flutter_libs: ^1.4.0
   flat_buffers: ^2.0.5
-  clean_repo_objectbox: ^0.2.1-SNAPSHOT.20220223
+  clean_repo_objectbox:
+    git:
+      url: https://github.com/JesusHdezWaterloo/clean_repo_objectbox
 
 dev_dependencies:
   flutter_test:
