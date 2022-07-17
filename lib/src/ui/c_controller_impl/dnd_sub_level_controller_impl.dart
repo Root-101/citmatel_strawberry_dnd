@@ -127,7 +127,7 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
                 shadowColor: Colors.green,
                 title: 'Respuesta correcta.',
                 description:
-                    'Felicidades lo has conseguido. Continúa así para ganar el nivel.',
+                    'Felicidades lo ha conseguido. Continúe así para ganar el nivel.',
                 shape: ShapeLightFocus.Circle,
                 contentAlign: ContentAlign.top,
                 showImage: false,
@@ -167,9 +167,9 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
             keyTarget: key7,
             shadowColor: Colors.red,
             title: 'Respuesta incorrecta.',
-            description: 'Cuando se responde incorrectamente pierdes una vida.'
-                '\n Cuando te quedes sin vidas se te dará la posibilidad de intentarlo de nuevo.'
-                '\n Solo si colocas todos los elementos correctamente podrás pasar de nivel.',
+            description: 'Cuando se responde incorrectamente pierde una vida.'
+                '\n Cuando se quede sin vidas se le dará la posibilidad de intentarlo de nuevo.'
+                '\n Solo si coloca todos los elementos correctamente podrá pasar de nivel.',
             shape: ShapeLightFocus.Circle,
             showImageOnTop: false,
             imagePadding: 50,
@@ -201,8 +201,8 @@ class DnDSubLevelControllerImpl extends DnDSubLevelController {
         ),
         rightButtonFunction: () => Get.back(closeOverlays: true),
         childFirstText: [
-          'Te has quedado sin vidas.',
-          'Inténtalo de nuevo.',
+          'Se ha quedado sin vidas.',
+          'Inténtelo de nuevo.',
           'El que persevera triunfa.',
         ],
         stars: generateProgress(),

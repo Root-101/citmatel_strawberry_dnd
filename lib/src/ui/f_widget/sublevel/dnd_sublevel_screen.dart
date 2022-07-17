@@ -405,10 +405,11 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
         shadowColor: Colors.blue.shade800,
         title: 'Atrás',
         description:
-            'Pulse este botón si desea volver a la pantalla de niveles.',
+            'Pulse este botón si desea volver a la pantalla de niveles.\n'
+            '\nPara avanzar en el tutorial pulse en la zona señalada o en los espacios vacíos.',
         showImageOnTop: false,
         imagePadding: 50,
-        descriptionMaxLines: 2,
+        descriptionMaxLines: 8,
       ),
     );
 
@@ -446,7 +447,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
         shadowColor: Colors.teal,
         title: 'Estrellas',
         description:
-            'Las estrellas indican cuan bien has realizado el nivel.\nPara obtenerlas todas debes completar el nivel sin equivocarte ni una sola vez.',
+            'Las estrellas indican cuan bien ha realizado el nivel.\nPara obtenerlas todas debe completar el nivel sin equivocarse ni una sola vez.',
         showImageOnTop: false,
         imagePadding: 50,
         descriptionMaxLines: 5,
@@ -460,7 +461,7 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
         shadowColor: Colors.pink,
         title: 'Cantidad de vidas.',
         description:
-            'Las vidas son la cantidad de intentos que tienes para equivocarte.\n Si las pierdes todas deberás empezar el nivel de nuevo.',
+            'Las vidas son la cantidad de intentos que tiene para equivocarse.\n Si las pierde todas deberá empezar el nivel de nuevo.',
         showImageOnTop: false,
         imagePadding: 50,
         descriptionMaxLines: 4,
@@ -503,24 +504,25 @@ class _DnDSubLevelScreenState extends State<DnDSubLevelScreen> {
         contentAlign: ContentAlign.top,
         title: 'Objeto.',
         description:
-            'Arrastra el objeto hacia la posición que se te indicará a continuación.',
+            'Arrastre el objeto hacia la posición que se le indicará a continuación.',
         shape: ShapeLightFocus.Circle,
         imagePadding: 50,
         descriptionMaxLines: 2,
       ),
     );
     targets.add(
-      StrawberryTutorial.addMultipleTarget(
+      StrawberryTutorial.addTarget(
         identify: "Target Drop",
         keyTarget: _key5,
         shadowColor: Colors.purple,
         title: 'Lugar del Objeto.',
         description:
-            'Esta es la posición correcta del objeto, aqui debes soltarlo.'
-            '\n Algunos elementos tienen varias hubicaciones.',
+            'Esta es la posición correcta del objeto, aqui debe soltarlo.'
+            '\n Algunos elementos tienen varias ubicaciones.',
         shape: ShapeLightFocus.Circle,
-        imagePadding: 50,
         descriptionMaxLines: 4,
+        showImage: false,
+        contentAlign: ContentAlign.top,
       ),
     );
   }
